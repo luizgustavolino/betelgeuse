@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1537469509 source:c:\users\lucas breur\desktop\pi - betelgeuse\code\main.c
+	<stdio.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	"funcoes.h"
+
+1537487635 c:\users\lucas breur\desktop\pi - betelgeuse\code\funcoes.h
+
