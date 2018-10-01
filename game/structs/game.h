@@ -5,6 +5,9 @@
 // game.h
 // estruturas de suporte ao jogo 
 //
+#ifndef betelgeuse_game_h
+#define betelgeuse_game_h
+
 #include <stddef.h>
 #include <stdio.h>
 
@@ -49,4 +52,7 @@ typedef struct Game {
  
 // Funções de apoio ao motor do jogo
 Game createNewGame();
-void changeScene(Game *game, Scene *newScene);
+void changeScene(Game *game, Scene newScene);
+void endGame(Game *game);
+
+#endif
