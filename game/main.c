@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "structs/game.h"
-#include "structs/scenes/splashScene.h" 
+#include "engine/engine.h"
+#include "scenes/splashScene.h"
 
 int main(){
     
