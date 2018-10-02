@@ -22,13 +22,14 @@ TARGET = beteugeuse
 # do jogo
 OBJECTS = $(shell find $(SOURCE_FOLDER) -name '*.c')
 
+# alvo default: gera o target, 
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
 	$(LD) -o $@ $^ $(LDFLAGS)
 
-# You don't even need to be explicit here,
-# compiling C files is handled automagically by Make.
+# diretriz para arquivos '.c' -> compilar e gerar o '.o'
+# que vai para o LD
 %.o: %.c
 	$(CC) $(CFLAGS) $^ -o $@
 
