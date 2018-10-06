@@ -39,6 +39,7 @@ Game createNewGame(){
 void endGame(Game *game){
 
 	// Avisa a cena anterior que o jogo acabou	
-	if (game->currentScene.onExit != NULL)
+	if (game->currentScene.onExit != NULL){
 		game->currentScene.onExit(game);
+    }
 }

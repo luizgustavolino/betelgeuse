@@ -14,6 +14,8 @@ int main(){
     changeScene(&game, splash);
     game.currentScene.onFrame(&game);
     endGame(&game);
+
+    loadAsset("splash.bmp");
  
     return 0;
 }

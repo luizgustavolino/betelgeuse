@@ -11,7 +11,7 @@ CFLAGS = -c -Wall -g -O2
 # LD é o Linker, vamos utilizar o mesmo que
 # o compiler. LD flags são as libs incluidas
 LD = $(CC)
-LDFLAGS = -lz
+LDFLAGS = -lz -lallegro -lallegro_image -lallegro_dialog
 
 # Pasta onde fica o fonte do jogo e
 # nome do executável final
@@ -22,8 +22,11 @@ TARGET = beteugeuse
 # do jogo
 OBJECTS = $(shell find $(SOURCE_FOLDER) -name '*.c')
 
-# alvo default: gera o target, 
-all: $(TARGET)
+# alvo default: gera o target, com o nome escolhido
+# primeiro ele chama clean: apaga a versão antiga
+# depois chama o target, que gera o executável
+# depois copia os assets para a pasta local
+all: clean $(TARGET) copy_assets
 
 $(TARGET): $(OBJECTS)
 	$(LD) -o $@ $^ $(LDFLAGS)
@@ -33,5 +36,11 @@ $(TARGET): $(OBJECTS)
 %.o: %.c
 	$(CC) $(CFLAGS) $^ -o $@
 
+copy_assets:
+	rsync -rpE ../../game/assets .
+
+.PHONY: copy_assets
+
 clean:
-	rm $(TARGET) $(OBJECTS)
+	rm -f $(TARGET)
+	rm -rf assets
