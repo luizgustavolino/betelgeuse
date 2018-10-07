@@ -1,24 +1,26 @@
 //
 // SENAC BCC PI 2 
 // Projeto Betelgeuse
-//
-// splashScene.c
-// estruturas da Cena de abertura
-//
+
 #include <stddef.h>
 #include <stdio.h>
 #include "splashScene.h"
 
+int bgAsset;
+
 static void splashOnEnter(Game *game) {
-	printf("%s\n", "splashOnEnter");
+	Logger.info("splashOnEnter");
+	bgAsset = loadImageAsset("splashbg.png");
 }
 
 static void splashOnFrame(Game *game) {
-	printf("%s\n", "splashOnFrame");	
+	Logger.info("frame");
+	drawImageAsset(bgAsset, 0, 0);
 }
 
 static void splashOnExit(Game *game) {
-	printf("%s\n", "splashOnExit");		
+	Logger.info("splashOnExit");
+	unloadImageAsset(bgAsset);
 }
 
 Scene makeSplashScene(Game *game) {

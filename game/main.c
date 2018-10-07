@@ -1,21 +1,34 @@
 #include <stdio.h>
+#include "engine/logger.h"
 #include "engine/engine.h"
 #include "scenes/splashScene.h"
 
-int main(){
-    
-    // estrutura de jogo 
-    Game game = createNewGame();
-    printf("new game created! screen info:\n");
-    printf("w:%d x h:%d\n", game.screenSetup.widht, game.screenSetup.height);
+// platform specifics
+// available is: 
+// - PLATFORM_POKITTO
+// - PLATFORM_WIN
+// - PLATFORM_MAC
+// - PLATFORM_LINUX
+// engines:
+// - ENGINE_ALLEGRO
+// - ENGINE_POKITTO
+#ifdef ENGINE_ALLEGRO
+#include <allegro5/allegro.h>
+#endif
 
-    // teste de cena
-    Scene splash = makeSplashScene();
-    changeScene(&game, splash);
-    game.currentScene.onFrame(&game);
+int main(int argc, char **argv){
+    
+    // informações da plataforma
+    setupLogger();
+    Logger.info("### SENAC BCC PI 2 // Projeto Betelgeuse ###");
+
+    // setup do ambiente + cena inicial
+    Game game = createNewGame();
+    changeScene(&game, makeSplashScene());
+
+    // game lyfecycle
+    while (game.running) nextFrame(&game);
     endGame(&game);
 
-    loadAsset("splash.bmp");
- 
     return 0;
 }

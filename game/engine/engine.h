@@ -3,14 +3,25 @@
 // Projeto Betelgeuse
 //
 // engine.h
-// centraliza os imports do motor do jogo, ou seja
-// tudo que não é conteúdo ou regra do jogo
+// centraliza as declarações do motor do jogo, ou seja
+// tudo que não é conteúdo ou regra específica do jogo.
 
 #ifndef betelgeuse_engine_engine_h
 #define betelgeuse_engine_engine_h
 
 #include <stddef.h>
 #include <stdio.h>
+#include <stdbool.h> 
+
+#include "logger.h"
+#include "utils.h"
+
+// 'platform' to 'render' definitions
+#if defined(PLATFORM_WIN) || defined(PLATFORM_MAC) || defined(PLATFORM_LINUX)
+    #define ENGINE_ALLEGRO
+#elif defined(PLATFORM_POKITTO)
+    #define ENGINE_POKITTO
+#endif
 
 // forward declarations
 typedef struct Game Game;
@@ -31,7 +42,7 @@ void changeScene(Game *game, Scene newScene);
 // da tela, largura, algura e escala
 typedef struct ScreenSetup {
     int height;
-    int widht;
+    int width;
     int scaleFactor;
 } ScreenSetup;
  
@@ -46,6 +57,9 @@ typedef struct GameplayContext {
 // Estrutura que agrupa toda as outras
 // e representa o jogo atual
 typedef struct Game {
+    bool running;
+    unsigned int frame;
+
     ScreenSetup screenSetup;
     Scene currentScene;
     GameplayContext gameplayContext;
@@ -53,11 +67,14 @@ typedef struct Game {
  
 // Funções de apoio ao motor do jogo
 Game createNewGame();
+void nextFrame(Game *game);
 void endGame(Game *game);
 
 // Asset drawing
-int loadAsset(char* name);
-void drawAsset(int tag);
-void unloadAsset(int tag);
+typedef unsigned int IMAGE_ASSET;
+
+IMAGE_ASSET loadImageAsset(char* name);
+void drawImageAsset(IMAGE_ASSET tag, unsigned int x, unsigned int y);
+void unloadImageAsset(IMAGE_ASSET tag);
 
 #endif

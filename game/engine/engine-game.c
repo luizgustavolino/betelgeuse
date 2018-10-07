@@ -1,10 +1,15 @@
 //
 // SENAC BCC PI 2 
 // Projeto Betelgeuse
-//
-// game.c
-//
+
 #include "engine.h"
+
+// Forward declaration de
+// Funções de ambiente (macOS, Linux etc)
+bool setupEnvironment(Game *game);
+void loopEnvironmentBeforeFrame(Game *game);
+void loopEnvironmentAfterFrame(Game *game);
+void quitEnvironment(Game *game);
 
 // # função createNewGame
 // Preenche uma nova estrutura de jogo, com os valores
@@ -19,7 +24,7 @@ Game createNewGame(){
     game.screenSetup.scaleFactor = 3;
 #endif
 
-    game.screenSetup.widht  = 220 * game.screenSetup.scaleFactor;
+    game.screenSetup.width  = 220 * game.screenSetup.scaleFactor;
     game.screenSetup.height = 176 * game.screenSetup.scaleFactor;
 
     game.gameplayContext.citiesRemaining = 3;
@@ -29,8 +34,23 @@ Game createNewGame(){
     game.currentScene.onEnter = NULL;
     game.currentScene.onFrame = NULL;
     game.currentScene.onExit  = NULL;
+    game.running              = true;
+
+    setupEnvironment(&game);
 
     return game;
+}
+
+// # função nextFrame
+void nextFrame(Game *game){
+    
+    game->frame++;
+    loopEnvironmentBeforeFrame(game);
+
+    if (game->currentScene.onFrame != NULL)
+        game->currentScene.onFrame(game);
+
+    loopEnvironmentAfterFrame(game);
 }
 
 // # função createNewGame
@@ -39,7 +59,7 @@ Game createNewGame(){
 void endGame(Game *game){
 
 	// Avisa a cena anterior que o jogo acabou	
-	if (game->currentScene.onExit != NULL){
-		game->currentScene.onExit(game);
-    }
+    // & platform specifcs
+	if (game->currentScene.onExit != NULL) game->currentScene.onExit(game);
+    quitEnvironment(game);
 }
