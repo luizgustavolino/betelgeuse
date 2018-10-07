@@ -1,17 +1,15 @@
 //
 // SENAC BCC PI 2 
 // Projeto Betelgeuse
-
-#if defined(PLATFORM_WIN) || defined(PLATFORM_MAC) || defined(PLATFORM_LINUX)
-
 #include <stddef.h>
 #include <stdio.h>
+#include "engine.h"
+
+#if defined(PLATFORM_WIN) || defined(PLATFORM_MAC) || defined(PLATFORM_LINUX)
 
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_image.h>
 #include "allegro5/allegro_native_dialog.h"
-
-#include "engine.h"
 
 typedef struct AssetNode {
 	IMAGE_ASSET id;

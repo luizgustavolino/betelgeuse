@@ -3,18 +3,14 @@
 #include "engine/engine.h"
 #include "scenes/splashScene.h"
 
-// platform specifics
-// available is: 
+// available platforms: 
 // - PLATFORM_POKITTO
 // - PLATFORM_WIN
 // - PLATFORM_MAC
 // - PLATFORM_LINUX
 // engines:
-// - ENGINE_ALLEGRO
+// - ENGINE_ALLEGRO (win, mac and linux)
 // - ENGINE_POKITTO
-#ifdef ENGINE_ALLEGRO
-#include <allegro5/allegro.h>
-#endif
 
 int main(int argc, char **argv){
     

@@ -14,7 +14,6 @@ static void splashOnEnter(Game *game) {
 }
 
 static void splashOnFrame(Game *game) {
-	Logger.info("frame");
 	drawImageAsset(bgAsset, 0, 0);
 }
 

@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "engine.h"
 
 #ifdef ENGINE_ALLEGRO
 
@@ -15,8 +16,6 @@
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_acodec.h>
 #include <allegro5/allegro_native_dialog.h>
-
-#include "engine.h"
 
 extern ALLEGRO_EVENT_QUEUE *queue;
 

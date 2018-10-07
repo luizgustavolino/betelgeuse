@@ -9,12 +9,10 @@
 #ifndef betelgeuse_engine_engine_h
 #define betelgeuse_engine_engine_h
 
+// std includes
 #include <stddef.h>
 #include <stdio.h>
 #include <stdbool.h> 
-
-#include "logger.h"
-#include "utils.h"
 
 // 'platform' to 'render' definitions
 #if defined(PLATFORM_WIN) || defined(PLATFORM_MAC) || defined(PLATFORM_LINUX)
@@ -22,6 +20,19 @@
 #elif defined(PLATFORM_POKITTO)
     #define ENGINE_POKITTO
 #endif
+
+// platform specifics globals
+#ifdef ENGINE_ALLEGRO
+    #include <allegro5/allegro.h>
+    ALLEGRO_DISPLAY *window;
+    ALLEGRO_EVENT_QUEUE *queue;
+#endif
+
+// engine droplets includes
+#include "logger.h"
+#include "utils.h"
+
+/// ----------------------------- STRUCTS and DEFINITIONS
 
 // forward declarations
 typedef struct Game Game;
@@ -72,7 +83,6 @@ void endGame(Game *game);
 
 // Asset drawing
 typedef unsigned int IMAGE_ASSET;
-
 IMAGE_ASSET loadImageAsset(char* name);
 void drawImageAsset(IMAGE_ASSET tag, unsigned int x, unsigned int y);
 void unloadImageAsset(IMAGE_ASSET tag);
