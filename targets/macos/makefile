@@ -11,7 +11,7 @@ CFLAGS = -c -Wall -g -O2
 # LD é o Linker, vamos utilizar o mesmo que
 # o compiler. LD flags são as libs incluidas
 LD = $(CC)
-LDFLAGS = -lz -lallegro -lallegro_image -lallegro_dialog
+LDFLAGS = -DPLATFORM_MAC -lz -lallegro -lallegro_acodec -lallegro_audio -lallegro_color -lallegro_dialog -lallegro_font -lallegro_image -lallegro_memfile -lallegro_physfs -lallegro_primitives -lallegro_ttf -lallegro_video -lallegro_main
 
 # Pasta onde fica o fonte do jogo e
 # nome do executável final
@@ -29,7 +29,7 @@ OBJECTS = $(shell find $(SOURCE_FOLDER) -name '*.c')
 all: clean $(TARGET) copy_assets
 
 $(TARGET): $(OBJECTS)
-	$(LD) -o $@ $^ $(LDFLAGS)
+	$(LD) -o $@ $^ $(LDFLAGS) 
 
 # diretriz para arquivos '.c' -> compilar e gerar o '.o'
 # que vai para o LD
