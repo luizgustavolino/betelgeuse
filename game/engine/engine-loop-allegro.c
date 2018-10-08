@@ -19,6 +19,10 @@
 
 extern ALLEGRO_EVENT_QUEUE *queue;
 
+static double deltaTime();
+const int FPS = 30;
+double initialTime;
+
 void loopEnvironmentBeforeFrame(Game *game){
 
 	while (!al_is_event_queue_empty(queue)){
@@ -30,11 +34,17 @@ void loopEnvironmentBeforeFrame(Game *game){
         }
     }
 
+    initialTime = al_get_time();
 }
 
 void loopEnvironmentAfterFrame(game) {
 	al_flip_display();
-	al_rest(0.15);
+	double sleepTime = deltaTime();
+	if (sleepTime > 0) al_rest(sleepTime);
+}
+
+static double deltaTime(){
+    return al_get_time() - initialTime;
 }
 
 #endif

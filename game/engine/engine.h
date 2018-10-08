@@ -38,7 +38,7 @@
 typedef struct Game Game;
 
 // Funções de ciclo de vida de uma cena
-typedef void (*gameloopControl)(Game *game);
+typedef void (*gameloopControl)(Game *game, int frame);
  
 // Estrutura de Cena
 typedef struct Scene {
@@ -70,7 +70,7 @@ typedef struct GameplayContext {
 typedef struct Game {
     bool running;
     unsigned int frame;
-
+    unsigned int sceneFrame;
     ScreenSetup screenSetup;
     Scene currentScene;
     GameplayContext gameplayContext;

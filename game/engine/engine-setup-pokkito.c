@@ -4,7 +4,7 @@
 
 #include "engine.h"
 
-#if defined(PLATFORM_POKITTO)
+#if defined(ENGINE_POKITTO)
 
 
 #endif

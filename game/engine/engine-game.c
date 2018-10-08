@@ -45,10 +45,12 @@ Game createNewGame(){
 void nextFrame(Game *game){
     
     game->frame++;
+
     loopEnvironmentBeforeFrame(game);
+    int frame = game->frame - game->sceneFrame;
 
     if (game->currentScene.onFrame != NULL)
-        game->currentScene.onFrame(game);
+        game->currentScene.onFrame(game, frame);
 
     loopEnvironmentAfterFrame(game);
 }
@@ -60,6 +62,7 @@ void endGame(Game *game){
 
 	// Avisa a cena anterior que o jogo acabou	
     // & platform specifcs
-	if (game->currentScene.onExit != NULL) game->currentScene.onExit(game);
+    int frame = game->frame - game->sceneFrame;
+	if (game->currentScene.onExit != NULL) game->currentScene.onExit(game, frame);
     quitEnvironment(game);
 }

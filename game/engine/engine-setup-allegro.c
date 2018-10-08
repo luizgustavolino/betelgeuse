@@ -85,7 +85,13 @@ static bool loadAllegro(Game *game){
 
 	int width  = game->screenSetup.width;
 	int height = game->screenSetup.height;
+	
 	window = al_create_display(width, height);
+
+	ALLEGRO_TRANSFORM trans;
+	al_identity_transform(&trans);
+	al_scale_transform(&trans, 3, 3);
+	al_use_transform(&trans);
 
    	if(!window) {
    		errorMessage = "failed to create display!";

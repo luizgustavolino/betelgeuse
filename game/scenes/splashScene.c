@@ -8,17 +8,19 @@
 
 int bgAsset;
 
-static void splashOnEnter(Game *game) {
-	Logger.info("splashOnEnter");
+static void splashOnEnter(Game *game, int frame) {
 	bgAsset = loadImageAsset("splashbg.png");
 }
 
-static void splashOnFrame(Game *game) {
+static void splashOnFrame(Game *game, int frame) {
 	drawImageAsset(bgAsset, 0, 0);
+
+	if (frame == 50) {
+		changeScene(game, makeSplashScene());
+	}
 }
 
-static void splashOnExit(Game *game) {
-	Logger.info("splashOnExit");
+static void splashOnExit(Game *game, int frame) {
 	unloadImageAsset(bgAsset);
 }
 
