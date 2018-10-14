@@ -6,22 +6,20 @@
 #include <stdio.h>
 #include "splashScene.h"
 
-int bgAsset;
+int senacLogo;
 
 static void splashOnEnter(Game *game, int frame) {
-	bgAsset = loadImageAsset("splashbg.png");
+	senacLogo = loadImageAsset("splash_senac.png");
 }
 
 static void splashOnFrame(Game *game, int frame) {
-	drawImageAsset(bgAsset, 0, 0);
-
-	if (frame == 50) {
-		changeScene(game, makeSplashScene());
-	}
+	unsigned char color = min(frame, 255);
+	if (frame < 360) fillRGB( color, color, color);
+	else drawImageAsset(senacLogo, 74, 52);
 }
 
 static void splashOnExit(Game *game, int frame) {
-	unloadImageAsset(bgAsset);
+	unloadImageAsset(senacLogo);
 }
 
 Scene makeSplashScene(Game *game) {

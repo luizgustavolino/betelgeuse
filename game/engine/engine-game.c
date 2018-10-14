@@ -7,8 +7,8 @@
 // Forward declaration de
 // Funções de ambiente (macOS, Linux etc)
 bool setupEnvironment(Game *game);
-void loopEnvironmentBeforeFrame(Game *game);
-void loopEnvironmentAfterFrame(Game *game);
+void loopEnvironmentBeforeFrame(Game *game, bool *redraw);
+void loopEnvironmentAfterFrame(Game *game, bool redrawing);
 void quitEnvironment(Game *game);
 
 // # função createNewGame
@@ -21,11 +21,12 @@ Game createNewGame(){
 #ifdef PLATFORM_POKITTO
     game.screenSetup.scaleFactor = 1;
 #else
-    game.screenSetup.scaleFactor = 3;
+    game.screenSetup.scaleFactor = 4;
 #endif
 
     game.screenSetup.width  = 220 * game.screenSetup.scaleFactor;
     game.screenSetup.height = 176 * game.screenSetup.scaleFactor;
+    game.screenSetup.fps    = 320;
 
     game.gameplayContext.citiesRemaining = 3;
     game.gameplayContext.day  = 1;
@@ -44,15 +45,17 @@ Game createNewGame(){
 // # função nextFrame
 void nextFrame(Game *game){
     
-    game->frame++;
+    bool redraw = false;
+    loopEnvironmentBeforeFrame(game, &redraw);
 
-    loopEnvironmentBeforeFrame(game);
-    int frame = game->frame - game->sceneFrame;
-
-    if (game->currentScene.onFrame != NULL)
-        game->currentScene.onFrame(game, frame);
-
-    loopEnvironmentAfterFrame(game);
+    if (redraw) {
+        game->frame++;
+        int frame = game->frame - game->sceneFrame;
+        if (game->currentScene.onFrame != NULL)
+            game->currentScene.onFrame(game, frame);
+    }
+    
+    loopEnvironmentAfterFrame(game, redraw);
 }
 
 // # função createNewGame

@@ -52,9 +52,10 @@ void changeScene(Game *game, Scene newScene);
 // Estrutura que guarda todas as informações
 // da tela, largura, algura e escala
 typedef struct ScreenSetup {
-    int height;
-    int width;
-    int scaleFactor;
+    unsigned int height;
+    unsigned int width;
+    unsigned int scaleFactor;
+    unsigned int fps;
 } ScreenSetup;
  
 // Estrutura que controla as regras do jogo
@@ -84,7 +85,8 @@ void endGame(Game *game);
 // Asset drawing
 typedef unsigned int IMAGE_ASSET;
 IMAGE_ASSET loadImageAsset(char* name);
-void drawImageAsset(IMAGE_ASSET tag, unsigned int x, unsigned int y);
+void drawImageAsset(IMAGE_ASSET tag, double x, double y);
 void unloadImageAsset(IMAGE_ASSET tag);
+void fillRGB(unsigned char r, unsigned char g, unsigned char b);
 
 #endif

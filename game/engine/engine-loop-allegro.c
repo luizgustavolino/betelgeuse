@@ -19,32 +19,28 @@
 
 extern ALLEGRO_EVENT_QUEUE *queue;
 
-static double deltaTime();
-const int FPS = 30;
-double initialTime;
-
-void loopEnvironmentBeforeFrame(Game *game){
+void loopEnvironmentBeforeFrame(Game *game, bool *shouldDraw){
+	
+	bool redraw = false;
 
 	while (!al_is_event_queue_empty(queue)){
+		
 		ALLEGRO_EVENT event;
 		al_wait_for_event(queue, &event);
- 
-        if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
+ 	
+ 		if(event.type == ALLEGRO_EVENT_TIMER) {
+      		redraw = true;
+    	} else if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
 			game->running = false;
         }
+
     }
-
-    initialTime = al_get_time();
+    
+    (*shouldDraw) = redraw;
 }
 
-void loopEnvironmentAfterFrame(game) {
-	al_flip_display();
-	double sleepTime = deltaTime();
-	if (sleepTime > 0) al_rest(sleepTime);
-}
-
-static double deltaTime(){
-    return al_get_time() - initialTime;
+void loopEnvironmentAfterFrame(Game *game, bool redrawing) {
+	if (redrawing) al_flip_display();
 }
 
 #endif

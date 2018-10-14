@@ -17,8 +17,10 @@
 #include <allegro5/allegro_acodec.h>
 #include <allegro5/allegro_native_dialog.h>
 
-ALLEGRO_DISPLAY *window;
-ALLEGRO_EVENT_QUEUE *queue;
+ALLEGRO_DISPLAY 	*window = NULL;
+ALLEGRO_TIMER   	*timer 	= NULL;
+ALLEGRO_EVENT_QUEUE *queue  = NULL;
+ALLEGRO_TRANSFORM   trans;
 
 // forward declaration, will be implemented
 // on engine-drawing by allegro
@@ -86,12 +88,16 @@ static bool loadAllegro(Game *game){
 	int width  = game->screenSetup.width;
 	int height = game->screenSetup.height;
 	
+	al_set_new_display_option(ALLEGRO_SINGLE_BUFFER, 1, ALLEGRO_REQUIRE);
+	al_set_new_display_option(ALLEGRO_SUPPORT_NPOT_BITMAP, 1, ALLEGRO_REQUIRE);
 	window = al_create_display(width, height);
 
-	ALLEGRO_TRANSFORM trans;
-	al_identity_transform(&trans);
-	al_scale_transform(&trans, 3, 3);
-	al_use_transform(&trans);
+	int scale = game->screenSetup.scaleFactor;
+	if (scale != 1) {
+		al_identity_transform(&trans);
+		al_scale_transform(&trans, scale, scale);
+		al_use_transform(&trans);
+	}
 
    	if(!window) {
    		errorMessage = "failed to create display!";
@@ -106,17 +112,23 @@ static bool loadAllegro(Game *game){
 		Logger.info("Allegro 5 is now loaded!");
 	}
 
+	timer = al_create_timer( 1.0 / (float) game->screenSetup.fps);
+	al_set_target_backbuffer(window);
+
 	al_set_window_title(window, "Senac PI II // Betelgeuse");
 	al_flip_display();
 
 	queue = al_create_event_queue();
 	al_register_event_source(queue, al_get_display_event_source(window));
 	al_register_event_source(queue, al_get_keyboard_event_source());
+	al_register_event_source(queue, al_get_timer_event_source(timer));
 
 	Logger.info("new game created! screen info:");
     Logger.complement("%dx%dpx (%dx scale)",
     	game->screenSetup.width, game->screenSetup.height,
     	game->screenSetup.scaleFactor);
+
+    al_start_timer(timer);
 
 	return setupIsOK;
 }
@@ -128,6 +140,7 @@ static void shutdownAllegro(){
 	al_unregister_event_source(queue, al_get_keyboard_event_source());
     al_unregister_event_source(queue, al_get_display_event_source(window));
     al_destroy_event_queue(queue);
+    al_destroy_timer(timer);
 
 	al_uninstall_keyboard();
     al_uninstall_audio();

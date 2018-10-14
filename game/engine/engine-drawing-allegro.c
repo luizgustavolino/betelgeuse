@@ -9,7 +9,8 @@
 
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_image.h>
-#include "allegro5/allegro_native_dialog.h"
+#include <allegro5/allegro_native_dialog.h>
+#include <allegro5/allegro_primitives.h>
 
 typedef struct AssetNode {
 	IMAGE_ASSET id;
@@ -51,7 +52,7 @@ IMAGE_ASSET loadImageAsset(char* name) {
 	}
 }
 
-void drawImageAsset(IMAGE_ASSET tag, unsigned int x, unsigned int y){
+void drawImageAsset(IMAGE_ASSET tag, double x, double y){
 	ALLEGRO_BITMAP *asset = findAssetNode(tag);
 	if (asset != NULL) al_draw_bitmap(asset, x, y, 0);
 	else Logger.error("can't draw asset with id: %d", tag);
@@ -109,6 +110,15 @@ static ALLEGRO_BITMAP* findAssetNode(IMAGE_ASSET id){
     } while (current != NULL);
 
 	return NULL;
+}
+
+// Fill entire screen with solid RGB color 
+// each channel goes from 0 to 255
+void fillRGB(unsigned char r, unsigned char g, unsigned char b){
+	int width  = 220; 
+	int height = 176;
+	ALLEGRO_COLOR tint = al_map_rgb(r,g,b);
+	al_draw_filled_rectangle(0, 0, width, height, tint);
 }
 
 #endif
