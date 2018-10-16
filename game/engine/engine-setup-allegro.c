@@ -20,7 +20,7 @@
 ALLEGRO_DISPLAY 	*window = NULL;
 ALLEGRO_TIMER   	*timer 	= NULL;
 ALLEGRO_EVENT_QUEUE *queue  = NULL;
-ALLEGRO_TRANSFORM   trans;
+ALLEGRO_TRANSFORM   game_scale_transform;
 
 // forward declaration, will be implemented
 // on engine-drawing by allegro
@@ -94,9 +94,9 @@ static bool loadAllegro(Game *game){
 
 	int scale = game->screenSetup.scaleFactor;
 	if (scale != 1) {
-		al_identity_transform(&trans);
-		al_scale_transform(&trans, scale, scale);
-		al_use_transform(&trans);
+		al_identity_transform(&game_scale_transform);
+		al_scale_transform(&game_scale_transform, scale, scale);
+		al_use_transform(&game_scale_transform);
 	}
 
    	if(!window) {
