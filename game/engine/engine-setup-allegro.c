@@ -63,13 +63,11 @@ static bool loadAllegro(Game *game){
 	if(!setupIsOK && errorMessage == NULL)
 		errorMessage = "Failed to initialize allegro primitives addon!";
 	
-	setupIsOK = setupIsOK ? al_init_font_addon() : false;
-	if(!setupIsOK && errorMessage == NULL)
-		errorMessage = "Failed to initialize allegro font addon!";
-
 	setupIsOK = setupIsOK ? al_init_image_addon() : false;
 	if(!setupIsOK && errorMessage == NULL)
 		errorMessage = "Failed to initialize allegro image addon!";
+
+	al_init_font_addon();
 
 	setupIsOK = setupIsOK ? al_install_audio() : false;
 	if(!setupIsOK && errorMessage == NULL)
