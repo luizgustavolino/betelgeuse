@@ -116,6 +116,8 @@ static bool loadAllegro(Game *game){
 	al_set_window_title(window, "Senac PI II // Betelgeuse");
 	al_flip_display();
 
+	al_resize_display(window, width, height);
+
 	queue = al_create_event_queue();
 	al_register_event_source(queue, al_get_display_event_source(window));
 	al_register_event_source(queue, al_get_keyboard_event_source());

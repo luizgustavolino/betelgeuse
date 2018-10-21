@@ -21,7 +21,7 @@ Game createNewGame(){
 #ifdef PLATFORM_POKITTO
     game.screenSetup.scaleFactor = 1;
 #else
-    game.screenSetup.scaleFactor = 2;
+    game.screenSetup.scaleFactor = 3;
 #endif
 
     game.screenSetup.width  = 220 * game.screenSetup.scaleFactor;
@@ -45,17 +45,17 @@ Game createNewGame(){
 // # função nextFrame
 void nextFrame(Game *game){
     
-    bool redraw = false;
-    loopEnvironmentBeforeFrame(game, &redraw);
+    bool shouldRedraw = false;
+    loopEnvironmentBeforeFrame(game, &shouldRedraw);
 
-    if (redraw) {
-        game->frame++;
-        int frame = game->frame - game->sceneFrame;
-        if (game->currentScene.onFrame != NULL)
-            game->currentScene.onFrame(game, frame);
+    if (shouldRedraw) {
+        int sceneFrame = (++game->frame - game->sceneFrame);
+        if (game->currentScene.onFrame != NULL){
+            game->currentScene.onFrame(game, sceneFrame);            
+        }
     }
     
-    loopEnvironmentAfterFrame(game, redraw);
+    loopEnvironmentAfterFrame(game, shouldRedraw);
 }
 
 // # função createNewGame
