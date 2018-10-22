@@ -35,12 +35,14 @@ void loopEnvironmentBeforeFrame(Game *game, bool *shouldDraw){
         }
 
     }
-    
+
+    if (redraw) al_flip_display();
     (*shouldDraw) = redraw;
+    
 }
 
 void loopEnvironmentAfterFrame(Game *game, bool redrawing) {
-	if (redrawing) al_flip_display();
+	
 }
 
 #endif

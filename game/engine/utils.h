@@ -21,4 +21,11 @@
 
 char* allocStringJoining(const char *s1, const char *s2);
 
+// funções de suavização
+float cubicEaseInOut(float p);
+float applyCubicEaseInOut(int fromFrame, int toFrame, int current, float delta);
+
+float cubicEaseOut(float p);
+float applyCubicEaseOut(int fromFrame, int toFrame, int current, float delta);
+
 #endif
