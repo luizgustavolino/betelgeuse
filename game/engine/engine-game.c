@@ -9,6 +9,7 @@
 bool setupEnvironment(Game *game);
 void loopEnvironmentBeforeFrame(Game *game, bool *redraw);
 void loopEnvironmentAfterFrame(Game *game, bool redrawing);
+void updateEnvironmentKeys(Game *game);
 void quitEnvironment(Game *game);
 
 // # função createNewGame
@@ -37,6 +38,13 @@ Game createNewGame(){
     game.currentScene.onExit  = NULL;
     game.running              = true;
 
+    game.keyState.a       = KEY_IS_UP;
+    game.keyState.b       = KEY_IS_UP;
+    game.keyState.up      = KEY_IS_UP;
+    game.keyState.right   = KEY_IS_UP;
+    game.keyState.down    = KEY_IS_UP;
+    game.keyState.left    = KEY_IS_UP;
+
     setupEnvironment(&game);
 
     return game;
@@ -50,6 +58,8 @@ void nextFrame(Game *game){
 
     if (shouldRedraw) {
         int sceneFrame = (++game->frame - game->sceneFrame);
+        updateEnvironmentKeys(game);
+
         if (game->currentScene.onFrame != NULL){
             game->currentScene.onFrame(game, sceneFrame);            
         }

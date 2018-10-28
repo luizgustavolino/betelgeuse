@@ -58,6 +58,11 @@ static void splashOnFrame(Game *game, int frame) {
 	} else {
 		changeScene(game, makeMainMenuScene(game));
 	}
+
+	if (game->keyState.a == KEY_IS_RELEASED) {
+		changeScene(game, makeMainMenuScene(game));
+	}
+	
 }
 
 static void splashOnExit(Game *game, int frame) {

@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include "mainMenuScene.h"
+#include "splashScene.h"
 
 static int menu_bg, cicle, ribbon;
 static int action_btn_a, action_btn_b;
@@ -44,10 +45,10 @@ static void mainMenuOnFrame(Game *game, int frame) {
 			setTextRGBColor(61, 140, 222);
 			drawText("opções", 184, 147);
 
-			
-
+			if (game->keyState.a == KEY_IS_RELEASED) {
+				changeScene(game, makeSplashScene());
+			}
 		}
-
 	}
 	
 }

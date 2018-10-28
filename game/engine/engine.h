@@ -66,12 +66,31 @@ typedef struct GameplayContext {
     int hour;
 } GameplayContext;
 
+
+typedef unsigned char actionState;
+
+#define KEY_IS_UP       (actionState) 0x00
+#define KEY_IS_DOWN     (actionState) 0x01
+#define KEY_IS_PRESSED  (actionState) 0x10
+#define KEY_IS_RELEASED (actionState) 0x11
+
+typedef struct ActionKeys {
+    actionState a;
+    actionState b;
+    actionState up;
+    actionState right;
+    actionState down;
+    actionState left;
+} ActionKeys;
+
 // Estrutura que agrupa toda as outras
 // e representa o jogo atual
+
 typedef struct Game {
     bool running;
     unsigned int frame;
     unsigned int sceneFrame;
+    ActionKeys keyState;
     ScreenSetup screenSetup;
     Scene currentScene;
     GameplayContext gameplayContext;

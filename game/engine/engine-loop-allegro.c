@@ -28,8 +28,9 @@ void loopEnvironmentBeforeFrame(Game *game, bool *shouldDraw){
 		ALLEGRO_EVENT event;
 		al_wait_for_event(queue, &event);
  	
- 		if(event.type == ALLEGRO_EVENT_TIMER) {
+ 		if(event.type == ALLEGRO_EVENT_TIMER) {      		
       		redraw = true;
+
     	} else if (event.type == ALLEGRO_EVENT_DISPLAY_CLOSE){
 			game->running = false;
         }
