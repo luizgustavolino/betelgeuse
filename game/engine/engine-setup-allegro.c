@@ -69,6 +69,10 @@ static bool loadAllegro(Game *game){
 
 	al_init_font_addon();
 
+	setupIsOK = setupIsOK ? al_init_ttf_addon() : false;
+	if(!setupIsOK && errorMessage == NULL)
+		errorMessage = "Failed to initialize allegro install tff addon!";
+
 	setupIsOK = setupIsOK ? al_install_audio() : false;
 	if(!setupIsOK && errorMessage == NULL)
 		errorMessage = "Failed to initialize allegro install audio!";

@@ -8,9 +8,13 @@
 #if defined(PLATFORM_WIN) || defined(PLATFORM_MAC) || defined(PLATFORM_LINUX)
 
 #include <allegro5/allegro.h>
-#include <allegro5/allegro_image.h>
-#include <allegro5/allegro_native_dialog.h>
 #include <allegro5/allegro_primitives.h>
+#include <allegro5/allegro_font.h>
+#include <allegro5/allegro_ttf.h>
+#include <allegro5/allegro_image.h>
+#include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_acodec.h>
+#include <allegro5/allegro_native_dialog.h>
 
 typedef struct AssetNode {
 	IMAGE_ASSET id;
@@ -119,6 +123,19 @@ void fillRGB(unsigned char r, unsigned char g, unsigned char b){
 	int height = 176;
 	ALLEGRO_COLOR tint = al_map_rgb(r,g,b);
 	al_draw_filled_rectangle(0, 0, width, height, tint);
+}
+
+// Text drawing
+static ALLEGRO_FONT *font = NULL;
+static ALLEGRO_COLOR color;
+
+void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b){
+	color = al_map_rgb(r,g,b);
+}
+
+void drawText(const char *text,  double x, double y){
+	if (font == NULL) font = al_load_ttf_font("assets/game-font.ttf", 8, ALLEGRO_TTF_MONOCHROME);
+	al_draw_text(font, color, x, y, ALLEGRO_ALIGN_LEFT, text);
 }
 
 #endif

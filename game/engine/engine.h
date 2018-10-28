@@ -89,4 +89,8 @@ void drawImageAsset(IMAGE_ASSET tag, double x, double y);
 void unloadImageAsset(IMAGE_ASSET tag);
 void fillRGB(unsigned char r, unsigned char g, unsigned char b);
 
+// Text drawing
+void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b);
+void drawText(const char *text,  double x, double y);
+
 #endif
