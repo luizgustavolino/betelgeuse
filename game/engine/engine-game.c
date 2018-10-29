@@ -11,6 +11,7 @@ void loopEnvironmentBeforeFrame(Game *game, bool *redraw);
 void loopEnvironmentAfterFrame(Game *game, bool redrawing);
 void updateEnvironmentKeys(Game *game);
 void quitEnvironment(Game *game);
+void menuOverlayOnFrame(Game *game, int frame);
 
 // # função createNewGame
 // Preenche uma nova estrutura de jogo, com os valores
@@ -45,6 +46,8 @@ Game createNewGame(){
     game.keyState.down    = KEY_IS_UP;
     game.keyState.left    = KEY_IS_UP;
 
+    game.menuOverlay.visible = false;
+
     setupEnvironment(&game);
 
     return game;
@@ -60,7 +63,9 @@ void nextFrame(Game *game){
         int sceneFrame = (++game->frame - game->sceneFrame);
         updateEnvironmentKeys(game);
 
-        if (game->currentScene.onFrame != NULL){
+        if (game->menuOverlay.visible == true) {
+            menuOverlayOnFrame(game, game->frame);
+        } else if (game->currentScene.onFrame != NULL){
             game->currentScene.onFrame(game, sceneFrame);            
         }
     }

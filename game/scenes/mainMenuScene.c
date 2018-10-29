@@ -10,6 +10,10 @@
 static int menu_bg, cicle, ribbon;
 static int action_btn_a, action_btn_b;
 
+static void mainMenuDidChooseOption(){
+
+}
+
 static void mainMenuOnEnter(Game *game, int frame) {
 	menu_bg  	= loadImageAsset("main_menu_bg.png");
 	cicle 	 	= loadImageAsset("main_menu_circle.png");
@@ -46,12 +50,13 @@ static void mainMenuOnFrame(Game *game, int frame) {
 			drawText("opções", 184, 147);
 
 			if (game->keyState.a == KEY_IS_RELEASED) {
-				changeScene(game, makeSplashScene());
+				showMenu(game);
 			}
 		}
 	}
 	
 }
+
 
 static void mainMenuOnExit(Game *game, int frame) {
 	unloadImageAsset(menu_bg);

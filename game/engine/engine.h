@@ -83,6 +83,11 @@ typedef struct ActionKeys {
     actionState left;
 } ActionKeys;
 
+// Menu que fica sobre as telas
+typedef struct MenuOverlay {
+    bool visible;
+} MenuOverlay;
+
 // Estrutura que agrupa toda as outras
 // e representa o jogo atual
 
@@ -94,6 +99,7 @@ typedef struct Game {
     ScreenSetup screenSetup;
     Scene currentScene;
     GameplayContext gameplayContext;
+    MenuOverlay menuOverlay;
 } Game;
  
 // Funções de apoio ao motor do jogo
@@ -111,5 +117,8 @@ void fillRGB(unsigned char r, unsigned char g, unsigned char b);
 // Text drawing
 void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b);
 void drawText(const char *text,  double x, double y);
+
+// Menu overlay
+void showMenu();
 
 #endif
