@@ -34,8 +34,8 @@ bool setupEnvironment(Game *game){
 }
 
 void quitEnvironment(Game *game) {
+	Logger.info("environment is now quitting!");
 	shutdownAllegro();
-	Logger.info("environment is quit!");
 }
 
 static bool loadAllegro(Game *game){
@@ -92,6 +92,7 @@ static bool loadAllegro(Game *game){
 	
 	al_set_new_display_option(ALLEGRO_SINGLE_BUFFER, 1, ALLEGRO_REQUIRE);
 	al_set_new_display_option(ALLEGRO_SUPPORT_NPOT_BITMAP, 1, ALLEGRO_REQUIRE);
+	
 	window = al_create_display(width, height);
 
 	int scale = game->screenSetup.scaleFactor;
@@ -139,19 +140,18 @@ static bool loadAllegro(Game *game){
 
 static void shutdownAllegro(){
 
-	al_destroy_display(window);
+	al_stop_timer(timer);
 
 	al_unregister_event_source(queue, al_get_keyboard_event_source());
     al_unregister_event_source(queue, al_get_display_event_source(window));
-    al_destroy_event_queue(queue);
-    al_destroy_timer(timer);
+    al_unregister_event_source(queue, al_get_timer_event_source(timer));
 
-	al_uninstall_keyboard();
-    al_uninstall_audio();
-    al_shutdown_image_addon();
-    al_shutdown_ttf_addon();
-    al_shutdown_font_addon();
-    al_shutdown_primitives_addon();
+    al_destroy_timer(timer);
+    al_destroy_display(window);
+    al_destroy_event_queue(queue);
+
+    // al_uninstall & al_shutdown functions is auto called
+    // by allegro, as stated in v5.0 manual
 }
 
 #endif

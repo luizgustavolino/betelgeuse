@@ -10,6 +10,6 @@
 
 #include "../engine/engine.h"
 
-Scene makeSplashScene();
+Scene makeSplashScene(Game *game);
 
 #endif

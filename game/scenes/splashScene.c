@@ -30,21 +30,21 @@ static void splashOnFrame(Game *game, int frame) {
 	int totalFrames	= waitTime + 3 * exposeTime + waitTime * 2;
 
 	if (frame < waitTime){
-		fillRGB(max(0, color - 35), max(0, color - 10), color);
+		fillRGB(game, max(0, color - 35), max(0, color - 10), color);
 
 	} else if (frame < waitTime + 1 * exposeTime){
 		drawImageAsset(senacLogo, 107, 59);
 		drawImageAsset(senacTitle, 76, 75);
 
 	} else if (frame == waitTime + 1 * exposeTime) {
-		fillRGB(220, 245, 255);
+		fillRGB(game, 220, 245, 255);
 
 	} else if (frame < waitTime + 2 * exposeTime){
 		drawImageAsset(bccLogo, 82, 64);
 		drawImageAsset(bccTitle, 80, 94);
 
 	} else if (frame < waitTime + 2 * exposeTime){
-		fillRGB(220, 245, 255);
+		fillRGB(game, 220, 245, 255);
 
 	}else if (frame < waitTime + 3 * exposeTime){
 		drawImageAsset(betelgeuseLogo, 74, 52);

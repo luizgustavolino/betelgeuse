@@ -6,24 +6,30 @@
 #include <stdio.h>
 #include "mainMenuScene.h"
 #include "splashScene.h"
+#include "reportScene.h"
 
+// Forward declarations
+char* menuOptionsDatasource(Game *game, int option);
+void menuCallback(Game *game, int choosenOption);
+
+// Scene assets
 static int menu_bg, cicle, ribbon;
 static int action_btn_a, action_btn_b;
 
-static void mainMenuDidChooseOption(){
-
-}
-
 static void mainMenuOnEnter(Game *game, int frame) {
+	
 	menu_bg  	= loadImageAsset("main_menu_bg.png");
 	cicle 	 	= loadImageAsset("main_menu_circle.png");
 	ribbon 	 	= loadImageAsset("main_menu_ribbon.png");
+
 	action_btn_a = loadImageAsset("btn_a_from_right_a.png");
 	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
-	fillRGB(220, 245, 255);
 }
 
 static void mainMenuOnFrame(Game *game, int frame) {
+
+	if (frame == 1)
+		fillRGB(game, 220, 245, 255);
 
 	if (frame < 860) {
 
@@ -38,7 +44,7 @@ static void mainMenuOnFrame(Game *game, int frame) {
 
 	} else {
 
-		float delta = applyCubicEaseOut(860, 990, frame, 64);
+		float delta = applyCubicEaseOut(860, 990, frame, 70);
 		if ( frame % 170 >= 100) { 
 			drawImageAsset(action_btn_a, 220 - delta , 145);
 		} else {
@@ -47,16 +53,38 @@ static void mainMenuOnFrame(Game *game, int frame) {
 
 		if ( frame > 990) { 
 			setTextRGBColor(61, 140, 222);
-			drawText("opções", 184, 147);
+			drawText("opções", 178, 150);
 
 			if (game->keyState.a == KEY_IS_RELEASED) {
-				showMenu(game);
+				showMenu(game, 2, menuOptionsDatasource, menuCallback);
 			}
 		}
 	}
-	
 }
 
+// #-- Menu options & callbacks
+#define MAIN_MENU_OPT_PLAY 		0
+#define MAIN_MENU_OPT_CREDITS 	1
+
+char* menuOptionsDatasource(Game *game, int option){
+	switch (option) {
+		case MAIN_MENU_OPT_PLAY: return "Jogar";
+		case MAIN_MENU_OPT_CREDITS: return "Créditos";
+		default: return NULL;
+	}
+}
+
+void menuCallback(Game *game, int choosenOption) {
+	switch (choosenOption) {
+		case MAIN_MENU_OPT_PLAY:
+			changeScene(game, makeReportScene(game));
+			break;
+		case MAIN_MENU_OPT_CREDITS:
+			break;
+		default: 
+			break;
+	}
+}
 
 static void mainMenuOnExit(Game *game, int frame) {
 	unloadImageAsset(menu_bg);

@@ -101,6 +101,7 @@ typedef struct Game {
     GameplayContext gameplayContext;
     MenuOverlay menuOverlay;
 } Game;
+
  
 // Funções de apoio ao motor do jogo
 Game createNewGame();
@@ -112,13 +113,38 @@ typedef unsigned int IMAGE_ASSET;
 IMAGE_ASSET loadImageAsset(char* name);
 void drawImageAsset(IMAGE_ASSET tag, double x, double y);
 void unloadImageAsset(IMAGE_ASSET tag);
-void fillRGB(unsigned char r, unsigned char g, unsigned char b);
+void fillRGB(Game *game, unsigned char r, unsigned char g, unsigned char b);
 
 // Text drawing
 void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b);
 void drawText(const char *text,  double x, double y);
 
+// Geometric drawing
+typedef struct Point {
+    float x, y;
+} Point;
+
+typedef struct Rect {
+    float x, y;
+    float width, height;
+} Rect;
+
+typedef struct Color {
+    unsigned char r, g, b;
+} Color;
+
+void drawRect(Rect frame, Color rgb);
+void drawLine(Point a, Point b, Color rgb);
+
 // Menu overlay
-void showMenu();
+#define MENU_BACK_OPTION -1
+
+typedef char* (*optionsDatasource)(Game *game, int option);
+typedef void (*optionsCallback)(Game *game, int option);
+
+void preloadMenuAssets(Game *game);
+void unloadMenuAssets(Game *game);
+
+void showMenu(Game *game, int optionsCount, optionsDatasource datasource, optionsCallback callback);
 
 #endif

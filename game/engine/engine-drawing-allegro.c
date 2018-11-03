@@ -118,11 +118,17 @@ static ALLEGRO_BITMAP* findAssetNode(IMAGE_ASSET id){
 
 // Fill entire screen with solid RGB color 
 // each channel goes from 0 to 255
-void fillRGB(unsigned char r, unsigned char g, unsigned char b){
-	int width  = 220; 
-	int height = 176;
+void fillRGB(Game *game, unsigned char r, unsigned char g, unsigned char b){
+	int width  = game->screenSetup.width; 
+	int height = game->screenSetup.height;
 	ALLEGRO_COLOR tint = al_map_rgb(r,g,b);
 	al_draw_filled_rectangle(0, 0, width, height, tint);
+}
+
+// Geometric drawing
+void drawRect(Rect frame, Color rgb){
+	ALLEGRO_COLOR tint = al_map_rgb(rgb.r, rgb.g, rgb.b);
+	al_draw_filled_rectangle(frame.x, frame.y, frame.x + frame.width, frame.y + frame.height, tint);
 }
 
 // Text drawing
@@ -136,6 +142,11 @@ void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b){
 void drawText(const char *text,  double x, double y){
 	if (font == NULL) font = al_load_ttf_font("assets/game-font.ttf", 8, ALLEGRO_TTF_MONOCHROME);
 	al_draw_text(font, color, x, y, ALLEGRO_ALIGN_LEFT, text);
+}
+
+void drawLine(Point a, Point b, Color rgb){
+	ALLEGRO_COLOR color = al_map_rgb(rgb.r, rgb.g, rgb.b);
+	al_draw_line(a.x, a.y, b.x, b.y, color, 1.0);
 }
 
 #endif

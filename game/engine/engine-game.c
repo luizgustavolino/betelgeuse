@@ -49,6 +49,7 @@ Game createNewGame(){
     game.menuOverlay.visible = false;
 
     setupEnvironment(&game);
+    preloadMenuAssets(&game);
 
     return game;
 }
@@ -82,5 +83,6 @@ void endGame(Game *game){
     // & platform specifcs
     int frame = game->frame - game->sceneFrame;
 	if (game->currentScene.onExit != NULL) game->currentScene.onExit(game, frame);
+    unloadMenuAssets(game);
     quitEnvironment(game);
 }
