@@ -1,5 +1,5 @@
 //
-// SENAC BCC PI 2 
+// SENAC BCC PI 2
 // Projeto Betelgeuse
 #include <stddef.h>
 #include <stdio.h>
@@ -67,7 +67,7 @@ void unloadImageAsset(IMAGE_ASSET tag){
 }
 
 // AssetNode handling
-// based on code by: learn-c.org 
+// based on code by: learn-c.org
 // at: https://www.learn-c.org/en/Linked_lists (oct 6, 2018)
 static AssetNode *head;
 static IMAGE_ASSET currentID;
@@ -116,10 +116,10 @@ static ALLEGRO_BITMAP* findAssetNode(IMAGE_ASSET id){
 	return NULL;
 }
 
-// Fill entire screen with solid RGB color 
+// Fill entire screen with solid RGB color
 // each channel goes from 0 to 255
 void fillRGB(Game *game, unsigned char r, unsigned char g, unsigned char b){
-	int width  = game->screenSetup.width; 
+	int width  = game->screenSetup.width;
 	int height = game->screenSetup.height;
 	ALLEGRO_COLOR tint = al_map_rgb(r,g,b);
 	al_draw_filled_rectangle(0, 0, width, height, tint);
@@ -140,8 +140,19 @@ void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b){
 }
 
 void drawText(const char *text,  double x, double y){
-	if (font == NULL) font = al_load_ttf_font("assets/game-font.ttf", 8, ALLEGRO_TTF_MONOCHROME);
+
+	// 1) find font path
+	char *path = "assets/game-font.ttf";
+	ALLEGRO_PATH *dir = al_get_standard_path(ALLEGRO_RESOURCES_PATH);
+	al_set_path_filename(dir, path);
+
+	const char *fullpath = al_path_cstr(dir, ALLEGRO_NATIVE_PATH_SEP);
+
+	// 2) load font
+	if (font == NULL) font = al_load_ttf_font(fullpath, 8, ALLEGRO_TTF_MONOCHROME);
 	al_draw_text(font, color, x, y, ALLEGRO_ALIGN_LEFT, text);
+	al_destroy_path(dir);
+	free(path);
 }
 
 void drawLine(Point a, Point b, Color rgb){
