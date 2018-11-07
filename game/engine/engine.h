@@ -60,12 +60,55 @@ typedef struct ScreenSetup {
  
 // Estrutura que controla as regras do jogo
 // e mantém o estado atual da partida
-typedef struct GameplayContext {
-    int citiesRemaining;
-    int day;
-    int hour;
-} GameplayContext;
 
+#define CITIES_UNTIL_VICTORY        3
+#define DESTINATIONS_COUNT          4
+#define POINTS_OF_INTEREST_COUNT    3
+
+#define WEEKDAY_MON 0
+#define WEEKDAY_TUE 1
+#define WEEKDAY_WED 2
+#define WEEKDAY_THU 3
+#define WEEKDAY_FRI 4
+
+typedef struct GameDate {
+    int dayOfWeek;
+    int hour;
+    int minutes;
+} GameDate;
+
+typedef struct Place {
+    char* name;
+    char* hint;
+    char* hintImageName;
+    char* citizenImageName;
+
+    int minutesRequired;
+} Place;
+
+typedef struct Destination {
+    char *name;
+    char *imageName;
+    int minutesRequired;
+    bool rightChoice;
+} Destination;
+
+typedef struct City {
+    char *name;
+    char *flavorText;
+    char *imageName;
+
+    Place pointsOfInterest[POINTS_OF_INTEREST_COUNT];
+    Destination destinations[DESTINATIONS_COUNT];
+} City;
+
+typedef struct GameplayContext {
+    char* stolenItemText;
+    GameDate currentTime;
+
+    int currentCity;
+    City cities[CITIES_UNTIL_VICTORY];
+} GameplayContext;
 
 typedef unsigned char actionState;
 
@@ -105,6 +148,7 @@ typedef struct Game {
  
 // Funções de apoio ao motor do jogo
 Game createNewGame();
+void loadGameData(Game *game);
 void nextFrame(Game *game);
 void endGame(Game *game);
 

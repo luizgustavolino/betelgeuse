@@ -23,16 +23,12 @@ Game createNewGame(){
 #ifdef PLATFORM_POKITTO
     game.screenSetup.scaleFactor = 1;
 #else
-    game.screenSetup.scaleFactor = 3;
+    game.screenSetup.scaleFactor = 5;
 #endif
 
     game.screenSetup.width  = 220 * game.screenSetup.scaleFactor;
     game.screenSetup.height = 176 * game.screenSetup.scaleFactor;
     game.screenSetup.fps    = 320;
-
-    game.gameplayContext.citiesRemaining = 3;
-    game.gameplayContext.day  = 1;
-    game.gameplayContext.hour = 9;
 
     game.currentScene.onEnter = NULL;
     game.currentScene.onFrame = NULL;
@@ -47,10 +43,10 @@ Game createNewGame(){
     game.keyState.left    = KEY_IS_UP;
 
     game.menuOverlay.visible = false;
-
+    
     setupEnvironment(&game);
     preloadMenuAssets(&game);
-
+    
     return game;
 }
 

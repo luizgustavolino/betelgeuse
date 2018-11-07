@@ -77,6 +77,7 @@ char* menuOptionsDatasource(Game *game, int option){
 void menuCallback(Game *game, int choosenOption) {
 	switch (choosenOption) {
 		case MAIN_MENU_OPT_PLAY:
+			loadGameData(game);
 			changeScene(game, makeReportScene(game));
 			break;
 		case MAIN_MENU_OPT_CREDITS:

@@ -3,6 +3,7 @@
 #include "engine/engine.h"
 #include "scenes/splashScene.h"
 #include "scenes/mainMenuScene.h"
+#include "scenes/reportScene.h"
 
 // available platforms: 
 // - PLATFORM_POKITTO

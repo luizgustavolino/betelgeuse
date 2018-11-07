@@ -13,8 +13,8 @@ static int pathAsset, pathDenseAsset;
 static int bgAsset, paperAsset;
 
 static void reportOnEnter(Game *game, int frame) {
-	bgAsset = loadImageAsset("report_bg.png");
-	paperAsset = loadImageAsset("report_paper.png");
+	bgAsset 		= loadImageAsset("report_bg.png");
+	paperAsset 		= loadImageAsset("report_paper.png");
 	pathAsset 		= loadImageAsset("menu_overlay_path.png");
 	pathDenseAsset 	= loadImageAsset("menu_overlay_path_dense.png"); 
 }
@@ -41,17 +41,20 @@ static void reportOnFrame(Game *game, int frame) {
 		drawImageAsset(paperAsset, 17, 10 + delta);
 
 		setTextRGBColor(GRAY);
-		drawText("Tesouro Nacional roubado", 34, 38 + delta);
-		drawText("bado em Belo Horizonte.", 34, 48 + delta);
-		drawText("Obra de Antônio Francisco", 34, 58 + delta);
-		drawText("Lisboa (Aleijadinho).", 34, 68 + delta);
-
-		drawText("Investigação em anda-", 34, 88 + delta);
-		drawText("mento. Suspeito avistado", 34, 98 + delta);
-		drawText("na região.", 34, 108 + delta);
-
-		drawText("Agentes no local.", 34, 128 + delta);
 		
+		int len = strlen(game->gameplayContext.stolenItemText);
+		char str[len];
+
+		strcpy(str, game->gameplayContext.stolenItemText);
+	    char *token = strtok(str, ";"); 
+	    int line = 0;
+
+	    while (token != NULL) { 
+	    	drawText(token, 34, 38 + delta + line * 10);
+	        token = strtok(NULL, ";"); 
+	        line ++;
+	    } 
+
 	}
 
 }
