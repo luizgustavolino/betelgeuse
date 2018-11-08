@@ -141,18 +141,22 @@ void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b){
 
 void drawText(const char *text,  double x, double y){
 
-	// 1) find font path
-	char *path = "assets/game-font.ttf";
-	ALLEGRO_PATH *dir = al_get_standard_path(ALLEGRO_RESOURCES_PATH);
-	al_set_path_filename(dir, path);
+	// load font, if needed
+	if (font == NULL) {
 
-	const char *fullpath = al_path_cstr(dir, ALLEGRO_NATIVE_PATH_SEP);
+		// find font path
+		char *path = "assets/game-font.ttf";
+		ALLEGRO_PATH *dir = al_get_standard_path(ALLEGRO_RESOURCES_PATH);
+		al_set_path_filename(dir, path);
 
-	// 2) load font
-	if (font == NULL) font = al_load_ttf_font(fullpath, 8, ALLEGRO_TTF_MONOCHROME);
+		// and load
+		const char *fullpath = al_path_cstr(dir, ALLEGRO_NATIVE_PATH_SEP);
+		font = al_load_ttf_font(fullpath, 8, ALLEGRO_TTF_MONOCHROME);
+		al_destroy_path(dir);
+	}
+
 	al_draw_text(font, color, x, y, ALLEGRO_ALIGN_LEFT, text);
-	al_destroy_path(dir);
-	free(path);
+	
 }
 
 void drawLine(Point a, Point b, Color rgb){
