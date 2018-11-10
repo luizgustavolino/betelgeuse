@@ -23,7 +23,7 @@ Game createNewGame(){
 #ifdef PLATFORM_POKITTO
     game.screenSetup.scaleFactor = 1;
 #else
-    game.screenSetup.scaleFactor = 5;
+    game.screenSetup.scaleFactor = 3;
 #endif
 
     game.screenSetup.width  = 220 * game.screenSetup.scaleFactor;

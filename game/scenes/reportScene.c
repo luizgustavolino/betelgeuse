@@ -11,12 +11,16 @@
 
 static int pathAsset, pathDenseAsset;
 static int bgAsset, paperAsset;
+static int action_btn_a, action_btn_b;
 
 static void reportOnEnter(Game *game, int frame) {
 	bgAsset 		= loadImageAsset("report_bg.png");
 	paperAsset 		= loadImageAsset("report_paper.png");
 	pathAsset 		= loadImageAsset("menu_overlay_path.png");
 	pathDenseAsset 	= loadImageAsset("menu_overlay_path_dense.png"); 
+
+	action_btn_a = loadImageAsset("btn_a_from_right_a.png");
+	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
 }
 
 static void reportOnFrame(Game *game, int frame) {
@@ -34,7 +38,7 @@ static void reportOnFrame(Game *game, int frame) {
 		for(int x = 0; x < 11; x++) for(int y = 0; y < 11; y++)
 			drawImageAsset(pathAsset, x*20, y*20);
 
-	} else if (frame >= 240) {
+	} else if (frame >= 240 && frame <= 820) {
 		drawImageAsset(bgAsset, 0, 0);
 
 		float delta = 170 - applyCubicEaseOut(520, 720, frame, 170);
@@ -55,6 +59,22 @@ static void reportOnFrame(Game *game, int frame) {
 	        line ++;
 	    } 
 
+	} else if (frame > 820) {
+		float delta = applyCubicEaseOut(820, 950, frame, 80);
+		if ( frame % 170 >= 100) { 
+			drawImageAsset(action_btn_a, 220 - delta , 145);
+		} else {
+			drawImageAsset(action_btn_b, 220 - delta , 145);
+		}
+
+		if ( frame > 950) { 
+			setTextRGBColor(61, 140, 222);
+			drawText("investigar", 168, 150);
+
+			if (game->keyState.a == KEY_IS_RELEASED) {
+				changeScene(game, makeReportScene(game));
+			}
+		}
 	}
 
 }
