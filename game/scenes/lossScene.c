@@ -4,7 +4,7 @@
 
 #include <stddef.h>
 #include <stdio.h>
-#include "winScene.h"
+#include "lossScene.h"
 
 #include "../engine/colors.h"
 
@@ -12,9 +12,8 @@
 static int robber,exclamation,idle1,idle2,idle3,idle4,walk2,walk3,walk4,walk5,walk6;
 static int aBtnIconA, aBtnIconB;
 float walk = -10;
-float down = 0;
 
-static void winOnEnter(Game *game, int frame) {
+static void lossOnEnter(Game *game, int frame) {
 
 	aBtnIconA	= loadImageAsset("main_a_btn_icon_a.png");
 	aBtnIconB	= loadImageAsset("main_a_btn_icon_b.png");
@@ -30,7 +29,7 @@ static void winOnEnter(Game *game, int frame) {
 	exclamation = loadImageAsset("exclamation.png");
 }
 
-static void winOnFrame(Game *game, int frame) {
+static void lossOnFrame(Game *game, int frame) {
 
 	if (frame == 1) fillRGB(game, BLACK);
     if (frame > 60 && frame <= 600){
@@ -76,50 +75,9 @@ static void winOnFrame(Game *game, int frame) {
         drawImageAsset(robber, walk, 100);
     }
 
-    if (frame > 1200 && frame <= 1400){
-        drawImageAsset(exclamation, 130, 100);
-    }
-
-    if (frame > 1400){
-        // reset screen
-        fillRGB(game, BLACK);
-        drawImageAsset(robber, walk, 100);
-
-        float delta = applyCubicEaseOut(1400, 1600, frame, 50);
-        drawLine((Point){ 105, 100}, (Point){105, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 1500){
-        float delta = applyCubicEaseOut(1500, 1700, frame, 50);
-        drawLine((Point){ 110, 100}, (Point){110, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 1600){
-        float delta = applyCubicEaseOut(1600, 1800, frame, 50);
-        drawLine((Point){ 115, 100}, (Point){115, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 1700){
-        float delta = applyCubicEaseOut(1700, 1900, frame, 50);
-        drawLine((Point){ 120, 100}, (Point){120, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 1800){
-        float delta = applyCubicEaseOut(1800, 2000, frame, 50);
-        drawLine((Point){ 125, 100}, (Point){125, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 1900){
-        float delta = applyCubicEaseOut(1900, 2100, frame, 50);
-        drawLine((Point){ 130, 100}, (Point){130, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 2000){
-            float delta = applyCubicEaseOut(2000, 2200, frame, 50);
-       drawLine((Point){ 135, 100}, (Point){135, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 2100){
-            float delta = applyCubicEaseOut(2100, 2300, frame, 50);
-       drawLine((Point){ 140, 100}, (Point){140, 100 + delta}, C_LIGHT_BLUE);
-    }
     if (frame > 2300) {
         setTextRGBColor(LIGHT_BLUE);
-        drawText("VOCE GANHOU!", 24, 28);
-        drawText("Tempo ate captura: 4 dias", 24, 38);
+        drawText("VOCE PERDEU!", 24, 28);
     }
 
 }
@@ -131,7 +89,7 @@ static void winOnFrame(Game *game, int frame) {
 //		}
 
 
-static void winOnExit(Game *game, int frame) {
+static void lossOnExit(Game *game, int frame) {
 	unloadImageAsset(aBtnIconA);
 	unloadImageAsset(aBtnIconB);
 	unloadImageAsset(idle1);
@@ -147,10 +105,11 @@ static void winOnExit(Game *game, int frame) {
 }
 
 
-Scene makeWinScene(Game *game){
-	Scene win;
-	win.onEnter = winOnEnter;
-	win.onFrame = winOnFrame;
-	win.onExit  = winOnExit;
-	return win;
+Scene makeLossScene(Game *game){
+	Scene loss;
+	loss.onEnter = lossOnEnter;
+	loss.onFrame = lossOnFrame;
+	loss.onExit  = lossOnExit;
+	return loss;
 }
+

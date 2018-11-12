@@ -2,7 +2,7 @@
 // SENAC BCC PI 2
 // Projeto Betelgeuse
 //
-// criminosoPreso.h
+// winScene.h
 // estruturas da cena do criminoso preso
 //
 #ifndef betelgeuse_criminoso_preso_scene_h
