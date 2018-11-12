@@ -12,10 +12,12 @@
 #define GRAY 	    98, 105, 100
 #define BLACK 		0, 0, 0
 #define BLUE 		60, 140, 221
+#define YELLOW 		230, 200, 110
 
 #define C_LIGHT_BLUE (Color) {LIGHT_BLUE}
 #define C_GRAY 	 	 (Color) {GRAY}
 #define C_BLACK 	 (Color) {BLACK}
 #define C_BLUE 	 	 (Color) {BLUE}
+#define C_YELLOW 	 (Color) {YELLOW}
 
 #endif

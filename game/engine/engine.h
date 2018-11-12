@@ -95,8 +95,10 @@ typedef struct Destination {
 
 typedef struct City {
     char *name;
-    char *flavorText;
+    char *flavorText[3];
     char *imageName;
+    int imageAlignX;
+    int imageAlignY;
 
     Place pointsOfInterest[POINTS_OF_INTEREST_COUNT];
     Destination destinations[DESTINATIONS_COUNT];

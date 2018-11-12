@@ -66,6 +66,10 @@ void unloadMenuAssets(Game *game) {
 }
 
 
+void closeMenu(Game *game, int optionsCount, optionsDatasource datasource, optionsCallback callback){
+
+}
+
 void showMenu(Game *game, int optionsCount, optionsDatasource datasource, optionsCallback callback){
 
 	game->menuOverlay.visible = true;

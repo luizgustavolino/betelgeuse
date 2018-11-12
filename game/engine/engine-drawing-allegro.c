@@ -155,7 +155,18 @@ void drawText(const char *text,  double x, double y){
 		al_destroy_path(dir);
 	}
 
-	al_draw_text(font, color, x, y, ALLEGRO_ALIGN_LEFT, text);
+	int len = strlen(text);
+	char str[len];
+
+	strcpy(str, text);
+	char *token = strtok(str, ";");
+	int line = 0;
+
+	while (token != NULL) { 
+		al_draw_text(font, color, x, y + line * 12, ALLEGRO_ALIGN_LEFT, token);
+		token = strtok(NULL, ";"); 
+		line ++;
+	}
 	
 }
 

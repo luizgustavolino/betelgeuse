@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include "reportScene.h"
+#include "cityScene.h"
 
 #include "../engine/colors.h"
 
@@ -46,18 +47,8 @@ static void reportOnFrame(Game *game, int frame) {
 
 		setTextRGBColor(GRAY);
 		
-		int len = strlen(game->gameplayContext.stolenItemText);
-		char str[len];
-
-		strcpy(str, game->gameplayContext.stolenItemText);
-	    char *token = strtok(str, ";"); 
-	    int line = 0;
-
-	    while (token != NULL) { 
-	    	drawText(token, 34, 38 + delta + line * 10);
-	        token = strtok(NULL, ";"); 
-	        line ++;
-	    } 
+		char* text = game->gameplayContext.stolenItemText;
+	    drawText(text, 34, 38 + delta);
 
 	} else if (frame > 820) {
 		float delta = applyCubicEaseOut(820, 950, frame, 80);
@@ -72,7 +63,7 @@ static void reportOnFrame(Game *game, int frame) {
 			drawText("investigar", 168, 150);
 
 			if (game->keyState.a == KEY_IS_RELEASED) {
-				changeScene(game, makeReportScene(game));
+				changeScene(game, makeCityScene(game));
 			}
 		}
 	}
@@ -81,6 +72,11 @@ static void reportOnFrame(Game *game, int frame) {
 
 static void reportOnExit(Game *game, int frame) {
 	unloadImageAsset(bgAsset);
+	unloadImageAsset(paperAsset);
+	unloadImageAsset(pathAsset);
+	unloadImageAsset(pathDenseAsset);
+	unloadImageAsset(action_btn_a);
+	unloadImageAsset(action_btn_b);
 }
 
 Scene makeReportScene(Game *game) {

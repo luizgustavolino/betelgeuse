@@ -26,10 +26,14 @@ void loadGameData(Game *game){
 
 	// City A:
 	City firstCity;
-    firstCity.name = "Rio de Janeiro";
-    firstCity.flavorText = "O rio continua sendo;\
-    						Uma cidade maravilhosa";
-    firstCity.imageName = "city-rio.png";
+    firstCity.name = "SP, São Paulo";
+    firstCity.flavorText[0] = "Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.";
+    firstCity.flavorText[1] = "O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;";
+    firstCity.flavorText[2] = "O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.";
+
+    firstCity.imageName = "cities/saopaulo.png";
+    firstCity.imageAlignX = -73;
+    firstCity.imageAlignY = 29;
 	game->gameplayContext.cities[0] = firstCity;
 
 	// Pontos de interesse
