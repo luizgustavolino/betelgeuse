@@ -1,11 +1,11 @@
 //
-// SENAC BCC PI 2 
+// SENAC BCC PI 2
 // Projeto Betelgeuse
 //
 // engine-gameplay.c
 // preenche a struct de jogo com as cidades, dicas
 // locais de interesse, tempo
-// 
+//
 // só a ana altera aqui :B
 
 #include <stdio.h>
@@ -22,7 +22,10 @@ void loadGameData(Game *game){
 	game->gameplayContext.currentCity = 0;
 
 	// TODO ana: carregar estes valores
-	game->gameplayContext.stolenItemText = "Roubaram um negócio;muito importante;para o lins";
+	game->gameplayContext.stolenItemText =  "        ***URGENTE***; ;\
+                                            A fórmula do pão de;queijo acaba de ser;roubada!; ;\
+                                            A receita faz parte do;patrimônio nacional.;\
+                                            Palmirinha está;desesperada! Rápido!;Minas depende de;você!";
 
 	// City A:
 	City firstCity;
@@ -61,7 +64,7 @@ void loadGameData(Game *game){
 	p2.citizenImageName = "Turista";
 	p2.minutesRequired 	= 140;
 	game->gameplayContext.cities[0].pointsOfInterest[2] = p2;
-	
+
 	// Destinos
 
 	Destination d0;

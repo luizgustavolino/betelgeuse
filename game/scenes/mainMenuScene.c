@@ -1,5 +1,5 @@
 //
-// SENAC BCC PI 2 
+// SENAC BCC PI 2
 // Projeto Betelgeuse
 
 #include <stddef.h>
@@ -13,13 +13,14 @@ char* menuOptionsDatasource(Game *game, int option);
 void menuCallback(Game *game, int choosenOption);
 
 // Scene assets
-static int menu_bg, cicle, ribbon;
+static int menu_bg, cicle, Maria, ribbon;
 static int action_btn_a, action_btn_b;
 
 static void mainMenuOnEnter(Game *game, int frame) {
-	
+
 	menu_bg  	= loadImageAsset("main_menu_bg.png");
 	cicle 	 	= loadImageAsset("main_menu_circle.png");
+	Maria       = loadImageAsset("Maria_Figueiredo.png");
 	ribbon 	 	= loadImageAsset("main_menu_ribbon.png");
 
 	action_btn_a = loadImageAsset("btn_a_from_right_a.png");
@@ -37,6 +38,7 @@ static void mainMenuOnFrame(Game *game, int frame) {
 		drawImageAsset(menu_bg, 0, 170 - delta);
 
 		delta = applyBounceEaseOut(390, 690, frame, 160);
+		drawImageAsset(Maria, 59 , delta - 135);
 		drawImageAsset(cicle, 59 , delta - 135);
 
 		delta = applyBackEaseOut(575, 860, frame, 110);
@@ -45,13 +47,13 @@ static void mainMenuOnFrame(Game *game, int frame) {
 	} else {
 
 		float delta = applyCubicEaseOut(860, 990, frame, 70);
-		if ( frame % 170 >= 100) { 
+		if ( frame % 170 >= 100) {
 			drawImageAsset(action_btn_a, 220 - delta , 145);
 		} else {
 			drawImageAsset(action_btn_b, 220 - delta , 145);
 		}
 
-		if ( frame > 990) { 
+		if ( frame > 990) {
 			setTextRGBColor(61, 140, 222);
 			drawText("opções", 178, 150);
 
@@ -82,7 +84,7 @@ void menuCallback(Game *game, int choosenOption) {
 			break;
 		case MAIN_MENU_OPT_CREDITS:
 			break;
-		default: 
+		default:
 			break;
 	}
 }
@@ -90,6 +92,7 @@ void menuCallback(Game *game, int choosenOption) {
 static void mainMenuOnExit(Game *game, int frame) {
 	unloadImageAsset(menu_bg);
 	unloadImageAsset(cicle);
+	unloadImageAsset(Maria);
 	unloadImageAsset(ribbon);
 	unloadImageAsset(action_btn_a);
 	unloadImageAsset(action_btn_b);
