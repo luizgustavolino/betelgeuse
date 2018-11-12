@@ -11,7 +11,7 @@
 // Robber assets. Goes from idle1 to walk2.
 static int robber,exclamation,idle1,idle2,idle3,idle4,walk2,walk3,walk4,walk5,walk6;
 static int aBtnIconA, aBtnIconB;
-float walk = -10;
+static float walk = -10;
 
 static void lossOnEnter(Game *game, int frame) {
 
@@ -57,7 +57,7 @@ static void lossOnFrame(Game *game, int frame) {
         walk = walk + 0.2;
     }
 
-    if (frame > 600 && frame <= 1200){
+    if (frame > 600){
         if (frame % 120 >= 0 && frame % 120 < 30) {
             robber = idle1;
         }
@@ -75,7 +75,7 @@ static void lossOnFrame(Game *game, int frame) {
         drawImageAsset(robber, walk, 100);
     }
 
-    if (frame > 2300) {
+    if (frame > 1200) {
         setTextRGBColor(LIGHT_BLUE);
         drawText("VOCE PERDEU!", 24, 28);
     }

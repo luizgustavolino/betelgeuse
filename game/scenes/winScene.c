@@ -11,8 +11,8 @@
 // Robber assets. Goes from idle1 to walk2.
 static int robber,exclamation,idle1,idle2,idle3,idle4,walk2,walk3,walk4,walk5,walk6;
 static int aBtnIconA, aBtnIconB;
-float walk = -10;
-float down = 0;
+static float walk = -10;
+static float down = 0;
 
 static void winOnEnter(Game *game, int frame) {
 
