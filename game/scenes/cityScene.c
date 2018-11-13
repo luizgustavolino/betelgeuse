@@ -38,6 +38,8 @@ static void cityOnEnter(Game *game, int frame) {
 
 	page_off = loadImageAsset("page_indic_off.png");
 	page_on = loadImageAsset("page_indic_on.png");
+
+	playSoundtrack(game, "intro.wav");
 	
 }
 

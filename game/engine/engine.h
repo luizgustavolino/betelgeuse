@@ -165,6 +165,11 @@ void fillRGB(Game *game, unsigned char r, unsigned char g, unsigned char b);
 void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b);
 void drawText(const char *text,  double x, double y);
 
+// Play/pause audio
+void stopSoundtrack(Game *game);
+void playSfx(Game *game, char* name);
+void playSoundtrack(Game *game, char* name);
+
 // Geometric drawing
 typedef struct Point {
     float x, y;

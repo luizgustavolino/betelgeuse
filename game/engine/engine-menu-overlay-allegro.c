@@ -74,6 +74,7 @@ void showMenu(Game *game, int optionsCount, optionsDatasource datasource, option
 
 	game->menuOverlay.visible = true;
 	closingMenuFrames = 0;
+	currentOption = 0;
 	startFrame = game->frame;
 
 	currentDatasource 	= datasource;
@@ -82,6 +83,8 @@ void showMenu(Game *game, int optionsCount, optionsDatasource datasource, option
 
 	if (pathAsset == 0)  pathAsset = loadImageAsset("menu_overlay_path.png");
 	if (abinHeader == 0) abinHeader = loadImageAsset("menu_header_abin.png");
+
+	playSfx(game, "menu_open.wav");
 
 }
 
@@ -175,12 +178,15 @@ void menuOverlayOnFrame(Game *game, int frame){
 			drawLine((Point){ 54, 72 + i * 27}, (Point){146, 72 + i * 27}, strokeColor);
 		}
 
-		if (game->keyState.down == KEY_IS_RELEASED && currentOption < currentOptionsCount - 1)
+		if (game->keyState.down == KEY_IS_RELEASED && currentOption < currentOptionsCount - 1){
 			currentOption += 1;
-		else if (game->keyState.up == KEY_IS_RELEASED && currentOption > 0)
+			playSfx(game, "menu_up_down.wav");
+		} else if (game->keyState.up == KEY_IS_RELEASED && currentOption > 0) {
 			currentOption -= 1;
-		else if (game->keyState.a == KEY_IS_RELEASED) {
+			playSfx(game, "menu_up_down.wav");
+		} else if (game->keyState.a == KEY_IS_RELEASED) {
 			closingMenuFrames = 90;
+			playSfx(game, "menu_a.wav");
 		}
 
 	}

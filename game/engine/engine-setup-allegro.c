@@ -81,7 +81,7 @@ static bool loadAllegro(Game *game){
 	if(!setupIsOK && errorMessage == NULL)
 		errorMessage = "Failed to initialize allegro acodec addon!";
 
-	setupIsOK = setupIsOK ? al_reserve_samples(1) : false;
+	setupIsOK = setupIsOK ? al_reserve_samples(4) : false;
 	if(!setupIsOK && errorMessage == NULL)
 		errorMessage = "Failed to initialize allegro acodec addon!";
 
