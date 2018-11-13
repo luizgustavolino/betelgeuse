@@ -7,6 +7,7 @@
 #include "mainMenuScene.h"
 #include "splashScene.h"
 #include "reportScene.h"
+#include "creditsScene.h"
 
 // Forward declarations
 char* menuOptionsDatasource(Game *game, int option);
@@ -83,6 +84,7 @@ void menuCallback(Game *game, int choosenOption) {
 			changeScene(game, makeReportScene(game));
 			break;
 		case MAIN_MENU_OPT_CREDITS:
+            changeScene(game, makeCreditsScene(game));
 			break;
 		default:
 			break;
