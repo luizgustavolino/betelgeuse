@@ -22,10 +22,7 @@ void loadGameData(Game *game){
 	game->gameplayContext.currentCity = 0;
 
 	// TODO ana: carregar estes valores
-	game->gameplayContext.stolenItemText =  "        ***URGENTE***; ;\
-                                            A fórmula do pão de;queijo acaba de ser;roubada!; ;\
-                                            A receita faz parte do;patrimônio nacional.;\
-                                            Palmirinha está;desesperada! Rápido!;Minas depende de;você!";
+	game->gameplayContext.stolenItemText =  "        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!";
 
 	// City A:
 	City firstCity;
