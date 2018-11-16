@@ -32,14 +32,9 @@ char *readTXT(Game *game, char *filename, int line){
         fgets(holder, MAXCHAR, fp);
         if(i == line){
             return holder;
-            //libera a variável holder
-            free(holder);
         }
         i++;
     }
-    // Fecha o arquivo
-    fclose(fp);
-    return 0;
 }
 
 void loadGameData(Game *game){
