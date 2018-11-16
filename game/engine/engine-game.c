@@ -2,6 +2,7 @@
 // SENAC BCC PI 2
 // Projeto Betelgeuse
 
+#include <time.h>
 #include "engine.h"
 
 // Forward declaration de
@@ -73,14 +74,7 @@ Game createNewGame(){
     //Fill levels
     for(int i = 0; i < 5; i++){
         LEVEL_1[i] = array[i+1];
-        if(i == 0){
-            LEVEL_2[i] = array[2];
-            LEVEL_3[i] = array[6];
-        }
-        else{
-            LEVEL_2[i] = array[i+1];
-            LEVEL_3[i] = array[i+1];
-        }
+        printf("%d ", LEVEL_1[i]);
     }
     return game;
 }

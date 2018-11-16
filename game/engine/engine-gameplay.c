@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include "engine.h"
 
 // Função que lê a linha escolhida do arquivo .txt selecionado. Retorna a string utilizando a váriavel temporária 'holder'
@@ -40,35 +39,10 @@ char *readTXT(Game *game, char *filename, int line){
 }
 
 void loadGameData(Game *game, int level[]){
-    //***TO DO***
-    //Randomizar 1-16
     //CRIMES -> Arquivo: crime.txt; Definir parâmetro LINE da função 'readTXT'
     //INFO CIDADES + CIDADE + IMAGEM -> Arquivo: cidade.txt; Definir parâmetro LINE da função 'readTXT'
     //DICAS -> Arquivo: dica.txt; Definir parâmetro LINE para input da função 'readTXT'
 
-    //RANDOMIZAR JOGO
-    //BASE: [CRIME] [ATUAL,CERTO,ERRADO,ERRADO,ERRADO] [DICA1,DICA2,DICA3] -> referente ao destino certo
-    //SEQUENCIA 1: [0]  [1,2*,3,4,5]      *proximo destino atual
-    //SEQUENCIA 2:      [2,6*,7,8,9]      *proximo destino atual
-    //SEQUENCIA 3:      [6,10*,11,12,13]     *fim de jogo
-
-    int tam = 16;
-    int array[tam];
-
-    // Preenche o vetor com 1-16
-    for (int i = 0; i < tam; i++) {
-        array[i] = i + 1;
-    }
-
-    // Embaralha o vetor
-    for (int i = 0; i < tam; i++) {
-        int temp = array[i];
-        srand((unsigned)time(NULL));
-        int randomIndex = rand() % tam;
-
-        array[i] = array[randomIndex];
-        array[randomIndex] = temp;
-    }
 
 	Logger.info("loading game data");
     game->gameplayContext.stolenItemText = readTXT(game, "crime.txt", 3*level[0] - 2); // Line jump = 3x - 2
