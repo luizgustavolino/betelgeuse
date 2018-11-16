@@ -1,5 +1,5 @@
 //
-// SENAC BCC PI 2 
+// SENAC BCC PI 2
 // Projeto Betelgeuse
 //
 // engine.h
@@ -12,7 +12,7 @@
 // std includes
 #include <stddef.h>
 #include <stdio.h>
-#include <stdbool.h> 
+#include <stdbool.h>
 
 // 'platform' to 'render' definitions
 #if defined(PLATFORM_WIN) || defined(PLATFORM_MAC) || defined(PLATFORM_LINUX)
@@ -39,14 +39,14 @@ typedef struct Game Game;
 
 // Funções de ciclo de vida de uma cena
 typedef void (*gameloopControl)(Game *game, int frame);
- 
+
 // Estrutura de Cena
 typedef struct Scene {
     gameloopControl onEnter;
     gameloopControl onFrame;
     gameloopControl onExit;
 } Scene;
- 
+
 void changeScene(Game *game, Scene newScene);
 
 // Estrutura que guarda todas as informações
@@ -57,7 +57,7 @@ typedef struct ScreenSetup {
     unsigned int scaleFactor;
     unsigned int fps;
 } ScreenSetup;
- 
+
 // Estrutura que controla as regras do jogo
 // e mantém o estado atual da partida
 
@@ -70,6 +70,7 @@ typedef struct ScreenSetup {
 #define WEEKDAY_WED 2
 #define WEEKDAY_THU 3
 #define WEEKDAY_FRI 4
+#define MAXCHAR 200
 
 typedef struct GameDate {
     int dayOfWeek;
@@ -147,7 +148,7 @@ typedef struct Game {
     MenuOverlay menuOverlay;
 } Game;
 
- 
+
 // Funções de apoio ao motor do jogo
 Game createNewGame();
 void loadGameData(Game *game);
