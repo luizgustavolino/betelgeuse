@@ -8,9 +8,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "engine.h"
 
 // Função que lê a linha escolhida do arquivo .txt selecionado. Retorna a string utilizando a váriavel temporária 'holder'
+
 char *readTXT(Game *game, char *filename, int line){
     FILE *fp;
     char *holder = (char *)malloc(MAXCHAR * sizeof(char));
@@ -37,15 +39,39 @@ char *readTXT(Game *game, char *filename, int line){
     }
 }
 
-void loadGameData(Game *game){
+void loadGameData(Game *game, int level[]){
     //***TO DO***
     //Randomizar 1-16
     //CRIMES -> Arquivo: crime.txt; Definir parâmetro LINE da função 'readTXT'
     //INFO CIDADES + CIDADE + IMAGEM -> Arquivo: cidade.txt; Definir parâmetro LINE da função 'readTXT'
     //DICAS -> Arquivo: dica.txt; Definir parâmetro LINE para input da função 'readTXT'
 
+    //RANDOMIZAR JOGO
+    //BASE: [CRIME] [ATUAL,CERTO,ERRADO,ERRADO,ERRADO] [DICA1,DICA2,DICA3] -> referente ao destino certo
+    //SEQUENCIA 1: [0]  [1,2*,3,4,5]      *proximo destino atual
+    //SEQUENCIA 2:      [2,6*,7,8,9]      *proximo destino atual
+    //SEQUENCIA 3:      [6,10*,11,12,13]     *fim de jogo
+
+    int tam = 16;
+    int array[tam];
+
+    // Preenche o vetor com 1-16
+    for (int i = 0; i < tam; i++) {
+        array[i] = i + 1;
+    }
+
+    // Embaralha o vetor
+    for (int i = 0; i < tam; i++) {
+        int temp = array[i];
+        srand((unsigned)time(NULL));
+        int randomIndex = rand() % tam;
+
+        array[i] = array[randomIndex];
+        array[randomIndex] = temp;
+    }
+
 	Logger.info("loading game data");
-    game->gameplayContext.stolenItemText = readTXT(game, "crime.txt", 1);
+    game->gameplayContext.stolenItemText = readTXT(game, "crime.txt", 3*level[0] - 2); // Line jump = 3x - 2
 	game->gameplayContext.currentTime.dayOfWeek = WEEKDAY_MON;
 	game->gameplayContext.currentTime.hour 		= 9;
 	game->gameplayContext.currentTime.minutes 	= 0;
@@ -53,10 +79,10 @@ void loadGameData(Game *game){
 
 	// City A:
 	City firstCity;
-    firstCity.name = readTXT(game, "cidade.txt", 0);
-    firstCity.flavorText[0] = readTXT(game, "cidade.txt", 2);
-    firstCity.flavorText[1] = readTXT(game, "cidade.txt", 3);
-    firstCity.flavorText[2] = readTXT(game, "cidade.txt", 4);
+    firstCity.name = readTXT(game, "crime.txt", 3*level[0] - 3); // Line jump = 3x - 3
+    firstCity.flavorText[0] = readTXT(game, "cidade.txt", 6*level[0] - 4); // Line jump = 6x - 4
+    firstCity.flavorText[1] = readTXT(game, "cidade.txt", 6*level[0] - 3); // Line jump = 6x - 3
+    firstCity.flavorText[2] = readTXT(game, "cidade.txt", 6*level[0] - 2); // Line jump = 6x - 2
 
     firstCity.imageName = "cities/saopaulo.png";
     firstCity.imageAlignX = -73;
@@ -92,28 +118,28 @@ void loadGameData(Game *game){
 	// Destinos
 
 	Destination d0;
-	d0.name = "Belo Horizonte";
+	d0.name = readTXT(game, "crime.txt", 3*level[1] - 3); // Line jump = 3x - 3
     d0.imageName = "city-bh.png";
     d0.minutesRequired = 300;
     d0.rightChoice = true;
     game->gameplayContext.cities[0].destinations[0] = d0;
 
     Destination d1;
-	d1.name = "Brasilia";
+	d1.name = readTXT(game, "crime.txt", 3*level[2] - 3); // Line jump = 3x - 3
     d1.imageName = "city-brasilia.png";
     d1.minutesRequired = 660;
     d1.rightChoice = false;
     game->gameplayContext.cities[0].destinations[1] = d1;
 
     Destination d2;
-	d2.name = "Recife";
+	d2.name = readTXT(game, "crime.txt", 3*level[3] - 3); // Line jump = 3x - 3
     d2.imageName = "city-recife.png";
     d2.minutesRequired = 720;
     d2.rightChoice = false;
     game->gameplayContext.cities[0].destinations[2] = d2;
 
     Destination d3;
-	d3.name = "Maceió";
+	d3.name = readTXT(game, "crime.txt", 3*level[4] - 3); // Line jump = 3x - 3
     d3.imageName = "city-maceio.png";
     d3.minutesRequired = 780;
     d3.rightChoice = false;

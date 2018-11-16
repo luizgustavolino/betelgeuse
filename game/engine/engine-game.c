@@ -1,5 +1,5 @@
 //
-// SENAC BCC PI 2 
+// SENAC BCC PI 2
 // Projeto Betelgeuse
 
 #include "engine.h"
@@ -15,7 +15,7 @@ void menuOverlayOnFrame(Game *game, int frame);
 
 // # função createNewGame
 // Preenche uma nova estrutura de jogo, com os valores
-// iniciais e ainda sem cena  
+// iniciais e ainda sem cena
 Game createNewGame(){
 
     struct Game game;
@@ -43,16 +43,51 @@ Game createNewGame(){
     game.keyState.left    = KEY_IS_UP;
 
     game.menuOverlay.visible = false;
-    
+
     setupEnvironment(&game);
     preloadMenuAssets(&game);
-    
+
+    //RANDOMIZE LEVELS
+    //BASE: [CRIME] [ATUAL,CERTO,ERRADO,ERRADO,ERRADO] [DICA1,DICA2,DICA3] -> referente ao destino certo
+    //SEQUENCIA 1: [0]  [1,2*,3,4,5]      *proximo destino atual
+    //SEQUENCIA 2:      [2,6*,7,8,9]      *proximo destino atual
+    //SEQUENCIA 3:      [6,10*,11,12,13]  *fim de jogo
+
+    int tam = 16;
+    int array[tam];
+
+    // Preenche o vetor com 1-16
+    for (int i = 0; i < tam; i++) {
+        array[i] = i + 1;
+    }
+
+    // Embaralha o vetor
+    for (int i = 0; i < tam; i++) {
+        int temp = array[i];
+        srand((unsigned)time(NULL));
+        int randomIndex = rand() % tam;
+
+        array[i] = array[randomIndex];
+        array[randomIndex] = temp;
+    }
+    //Fill levels
+    for(int i = 0; i < 5; i++){
+        LEVEL_1[i] = array[i+1];
+        if(i == 0){
+            LEVEL_2[i] = array[2];
+            LEVEL_3[i] = array[6];
+        }
+        else{
+            LEVEL_2[i] = array[i+1];
+            LEVEL_3[i] = array[i+1];
+        }
+    }
     return game;
 }
 
 // # função nextFrame
 void nextFrame(Game *game){
-    
+
     bool shouldRedraw = false;
     loopEnvironmentBeforeFrame(game, &shouldRedraw);
 
@@ -63,19 +98,19 @@ void nextFrame(Game *game){
         if (game->menuOverlay.visible == true) {
             menuOverlayOnFrame(game, game->frame);
         } else if (game->currentScene.onFrame != NULL){
-            game->currentScene.onFrame(game, sceneFrame);            
+            game->currentScene.onFrame(game, sceneFrame);
         }
     }
-    
+
     loopEnvironmentAfterFrame(game, shouldRedraw);
 }
 
 // # função createNewGame
-// Precisa ser chamada no fim do jogo, para gestão 
+// Precisa ser chamada no fim do jogo, para gestão
 // correta da memória
 void endGame(Game *game){
 
-	// Avisa a cena anterior que o jogo acabou	
+	// Avisa a cena anterior que o jogo acabou
     // & platform specifcs
     int frame = game->frame - game->sceneFrame;
 	if (game->currentScene.onExit != NULL) game->currentScene.onExit(game, frame);

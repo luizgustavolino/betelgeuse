@@ -4,7 +4,7 @@
 #include "scenes/splashScene.h"
 #include "scenes/reportScene.h"
 
-// available platforms: 
+// available platforms:
 // - PLATFORM_POKITTO
 // - PLATFORM_WIN
 // - PLATFORM_MAC
@@ -14,18 +14,18 @@
 // - ENGINE_POKITTO
 
 int main(int argc, char **argv){
-    
+
     // informações da plataforma
     setupLogger();
     Logger.info("### SENAC BCC PI 2 // Projeto Betelgeuse ###");
-    
+
     // setup do ambiente + cena inicial
     Game game = createNewGame();
 
 
-    loadGameData(&game);
+    loadGameData(&game, LEVEL_1);
     changeScene(&game, makeReportScene(&game));
-    
+
     // game lyfecycle
     while (game.running) nextFrame(&game);
     endGame(&game);

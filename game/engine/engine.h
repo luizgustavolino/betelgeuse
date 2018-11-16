@@ -40,6 +40,11 @@ typedef struct Game Game;
 // Funções de ciclo de vida de uma cena
 typedef void (*gameloopControl)(Game *game, int frame);
 
+// Game levels
+int LEVEL_1[5];
+int LEVEL_2[5];
+int LEVEL_3[5];
+
 // Estrutura de Cena
 typedef struct Scene {
     gameloopControl onEnter;
@@ -151,7 +156,7 @@ typedef struct Game {
 
 // Funções de apoio ao motor do jogo
 Game createNewGame();
-void loadGameData(Game *game);
+void loadGameData(Game *game, int *level);
 void nextFrame(Game *game);
 void endGame(Game *game);
 
