@@ -68,7 +68,7 @@ void playSoundtrack(Game *game, char* name){
 
 	// filename, buffer_count, samples
 	currentOST = al_load_audio_stream(fullpath, 4, 1024);
-	al_set_audio_stream_gain(currentOST, 0.1);
+	al_set_audio_stream_gain(currentOST, 0.3);
 	al_attach_audio_stream_to_mixer(currentOST, al_get_default_mixer());
 	al_set_audio_stream_playing(currentOST, true);
 

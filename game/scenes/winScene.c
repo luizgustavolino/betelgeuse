@@ -124,13 +124,6 @@ static void winOnFrame(Game *game, int frame) {
 
 }
 
-//   if (frame % 120 > 60) {
-//			drawimageasset(aBtnIconA, 190, 145);
-//		} else {
-//			drawimageasset(aBtnIconB, 190, 145);
-//		}
-
-
 static void winOnExit(Game *game, int frame) {
 	unloadImageAsset(aBtnIconA);
 	unloadImageAsset(aBtnIconB);

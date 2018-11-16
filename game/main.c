@@ -2,7 +2,6 @@
 #include "engine/logger.h"
 #include "engine/engine.h"
 #include "scenes/splashScene.h"
-#include "scenes/mainMenuScene.h"
 #include "scenes/reportScene.h"
 
 // available platforms: 
@@ -22,7 +21,10 @@ int main(int argc, char **argv){
     
     // setup do ambiente + cena inicial
     Game game = createNewGame();
-    changeScene(&game, makeSplashScene(&game));
+
+
+    loadGameData(&game);
+    changeScene(&game, makeReportScene(&game));
     
     // game lyfecycle
     while (game.running) nextFrame(&game);

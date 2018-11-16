@@ -5,16 +5,23 @@
 #include <stddef.h>
 #include <stdio.h>
 #include "cityScene.h"
+#include "cityScene.h"
+#include "destinationsScene.h"
 
 #include "../engine/colors.h"
 
 // ### Declarações de variáveis e funções
 
 static int current_page;
+
+
+static int abin_bg;
+
 static int city_foreground, city_background;
 static int action_btn_a, action_btn_b;
 static int page_off, page_on;
 
+static void drawInterface(Game *game, int frame);
 static void drawPage(Game *game, int pageNum);
 static void drawTime(int day, int hour, int minute);
 
@@ -30,6 +37,7 @@ static void cityOnEnter(Game *game, int frame) {
 	char *background_image = game->gameplayContext.cities[current].imageName;
 	city_background = loadImageAsset(background_image);
 
+	abin_bg = loadImageAsset("abin_pc_bg.png");
 	city_foreground = loadImageAsset("city_foreground.png");
 	current_page = 0;
 
@@ -39,11 +47,14 @@ static void cityOnEnter(Game *game, int frame) {
 	page_off = loadImageAsset("page_indic_off.png");
 	page_on = loadImageAsset("page_indic_on.png");
 
-	playSoundtrack(game, "intro.wav");
+	//playSoundtrack(game, "intro.wav");
 	
 }
 
 static void cityOnFrame(Game *game, int frame) {
+
+	// desenha a interface e fundo
+	drawInterface(game, frame);
 
 	// desenhando texto da cidade
 	drawPage(game, current_page);
@@ -86,6 +97,19 @@ static void cityOnExit(Game *game, int frame) {
 
 // ### Funções de apoio
 
+// desenha a interface e fundo
+static void drawInterface(Game *game, int frame){
+
+	int current = game->gameplayContext.currentCity;
+	int bg_align_x = game->gameplayContext.cities[current].imageAlignX;
+    int bg_align_y = game->gameplayContext.cities[current].imageAlignY;
+
+	drawImageAsset(city_background, bg_align_x, bg_align_y);
+	//drawImageAsset(abin_bg, 0, 0);
+	
+	drawImageAsset(city_foreground, 0, 0);
+}
+
 static void drawTime(int day, int hour, int minute){
 
 	char buffer[16];
@@ -107,12 +131,7 @@ static void drawTime(int day, int hour, int minute){
 
 static void drawPage(Game *game, int pageNum){
 
-	int current    = game->gameplayContext.currentCity;
-	int bg_align_x = game->gameplayContext.cities[current].imageAlignX;
-    int bg_align_y = game->gameplayContext.cities[current].imageAlignY;
-
-	drawImageAsset(city_background, bg_align_x, bg_align_y);
-	drawImageAsset(city_foreground, 0, 0);
+	int current = game->gameplayContext.currentCity;
 
 	setTextRGBColor(YELLOW);
 	drawText(game->gameplayContext.cities[current].name, 85, 11);
@@ -141,6 +160,7 @@ void menuCallback(Game *game, int choosenOption) {
 		case CITY_MENU_OPT_INVESTIGATE:
 			break;
 		case CITY_MENU_OPT_FLY:
+			changeScene(game, makeDestinationsScene(game));
 			break;
 		case CITY_MENU_OPT_BACK:
 			break;

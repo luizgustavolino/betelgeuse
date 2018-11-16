@@ -13,14 +13,14 @@ char* menuOptionsDatasource(Game *game, int option);
 void menuCallback(Game *game, int choosenOption);
 
 // Scene assets
-static int menu_bg, cicle, Maria, ribbon;
+static int menu_bg, cicle, maria, ribbon;
 static int action_btn_a, action_btn_b;
 
 static void mainMenuOnEnter(Game *game, int frame) {
 
 	menu_bg  	= loadImageAsset("main_menu_bg.png");
 	cicle 	 	= loadImageAsset("main_menu_circle.png");
-	Maria       = loadImageAsset("Maria_Figueiredo.png");
+	maria       = loadImageAsset("Maria_Figueiredo.png");
 	ribbon 	 	= loadImageAsset("main_menu_ribbon.png");
 
 	action_btn_a = loadImageAsset("btn_a_from_right_a.png");
@@ -37,8 +37,10 @@ static void mainMenuOnFrame(Game *game, int frame) {
 		float delta = applyCubicEaseOut(0, 520, frame, 184);
 		drawImageAsset(menu_bg, 0, 170 - delta);
 
+		delta = applyBounceEaseOut(397, 697, frame, 160);
+		drawImageAsset(maria, 59 , delta - 135);
+
 		delta = applyBounceEaseOut(390, 690, frame, 160);
-		drawImageAsset(Maria, 59 , delta - 135);
 		drawImageAsset(cicle, 59 , delta - 135);
 
 		delta = applyBackEaseOut(575, 860, frame, 110);
@@ -92,7 +94,7 @@ void menuCallback(Game *game, int choosenOption) {
 static void mainMenuOnExit(Game *game, int frame) {
 	unloadImageAsset(menu_bg);
 	unloadImageAsset(cicle);
-	unloadImageAsset(Maria);
+	unloadImageAsset(maria);
 	unloadImageAsset(ribbon);
 	unloadImageAsset(action_btn_a);
 	unloadImageAsset(action_btn_b);

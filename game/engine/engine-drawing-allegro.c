@@ -139,7 +139,8 @@ void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b){
 	color = al_map_rgb(r,g,b);
 }
 
-void drawText(const char *text,  double x, double y){
+
+static void drawAlignedText(const char *text,  double x, double y, bool centralized){
 
 	// load font, if needed
 	if (font == NULL) {
@@ -162,12 +163,22 @@ void drawText(const char *text,  double x, double y){
 	char *token = strtok(str, ";");
 	int line = 0;
 
-	while (token != NULL) { 
-		al_draw_text(font, color, x, y + line * 12, ALLEGRO_ALIGN_LEFT, token);
+	while (token != NULL) {
+		int align = centralized ? ALLEGRO_ALIGN_CENTRE : ALLEGRO_ALIGN_LEFT;
+		al_draw_text(font, color, x, y + line * 12, align, token);
 		token = strtok(NULL, ";"); 
 		line ++;
 	}
 	
+}
+
+
+void drawText(const char *text,  double x, double y){
+	drawAlignedText(text, x, y, false);
+}
+
+void drawCentralizedText(const char *text,  double x, double y){
+	drawAlignedText(text, x, y, true);
 }
 
 void drawLine(Point a, Point b, Color rgb){
