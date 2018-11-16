@@ -41,9 +41,9 @@ typedef struct Game Game;
 typedef void (*gameloopControl)(Game *game, int frame);
 
 // Game levels
-int LEVEL_1[5];
-int LEVEL_2[5];
-int LEVEL_3[5];
+int LEVEL_1[];
+int LEVEL_2[];
+int LEVEL_3[];
 
 // Estrutura de Cena
 typedef struct Scene {

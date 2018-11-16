@@ -49,10 +49,11 @@ Game createNewGame(){
     preloadMenuAssets(&game);
 
     //RANDOMIZE LEVELS
-    //BASE: [CRIME] [ATUAL,CERTO,ERRADO,ERRADO,ERRADO] [DICA1,DICA2,DICA3] -> referente ao destino certo
-    //SEQUENCIA 1: [0]  [1,2*,3,4,5]      *proximo destino atual
-    //SEQUENCIA 2:      [2,6*,7,8,9]      *proximo destino atual
-    //SEQUENCIA 3:      [6,10*,11,12,13]  *fim de jogo
+    //BASE: [CRIME = ATUAL,CERTO,ERRADO,ERRADO,ERRADO] [DICA1,DICA2,DICA3] -> referente ao destino certo
+    //Números são referentes aos índices da array original
+    //LEVEL 1:      [0,1*,2,3,4]     *destino certo
+    //LEVEL 2:      [1,5*,6,7,8]     *destino certo
+    //LEVEL 3:      [5,9*,10,11,12]  *fim de jogo
 
     int tam = 16;
     int array[tam];
@@ -62,20 +63,37 @@ Game createNewGame(){
         array[i] = i + 1;
     }
 
-    // Embaralha o vetor
-    for (int i = 0; i < tam; i++) {
-        int temp = array[i];
-        srand((unsigned)time(NULL));
-        int randomIndex = rand() % tam;
+    // Troca
+    void swap(int *a, int *b) {
+        int temp = *a;
+        *a = *b;
+        *b = temp;
+    }
 
-        array[i] = array[randomIndex];
-        array[randomIndex] = temp;
+    // Embaralha o vetor
+    srand(time(NULL));
+    int i;
+    for(i = tam-1; i > 0; i--) {
+        int j = rand() % (i+1);
+        swap(&array[i], &array[j]);
     }
+
     //Fill levels
-    for(int i = 0; i < 5; i++){
-        LEVEL_1[i] = array[i+1];
-        printf("%d ", LEVEL_1[i]);
+    LEVEL_1[0] = array[0]; // Crime
+    for(int i = 1; i < 5; i++){
+        LEVEL_1[i] = array[i];
     }
+
+    LEVEL_2[0] = LEVEL_1[1]; // Destino certo
+    for(int i = 5; i < 9; i++){
+        LEVEL_2[i-5] = array[i];
+    }
+
+    LEVEL_3[0] = LEVEL_2[1]; // Destino certo
+    for(int i = 9; i < 13; i++){
+        LEVEL_3[i-9] = array[i];
+    }
+
     return game;
 }
 
