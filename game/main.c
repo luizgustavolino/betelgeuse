@@ -2,7 +2,7 @@
 #include "engine/logger.h"
 #include "engine/engine.h"
 #include "scenes/splashScene.h"
-#include "scenes/winScene.h"
+#include "scenes/finalScene.h"
 
 // available platforms:
 // - PLATFORM_POKITTO
@@ -24,7 +24,7 @@ int main(int argc, char **argv){
 
 
     loadGameData(&game, LEVEL_1);
-    changeScene(&game, makeWinScene(&game));
+    changeScene(&game, makeFinalScene(&game));
 
     // game lyfecycle
     while (game.running) nextFrame(&game);

@@ -4,17 +4,20 @@
 
 #include <stddef.h>
 #include <stdio.h>
-#include "winScene.h"
+#include "finalScene.h"
+#include "creditsScene.h"
 
 #include "../engine/colors.h"
 
+//!!!TO-DO!!! READ RESULT AND DEFINE OUTCOME
+//-> If win: play win song and write win text. Else: play loss song and write loss text.
+
 static int bgAsset, pathAsset, pathDenseAsset, mobile, popup, windowPopup, smoke_1, smoke_2, smoke_3;
-static int aBtnIconA, aBtnIconB;
+static int action_btn_a, action_btn_b;
 //Animation
-static int startDly = 500;
+static int startDly = 500, endFrame; //Delay till the phone starts ringing. Could play an intro song or write some story text
 
-
-static void winOnEnter(Game *game, int frame) {
+static void finalOnEnter(Game *game, int frame) {
     bgAsset 		= loadImageAsset("report_bg.png");
 	pathAsset 		= loadImageAsset("menu_overlay_path.png");
 	pathDenseAsset 	= loadImageAsset("menu_overlay_path_dense.png");
@@ -25,16 +28,16 @@ static void winOnEnter(Game *game, int frame) {
 	smoke_2      	= loadImageAsset("smoke_2.png");
 	smoke_3     	= loadImageAsset("smoke_3.png");
 
-	aBtnIconA	= loadImageAsset("main_a_btn_icon_a.png");
-	aBtnIconB	= loadImageAsset("main_a_btn_icon_b.png");
+	action_btn_a	= loadImageAsset("btn_a_from_right_a.png");
+	action_btn_b	= loadImageAsset("btn_a_from_right_b.png");
 
 }
 
-static void winOnFrame(Game *game, int frame) {
+static void finalOnFrame(Game *game, int frame) {
+
+    endFrame = startDly + 2400;
 
 	if (frame == 1) fillRGB(game, BLACK);
-    if (frame < 60) return;
-
 	if (frame == 120) {
 		drawImageAsset(bgAsset, 0, 0);
 		for(int x = 0; x < 11; x++) for(int y = 0; y < 11; y++)
@@ -45,7 +48,7 @@ static void winOnFrame(Game *game, int frame) {
 		for(int x = 0; x < 11; x++) for(int y = 0; y < 11; y++)
 			drawImageAsset(pathAsset, x*20, y*20);
 
-    } else if (frame >= 240) {
+    } else if (frame >= 240 && frame < endFrame) {
 		drawImageAsset(bgAsset, 0, 0);
 		if ( frame % 360 >= 0 && frame % 360 < 90) {
 			drawImageAsset(smoke_1, 36, 103);
@@ -73,19 +76,34 @@ static void winOnFrame(Game *game, int frame) {
         }
     }
 
-    if (frame >= startDly + 1800){
+    if (frame >= startDly + 1800 && frame < endFrame){
         if(frame == startDly + 1800) playSfx(game, "gameLoss.wav");
         float delta = 170 - applyCubicEaseOut(startDly + 1800, startDly + 1930, frame, 170);
-		drawImageAsset(windowPopup, 0, 0 + delta);
+		drawImageAsset(windowPopup, 0, delta - 14);
 
 		setTextRGBColor(LIGHT_BLUE);
 
-		char* text = "O bandido escapou e foi visto pela;ultima vez na cidade Belo Horizonte.; ;Voce esta DEMITIDO, recruta.; ;; ;; ;ABIN;Agencia Brasileira de Inteligencia";
-	    drawText(text, 20, 34 + delta);
+		char* text = "     *** O bandido escapou ***; ;    Foi visto pela ultima vez na;    cidade Belo Horizonte.; ;    Voce esta DEMITIDO, recruta.; ;Ass.;ABIN;Agencia Brasileira de Inteligencia";
+	    drawText(text, 20, 14 + delta);
+    }
+
+    if (frame >= startDly + 2400){
+        float delta = applyCubicEaseOut(startDly + 2400, startDly + 2530, frame, 70);
+		if ( frame % 170 >= 100) {
+			drawImageAsset(action_btn_a, 215 - delta , 145);
+		} else {
+			drawImageAsset(action_btn_b, 215 - delta , 145);
+		} if ( frame > startDly + 2530) {
+            setTextRGBColor(61, 140, 222);
+			drawText("creditos", 173, 150);
+
+        } if (game->keyState.a == KEY_IS_RELEASED) {
+            changeScene(game, makeCreditsScene(game));
+        }
     }
 }
 
-static void winOnExit(Game *game, int frame) {
+static void finalOnExit(Game *game, int frame) {
     unloadImageAsset(bgAsset);
 	unloadImageAsset(pathAsset);
 	unloadImageAsset(pathDenseAsset);
@@ -95,15 +113,15 @@ static void winOnExit(Game *game, int frame) {
 	unloadImageAsset(smoke_1);
 	unloadImageAsset(smoke_2);
 	unloadImageAsset(smoke_3);
-	unloadImageAsset(aBtnIconA);
-	unloadImageAsset(aBtnIconB);
+	unloadImageAsset(action_btn_a);
+	unloadImageAsset(action_btn_b);
 }
 
 
-Scene makeWinScene(Game *game){
-	Scene win;
-	win.onEnter = winOnEnter;
-	win.onFrame = winOnFrame;
-	win.onExit  = winOnExit;
-	return win;
+Scene makeFinalScene(Game *game){
+	Scene final;
+	final.onEnter = finalOnEnter;
+	final.onFrame = finalOnFrame;
+	final.onExit  = finalOnExit;
+	return final;
 }
