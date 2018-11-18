@@ -78,6 +78,7 @@ static void finalOnFrame(Game *game, int frame) {
 
     if (frame >= startDly + 1800 && frame < endFrame){
         if(frame == startDly + 1800) playSfx(game, "gameLoss.wav");
+        if(frame == startDly + 2220) playSoundtrack(game, "gameOver.wav");
         float delta = 170 - applyCubicEaseOut(startDly + 1800, startDly + 1930, frame, 170);
 		drawImageAsset(windowPopup, 0, delta - 14);
 
