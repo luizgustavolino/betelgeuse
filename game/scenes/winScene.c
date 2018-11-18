@@ -8,135 +8,95 @@
 
 #include "../engine/colors.h"
 
-// Robber assets. Goes from idle1 to walk2.
-static int robber,exclamation,idle1,idle2,idle3,idle4,walk2,walk3,walk4,walk5,walk6;
+static int bgAsset, pathAsset, pathDenseAsset, mobile, popup, windowPopup, smoke_1, smoke_2, smoke_3;
 static int aBtnIconA, aBtnIconB;
-static float walk = -10;
-static float down = 0;
+//Animation
+static int startDly = 500;
+
 
 static void winOnEnter(Game *game, int frame) {
+    bgAsset 		= loadImageAsset("report_bg.png");
+	pathAsset 		= loadImageAsset("menu_overlay_path.png");
+	pathDenseAsset 	= loadImageAsset("menu_overlay_path_dense.png");
+	mobile      	= loadImageAsset("mobile.png");
+	popup      	    = loadImageAsset("popup.png");
+	windowPopup     = loadImageAsset("window.png");
+	smoke_1      	= loadImageAsset("smoke_1.png");
+	smoke_2      	= loadImageAsset("smoke_2.png");
+	smoke_3     	= loadImageAsset("smoke_3.png");
 
 	aBtnIconA	= loadImageAsset("main_a_btn_icon_a.png");
 	aBtnIconB	= loadImageAsset("main_a_btn_icon_b.png");
-	idle1       = loadImageAsset("robber_idle_1.png");
-	idle2       = loadImageAsset("robber_idle_2.png");
-	idle3       = loadImageAsset("robber_idle_3.png");
-	idle4       = loadImageAsset("robber_idle_4.png");
-	walk2       = loadImageAsset("robber_walk_2.png");
-	walk3       = loadImageAsset("robber_walk_3.png");
-	walk4       = loadImageAsset("robber_walk_4.png");
-	walk5       = loadImageAsset("robber_walk_5.png");
-	walk6       = loadImageAsset("robber_walk_6.png");
-	exclamation = loadImageAsset("exclamation.png");
+
 }
 
 static void winOnFrame(Game *game, int frame) {
 
 	if (frame == 1) fillRGB(game, BLACK);
-    if (frame > 60 && frame <= 600){
-        if (frame % 180 >= 0 && frame % 180 < 30) {
-            robber = idle1;
+    if (frame < 60) return;
+
+	if (frame == 120) {
+		drawImageAsset(bgAsset, 0, 0);
+		for(int x = 0; x < 11; x++) for(int y = 0; y < 11; y++)
+			drawImageAsset(pathDenseAsset, x*20, y*20);
+
+	} else if (frame == 180) {
+		drawImageAsset(bgAsset, 0, 0);
+		for(int x = 0; x < 11; x++) for(int y = 0; y < 11; y++)
+			drawImageAsset(pathAsset, x*20, y*20);
+
+    } else if (frame >= 240) {
+		drawImageAsset(bgAsset, 0, 0);
+		if ( frame % 360 >= 0 && frame % 360 < 90) {
+			drawImageAsset(smoke_1, 36, 103);
+		} else if ( frame % 360 >= 90 && frame % 360 < 180) {
+			drawImageAsset(smoke_2, 36, 103);
+        } else if ( frame % 360 >= 180 && frame % 360 < 270) {
+			drawImageAsset(smoke_3, 36, 103);
+        } else if ( frame % 360 >= 270 && frame % 360 < 360) {
+			drawImageAsset(smoke_2, 36, 103);
+
+        } if (frame >= startDly && frame < startDly + 400) {
+            if(frame == startDly) playSfx(game, "mobile.wav");
+            if ( frame % 40 >= 20) {
+                drawImageAsset(mobile, 62, 117);
+            }
+        } else if (frame >= startDly + 900 && frame < startDly + 1300) {
+            if(frame == startDly + 900) playSfx(game, "mobile.wav");
+            if ( frame % 40 >= 20) {
+                drawImageAsset(mobile, 62, 117);
+            }
+        } if (frame >= startDly + 1400) {
+            if(frame == startDly + 1400) playSfx(game, "popup.wav");
+            drawImageAsset(popup, 110, 78);
+
         }
-        if (frame % 180 >= 30 && frame % 180 < 60) {
-            robber = walk2;
-        }
-        if (frame % 180 >= 60 && frame % 180 < 90) {
-            robber = walk3;
-        }
-        if (frame % 180 >= 90 && frame % 180 < 120) {
-            robber = walk4;
-        }
-        if (frame % 180 >= 120 && frame % 180 < 150) {
-            robber = walk5;
-        }
-        if (frame % 180 >= 150 && frame % 180 < 180) {
-            robber = walk6;
-        }
-        fillRGB(game, BLACK);
-        drawImageAsset(robber, walk, 100);
-        //x-position of the robber
-        walk = walk + 0.2;
     }
 
-    if (frame > 600 && frame <= 1200){
-        if (frame % 120 >= 0 && frame % 120 < 30) {
-            robber = idle1;
-        }
-        if (frame % 120 >= 30 && frame % 120 < 60) {
-            robber = idle2;
-        }
-        if (frame % 120 >= 60 && frame % 60 < 90) {
-            robber = idle3;
-        }
-        if (frame % 120 >= 90 && frame % 120 < 120){
-            robber = idle4;
-        }
+    if (frame >= startDly + 1800){
+        if(frame == startDly + 1800) playSfx(game, "gameLoss.wav");
+        float delta = 170 - applyCubicEaseOut(startDly + 1800, startDly + 1930, frame, 170);
+		drawImageAsset(windowPopup, 0, 0 + delta);
 
-        fillRGB(game, BLACK);
-        drawImageAsset(robber, walk, 100);
-    }
+		setTextRGBColor(LIGHT_BLUE);
 
-    if (frame > 1200 && frame <= 1400){
-        drawImageAsset(exclamation, 130, 100);
+		char* text = "O bandido escapou e foi visto pela;ultima vez na cidade Belo Horizonte.; ;Voce esta DEMITIDO, recruta.; ;; ;; ;ABIN;Agencia Brasileira de Inteligencia";
+	    drawText(text, 20, 34 + delta);
     }
-
-    if (frame > 1400){
-        // reset screen
-        fillRGB(game, BLACK);
-        drawImageAsset(robber, walk, 100);
-
-        float delta = applyCubicEaseOut(1400, 1600, frame, 50);
-        drawLine((Point){ 105, 100}, (Point){105, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 1500){
-        float delta = applyCubicEaseOut(1500, 1700, frame, 50);
-        drawLine((Point){ 110, 100}, (Point){110, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 1600){
-        float delta = applyCubicEaseOut(1600, 1800, frame, 50);
-        drawLine((Point){ 115, 100}, (Point){115, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 1700){
-        float delta = applyCubicEaseOut(1700, 1900, frame, 50);
-        drawLine((Point){ 120, 100}, (Point){120, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 1800){
-        float delta = applyCubicEaseOut(1800, 2000, frame, 50);
-        drawLine((Point){ 125, 100}, (Point){125, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 1900){
-        float delta = applyCubicEaseOut(1900, 2100, frame, 50);
-        drawLine((Point){ 130, 100}, (Point){130, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 2000){
-            float delta = applyCubicEaseOut(2000, 2200, frame, 50);
-       drawLine((Point){ 135, 100}, (Point){135, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 2100){
-            float delta = applyCubicEaseOut(2100, 2300, frame, 50);
-       drawLine((Point){ 140, 100}, (Point){140, 100 + delta}, C_LIGHT_BLUE);
-    }
-    if (frame > 2300) {
-        setTextRGBColor(LIGHT_BLUE);
-        drawText("VOCE GANHOU!", 24, 28);
-        drawText("Tempo ate captura: 4 dias", 24, 38);
-    }
-
 }
 
 static void winOnExit(Game *game, int frame) {
+    unloadImageAsset(bgAsset);
+	unloadImageAsset(pathAsset);
+	unloadImageAsset(pathDenseAsset);
+	unloadImageAsset(mobile);
+	unloadImageAsset(popup);
+	unloadImageAsset(windowPopup);
+	unloadImageAsset(smoke_1);
+	unloadImageAsset(smoke_2);
+	unloadImageAsset(smoke_3);
 	unloadImageAsset(aBtnIconA);
 	unloadImageAsset(aBtnIconB);
-	unloadImageAsset(idle1);
-	unloadImageAsset(idle2);
-	unloadImageAsset(idle3);
-	unloadImageAsset(idle4);
-	unloadImageAsset(walk2);
-	unloadImageAsset(walk3);
-	unloadImageAsset(walk4);
-	unloadImageAsset(walk5);
-	unloadImageAsset(walk6);
-	unloadImageAsset(exclamation);
 }
 
 
