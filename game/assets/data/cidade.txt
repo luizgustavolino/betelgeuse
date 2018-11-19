@@ -66,31 +66,30 @@ A cidade é com-;posta pela ilha prin-;cipal e tem mais;algumas ilhas cir-;cunda
 
 RS, Porto Alegre
 cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-Fundada em 1772 
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
+Fundada em 1772;e povoada por casais;portugueses, hoje;é sede da maior;concentração urbana da;região Sul e quinta;mais populosa do;Brasil.
+O município é conhecido;como "Capital dos;Gaúchos", tem uma;cultura diversificada,;possui ricas;tradições folclóricas,;e um significativo;patrimônio histórico;
+com numerosos museus.;O mês mais quente;do ano é janeiro,;com média de 30ºC.;Mais frio é julho,;10ºC.
 
 AM, Manaus
 cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
+Fundada em 1669;pelos portugueses,;a cidade é o mais;importante centro de;estudos científicos de;sustentabilidade.;Conhecida como "Paris;dos Trópicos",
+devido a sua intensa;modernização durante;a época áurea da;borracha, atraindo;investimentos es-;trangeiros e imi-;grantes de algumas;partes do mundo.;
+O mês mais quente;do ano é setembro,;com média de 33ºC.;Mais frio é junho,;23ºC. A precipitação;média é de 2300mm;anuais, concentra-;dos no verão.
 
 PA, Belém
 cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
+Fundada em 1616;pelos portugueses, é;uma cidade histórica;e portuária,;sendo a capital mais;chuvosa do Brasil;devido a seu clima;equatorial.
+A cidade exerce sig-;nificativa influência;como metrópole;regional, influen-;ciando mais de 8;milhões de pessoas;nos estados do Pará,;Amapá e Maranhão,;
+seja do ponto de;vista cultural, eco-;nômico ou político.;A precipitação mé-;dia é de 3000mm anuais,;concentrados;no verão.
 
 AC, Rio Branco
-cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
+cities/saopaulo.png.
+Fundada em 1882,;foi uma das últimas;cidades do Brasil;a ser efetivamente;povoada e localiza-se;às margens do Rio;Acre. O desenvolvi-;mento do município; 
+ocorreu durante um;grande período dado;pelo Ciclo da Borracha.;Atualmente, a;madeira é o principal;produto de exportação;do estado, que;também é um grande;
+produtor de castanha-;do-pará, fruto;do açaí e óleo da;copaíba. O mês mais;quente do ano é se-;tembro, com média de;33ºC. Mais frio;é julho, 17ºC.
 
 DF, Brasília
 cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
+Fundada em 1960,;pelo então presidente;Juscelino Kubitschek,;é a terceira;capital federal do;Brasil e a sede do;governo do Distrito;Federal. 
+O arquiteto Oscar;Niemeyer projetou os;principais prédios;públicos do muni-;cípio, é a terceira;cidade mais rica;do país. A economia;de Brasília tem como;
+principais bases;a construção civil e;o varejo. E é;classificada como;Patrimônio Cultural;da Humanidade. 
