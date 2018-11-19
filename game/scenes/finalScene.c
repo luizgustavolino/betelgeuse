@@ -1,4 +1,4 @@
-//
+﻿//
 // SENAC BCC PI 2
 // Projeto Betelgeuse
 
@@ -84,7 +84,7 @@ static void finalOnFrame(Game *game, int frame) {
 
 		setTextRGBColor(LIGHT_BLUE);
 
-		char* text = "     *** O bandido escapou ***; ;    Foi visto pela ultima vez na;    cidade Belo Horizonte.; ;    Voce esta DEMITIDO, recruta.; ;Ass.;ABIN;Agencia Brasileira de Inteligencia";
+		char* text = "     *** O bandido escapou ***; ;    Foi visto pela última vez na;    cidade Belo Horizonte.; ;    Você está DEMITIDO, recruta.; ;Ass.;ABIN;Agência Brasileira de Inteligência";
 	    drawText(text, 20, 14 + delta);
     }
 
@@ -96,7 +96,7 @@ static void finalOnFrame(Game *game, int frame) {
 			drawImageAsset(action_btn_b, 215 - delta , 145);
 		} if ( frame > startDly + 2530) {
             setTextRGBColor(61, 140, 222);
-			drawText("creditos", 173, 150);
+			drawText("créditos", 173, 150);
 
         } if (game->keyState.a == KEY_IS_RELEASED) {
             changeScene(game, makeCreditsScene(game));

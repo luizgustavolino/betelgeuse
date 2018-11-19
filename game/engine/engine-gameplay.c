@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "math.h"
 #include "engine.h"
 
 // Função que lê a linha escolhida do arquivo .txt selecionado. Retorna a string utilizando a váriavel temporária 'holder'
@@ -38,6 +39,54 @@ char *readTXT(Game *game, char *filename, int line){
     }
 }
 
+int roundFloatToInt(float x){
+    int y;
+
+    y = (int)(x + 0.5);
+
+    return y;
+}
+
+float deg2rad(float deg) {
+  return (deg * PI / 180);
+}
+
+float rad2deg(float rad) {
+  return (rad * 180 / PI);
+}
+
+//Capture the thief before FRYDAY
+//Can work from 9:00 to 18:00, so after 18:00 PM change day
+
+//Function that calculates the travel time between cities and returns time in hour and minutes.
+//Input should be (City A Latitude, City A Longitude, City B Latitude, City B Longitude)
+//Max travel time based on: Max distance 4.394km (North to South), JET average speed 2.000 km/h. -> MAX TIME: 130 minutes
+//I added up the airport times to it to make it more believable. So each flight is equal to 3 hours + Jet travel time.
+//We can tweak these numbers for balance purposes.
+int travelTime(float lat1, float lon1, float lat2, float lon2){
+
+    //***CODE FROM GEODATASOURCE -> https://www.geodatasource.com/developers/c***
+    float theta, dist;
+
+    theta = lon1 - lon2;
+    dist = sin(deg2rad(lat1)) * sin(deg2rad(lat2)) + cos(deg2rad(lat1)) * cos(deg2rad(lat2)) * cos(deg2rad(theta));
+    dist = acos(dist);
+    dist = rad2deg(dist);
+    dist = dist * 60 * 1.1515;
+    //Distance in km
+    dist = dist * 1.609344;
+    //***End of code from source***
+
+    const int airportTime = 180; //Airport time in minutes. Same for every flight
+
+    int size = 310; //Based on Max travel time + airport time
+    int *minutes;
+
+    minutes = (int*) malloc(size * sizeof(int));
+	minutes = roundFloatToInt(airportTime + dist * 60/2000); //1 hour (in minutes) divided by the speed of the JET times the travel distance
+	return minutes;
+}
+
 void loadGameData(Game *game, int level[]){
     //CRIMES -> Arquivo: crime.txt; Definir parâmetro LINE da função 'readTXT'
     //INFO CIDADES + CIDADE + IMAGEM -> Arquivo: cidade.txt; Definir parâmetro LINE da função 'readTXT'
@@ -61,6 +110,8 @@ void loadGameData(Game *game, int level[]){
     firstCity.imageName = "cities/saopaulo.png";
     firstCity.imageAlignX = -73;
     firstCity.imageAlignY = 29;
+    firstCity.Latitude  = atoi(readTXT(game, "coordenadas.txt", 4*level[0]-3)); // Line jump = 4x - 3
+    firstCity.Longitude = atoi(readTXT(game, "coordenadas.txt", 4*level[0]-2)); // Line jump = 4x - 2
 	game->gameplayContext.cities[0] = firstCity;
 
 	// Pontos de interesse
@@ -94,29 +145,37 @@ void loadGameData(Game *game, int level[]){
 	Destination d0;
 	d0.name = readTXT(game, "crime.txt", 3*level[1] - 3); // Line jump = 3x - 3
     d0.imageName = "city-bh.png";
-    d0.minutesRequired = 300;
     d0.rightChoice = true;
+    d0.Latitude  = atoi(readTXT(game, "coordenadas.txt", 4*level[1]-3)); // Line jump = 4x - 3
+    d0.Longitude = atoi(readTXT(game, "coordenadas.txt", 4*level[1]-2)); // Line jump = 4x - 2
+    d0.minutesRequired = travelTime(firstCity.Latitude, firstCity.Longitude, d0.Latitude, d0.Longitude);
     game->gameplayContext.cities[0].destinations[0] = d0;
 
     Destination d1;
 	d1.name = readTXT(game, "crime.txt", 3*level[2] - 3); // Line jump = 3x - 3
     d1.imageName = "city-brasilia.png";
-    d1.minutesRequired = 660;
     d1.rightChoice = false;
+    d1.Latitude  = atoi(readTXT(game, "coordenadas.txt", 4*level[2]-3)); // Line jump = 4x - 3
+    d1.Longitude = atoi(readTXT(game, "coordenadas.txt", 4*level[2]-2)); // Line jump = 4x - 2
+    d1.minutesRequired = travelTime(firstCity.Latitude, firstCity.Longitude, d1.Latitude, d1.Longitude);
     game->gameplayContext.cities[0].destinations[1] = d1;
 
     Destination d2;
 	d2.name = readTXT(game, "crime.txt", 3*level[3] - 3); // Line jump = 3x - 3
     d2.imageName = "city-recife.png";
-    d2.minutesRequired = 720;
     d2.rightChoice = false;
+    d2.Latitude  = atoi(readTXT(game, "coordenadas.txt", 4*level[3]-3)); // Line jump = 4x - 3
+    d2.Longitude = atoi(readTXT(game, "coordenadas.txt", 4*level[3]-2)); // Line jump = 4x - 2
+    d2.minutesRequired = travelTime(firstCity.Latitude, firstCity.Longitude, d2.Latitude, d2.Longitude);
     game->gameplayContext.cities[0].destinations[2] = d2;
 
     Destination d3;
 	d3.name = readTXT(game, "crime.txt", 3*level[4] - 3); // Line jump = 3x - 3
     d3.imageName = "city-maceio.png";
-    d3.minutesRequired = 780;
     d3.rightChoice = false;
+    d3.Latitude  = atoi(readTXT(game, "coordenadas.txt", 4*level[4]-3)); // Line jump = 4x - 3
+    d3.Longitude = atoi(readTXT(game, "coordenadas.txt", 4*level[4]-2)); // Line jump = 4x - 2
+    d3.minutesRequired = travelTime(firstCity.Latitude, firstCity.Longitude, d3.Latitude, d3.Longitude);
     game->gameplayContext.cities[0].destinations[3] = d3;
 
 }

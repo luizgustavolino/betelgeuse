@@ -97,6 +97,8 @@ typedef struct Destination {
     char *imageName;
     int minutesRequired;
     bool rightChoice;
+    int Latitude;
+    int Longitude;
 } Destination;
 
 typedef struct City {
@@ -105,6 +107,8 @@ typedef struct City {
     char *imageName;
     int imageAlignX;
     int imageAlignY;
+    int Latitude;
+    int Longitude;
 
     Place pointsOfInterest[POINTS_OF_INTEREST_COUNT];
     Destination destinations[DESTINATIONS_COUNT];
