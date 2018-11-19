@@ -82,12 +82,12 @@ void loadGameData(Game *game){
 
     LEVEL_2[0] = LEVEL_1[1]; // Destino certo
     for(int i = 5; i < 9; i++){
-        LEVEL_2[i-5] = array[i];
+        LEVEL_2[i-4] = array[i];
     }
 
     LEVEL_3[0] = LEVEL_2[1]; // Destino certo
     for(int i = 9; i < 13; i++){
-        LEVEL_3[i-9] = array[i];
+        LEVEL_3[i-8] = array[i];
     }
 
     loadGameLevel(game, LEVEL_1);
@@ -102,7 +102,7 @@ void loadGameLevel(Game *game, int level[]){
 
 
 	Logger.info("loading game data");
-    game->gameplayContext.stolenItemText = readTXT(game, "assets/data/crime.txt", 3*level[0] - 2); // Line jump = 3x - 2
+    game->gameplayContext.stolenItemText = readTXT(game, "data/crime.txt", 3*level[0] - 2); // Line jump = 3x - 2
 	game->gameplayContext.currentTime.dayOfWeek = WEEKDAY_MON;
 	game->gameplayContext.currentTime.hour 		= 9;
 	game->gameplayContext.currentTime.minutes 	= 0;
@@ -110,80 +110,80 @@ void loadGameLevel(Game *game, int level[]){
 
 	// City A:
 	City firstCity;
-    firstCity.name = readTXT(game, "assets/data/crime.txt", 3*level[0] - 3); // Line jump = 3x - 3
-    firstCity.flavorText[0] = readTXT(game, "assets/data/cidade.txt", 6*level[0] - 4); // Line jump = 6x - 4
-    firstCity.flavorText[1] = readTXT(game, "assets/data/cidade.txt", 6*level[0] - 3); // Line jump = 6x - 3
-    firstCity.flavorText[2] = readTXT(game, "assets/data/cidade.txt", 6*level[0] - 2); // Line jump = 6x - 2
+    firstCity.name = readTXT(game, "data/crime.txt", 3*level[0] - 3); // Line jump = 3x - 3
+    firstCity.flavorText[0] = readTXT(game, "data/cidade.txt", 6*level[0] - 4); // Line jump = 6x - 4
+    firstCity.flavorText[1] = readTXT(game, "data/cidade.txt", 6*level[0] - 3); // Line jump = 6x - 3
+    firstCity.flavorText[2] = readTXT(game, "data/cidade.txt", 6*level[0] - 2); // Line jump = 6x - 2
 
     firstCity.imageName = "cities/saopaulo.png";
     firstCity.imageAlignX = -73;
     firstCity.imageAlignY = 29;
-    firstCity.Latitude  = atoi(readTXT(game, "assets/data/coordenadas.txt", 4*level[0]-3)); // Line jump = 4x - 3
-    firstCity.Longitude = atoi(readTXT(game, "assets/data/coordenadas.txt", 4*level[0]-2)); // Line jump = 4x - 2
+    firstCity.latitude  = atoi(readTXT(game, "data/coordenadas.txt", 4*level[0]-3)); // Line jump = 4x - 3
+    firstCity.longitude = atoi(readTXT(game, "data/coordenadas.txt", 4*level[0]-2)); // Line jump = 4x - 2
 	game->gameplayContext.cities[0] = firstCity;
 
 	// Pontos de interesse
 
 	Place p0;
-	p0.name = readTXT(game, "assets/data/dica.txt", 1);
-	p0.hint = readTXT(game, "assets/data/dica.txt", 2);
+	p0.name = readTXT(game, "data/dica.txt", 1);
+	p0.hint = readTXT(game, "data/dica.txt", 2);
 	p0.hintImageName 	= "hint-citizen-a.png";
-	p0.citizenImageName = readTXT(game, "assets/data/dica.txt", 4);
+	p0.citizenImageName = readTXT(game, "data/dica.txt", 4);
 	p0.minutesRequired 	= 120;
 	game->gameplayContext.cities[0].pointsOfInterest[0] = p0;
 
 	Place p1;
-	p1.name = readTXT(game, "assets/data/dica.txt", 8);
-	p1.hint = readTXT(game, "assets/data/dica.txt", 9);
+	p1.name = readTXT(game, "data/dica.txt", 8);
+	p1.hint = readTXT(game, "data/dica.txt", 9);
 	p1.hintImageName 	= "hint-citizen-b.png";
-	p1.citizenImageName = readTXT(game, "assets/data/dica.txt", 11);
+	p1.citizenImageName = readTXT(game, "data/dica.txt", 11);
 	p1.minutesRequired 	= 90;
 	game->gameplayContext.cities[0].pointsOfInterest[1] = p1;
 
 	Place p2;
-	p2.name = readTXT(game, "assets/data/dica.txt", 14);
-	p2.hint = readTXT(game, "assets/data/dica.txt", 15);
+	p2.name = readTXT(game, "data/dica.txt", 14);
+	p2.hint = readTXT(game, "data/dica.txt", 15);
 	p2.hintImageName 	= "hint-citizen-c.png";
-	p2.citizenImageName = readTXT(game, "assets/data/dica.txt", 17);
+	p2.citizenImageName = readTXT(game, "data/dica.txt", 17);
 	p2.minutesRequired 	= 140;
 	game->gameplayContext.cities[0].pointsOfInterest[2] = p2;
 
 	// Destinos
 
 	Destination d0;
-	d0.name = readTXT(game, "assets/data/crime.txt", 3*level[1] - 3); // Line jump = 3x - 3
+	d0.name = readTXT(game, "data/crime.txt", 3*level[1] - 3); // Line jump = 3x - 3
     d0.imageName = "city-bh.png";
     d0.rightChoice = true;
-    d0.Latitude  = atoi(readTXT(game, "assets/data/coordenadas.txt", 4*level[1]-3)); // Line jump = 4x - 3
-    d0.Longitude = atoi(readTXT(game, "assets/data/coordenadas.txt", 4*level[1]-2)); // Line jump = 4x - 2
-    d0.minutesRequired = travelTime(firstCity.Latitude, firstCity.Longitude, d0.Latitude, d0.Longitude);
+    d0.latitude  = atoi(readTXT(game, "data/coordenadas.txt", 4*level[1]-3)); // Line jump = 4x - 3
+    d0.longitude = atoi(readTXT(game, "data/coordenadas.txt", 4*level[1]-2)); // Line jump = 4x - 2
+    d0.minutesRequired = travelTime(firstCity.latitude, firstCity.longitude, d0.latitude, d0.longitude);
     game->gameplayContext.cities[0].destinations[0] = d0;
 
     Destination d1;
-	d1.name = readTXT(game, "assets/data/crime.txt", 3*level[2] - 3); // Line jump = 3x - 3
+	d1.name = readTXT(game, "data/crime.txt", 3*level[2] - 3); // Line jump = 3x - 3
     d1.imageName = "city-brasilia.png";
     d1.rightChoice = false;
-    d1.Latitude  = atoi(readTXT(game, "assets/data/coordenadas.txt", 4*level[2]-3)); // Line jump = 4x - 3
-    d1.Longitude = atoi(readTXT(game, "assets/data/coordenadas.txt", 4*level[2]-2)); // Line jump = 4x - 2
-    d1.minutesRequired = travelTime(firstCity.Latitude, firstCity.Longitude, d1.Latitude, d1.Longitude);
+    d1.latitude  = atoi(readTXT(game, "data/coordenadas.txt", 4*level[2]-3)); // Line jump = 4x - 3
+    d1.longitude = atoi(readTXT(game, "data/coordenadas.txt", 4*level[2]-2)); // Line jump = 4x - 2
+    d1.minutesRequired = travelTime(firstCity.latitude, firstCity.longitude, d1.latitude, d1.longitude);
     game->gameplayContext.cities[0].destinations[1] = d1;
 
     Destination d2;
-	d2.name = readTXT(game, "assets/data/crime.txt", 3*level[3] - 3); // Line jump = 3x - 3
+	d2.name = readTXT(game, "data/crime.txt", 3*level[3] - 3); // Line jump = 3x - 3
     d2.imageName = "city-recife.png";
     d2.rightChoice = false;
-    d2.Latitude  = atoi(readTXT(game, "assets/data/coordenadas.txt", 4*level[3]-3)); // Line jump = 4x - 3
-    d2.Longitude = atoi(readTXT(game, "assets/data/coordenadas.txt", 4*level[3]-2)); // Line jump = 4x - 2
-    d2.minutesRequired = travelTime(firstCity.Latitude, firstCity.Longitude, d2.Latitude, d2.Longitude);
+    d2.latitude  = atoi(readTXT(game, "data/coordenadas.txt", 4*level[3]-3)); // Line jump = 4x - 3
+    d2.longitude = atoi(readTXT(game, "data/coordenadas.txt", 4*level[3]-2)); // Line jump = 4x - 2
+    d2.minutesRequired = travelTime(firstCity.latitude, firstCity.longitude, d2.latitude, d2.longitude);
     game->gameplayContext.cities[0].destinations[2] = d2;
 
     Destination d3;
-	d3.name = readTXT(game, "assets/data/crime.txt", 3*level[4] - 3); // Line jump = 3x - 3
+	d3.name = readTXT(game, "data/crime.txt", 3*level[4] - 3); // Line jump = 3x - 3
     d3.imageName = "city-maceio.png";
     d3.rightChoice = false;
-    d3.Latitude  = atoi(readTXT(game, "assets/data/coordenadas.txt", 4*level[4]-3)); // Line jump = 4x - 3
-    d3.Longitude = atoi(readTXT(game, "assets/data/coordenadas.txt", 4*level[4]-2)); // Line jump = 4x - 2
-    d3.minutesRequired = travelTime(firstCity.Latitude, firstCity.Longitude, d3.Latitude, d3.Longitude);
+    d3.latitude  = atoi(readTXT(game, "data/coordenadas.txt", 4*level[4]-3)); // Line jump = 4x - 3
+    d3.longitude = atoi(readTXT(game, "data/coordenadas.txt", 4*level[4]-2)); // Line jump = 4x - 2
+    d3.minutesRequired = travelTime(firstCity.latitude, firstCity.longitude, d3.latitude, d3.longitude);
     game->gameplayContext.cities[0].destinations[3] = d3;
 
 }
