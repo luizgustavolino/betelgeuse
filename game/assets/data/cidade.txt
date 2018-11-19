@@ -12,44 +12,44 @@ O mês mais quente;do ano é fevereiro,;com média de 34ºC.;Mais frio é julho,
 
 MG, Belo Horizonte
 cities/saopaulo.png
-Fundada em 1897;por conta da mineração,;a cidade já;foi indicada como a;metrópole com melhor;qualidade de vida na; América Latina. 
-O município é carac-;terizada pela pre-;dominância do setor;terciário em sua;economia, com des-;taque para o;comércio e serviços;financeiros.;
-É também conhecida;como a "capital;nacional dos botecos",; por existirem mais;bares per capita do;que em qualquer;outra grande cidade;do Brasil.
+Fundada em 1897;por conta da mine-;ração, a cidade já foi;indicada como a;metrópole com me-;lhor qualidade de;vida na América;Latina. 
+O município é carac-;terizada pela pre-;dominância do setor;terciário em sua;economia, com des-;taque para o comér-;cio e serviços;financeiros.;
+É também conhecida;como a "capital;nacional dos bote-;cos", por existirem;mais bares per ca-;pita do que em qual-;quer outra grande;cidade do Brasil.
 
 BA, Salvador
 cities/saopaulo.png
-Fundada em 1549;por Tomé de Sousa, a;cidade é uma das;mais antigas da;América e foi a primeira;sede da adminis-;tração colonial por-;tuguesa do Brasil.
-O município é notado;em todo o país pela;sua cultura afro-;brasileira na gas-;tronomia, na re-;ligião e na música,;reconhecida como;a "Capital da Alegria".;
+Fundada em 1549;por Tomé de Sousa,;a cidade é uma das;mais antigas da Amé-;rica e foi a prime-;ira sede da adminis-;tração colonial por-;tuguesa do Brasil.
+O município é notado;em todo o país pela;sua cultura afro-;brasileira na gastro-;nomia, na religião;e na música,;reconhecida como a;"Capital da Alegria".;
 O mês mais quente;do ano é fevereiro,;com média de 31ºC.;Mais frio é agosto,;21ºC. A precipitação;média é de 1800mm;anuais, concentra-;dos no outono.
 
 PE, Recife
 cities/saopaulo.png
-Fundada em 1537,;foi a mais rica ca-;pitania do Brasil;Colônia, conhecida;em todo o mundo por;conta da cultura da;cana-de-açúcar e do; pau-brasil.
+Fundada em 1537,;foi a mais rica ca-;pitania do Brasil;Colônia, conhecida;em todo o mundo;por conta da cultura;da cana-de-açúcar e;do pau-brasil.
 O município é conhe-;cido como a "Veneza;Brasileira", sendo;um dos locais que;mais atrae turistas,;principalmente por;conta do carnaval;e do são joão.;
 O mês mais quente;do ano é fevereiro,;com média de 31ºC.;Mais frio é agosto,;20ºC. A precipitação;média é de 2200mm;anuais, concentra-;dos no inverno.
 
 CE, Fortaleza
 cities/saopaulo.png
-Fundada em 1726;para defender a região;contra estrangeiros,; é a capital;brasileira mais próxima;da Europa, a;5.608 km de Lisboa,; em Portugal. 
-O município é um im-;portante centro in-;dustrial e comercial;do Brasil, com o;oitavo maior poder;de compra mu-;nicipal da nação, o; segundo destino mais; 
-desejado do país;e quarta cidade bra-;sileira que mais;recebe turistas. O mês;mais quente do ano;é dezembro, com;média de 31ºC. Mais; frio é julho, 22ºC.
+Fundada em 1726;para defender a re-;gião contra estran-;geiros, é a capital;brasileira mais pró-;xima da Europa, a;5.608 km de Lisboa,;em Portugal. 
+O município é um im-;portante centro in-;dustrial e comercial;do Brasil, com o oi-;tavo maior poder;de compra muni-;cipal da nação, o se-;gundo destino mais; 
+desejado do país e;quarta cidade bra-;sileira que mais re-;cebe turistas. O mês;mais quente do ano;é dezembro, com;média de 31ºC. Mais;frio é julho, 22ºC.
 
 GO, Goiânia
 cities/saopaulo.png
-Fundada em 1933;no contexto da Revo-;lução de 30, por;Pedro Ludovico e o;presidente da época; Getúlio Vargas, foi;planejada e cons-;truída para ser uma;
-capital política e;administrativa. É um;importante polo;econômico da região,;considerada um centro;estratégico para; as áreas como;indústria e agricultura.; 
+Fundada em 1933 no;contexto da Revo-;lução de 30, por Pe-;dro Ludovico e o;presidente da época;Getúlio Vargas, foi;planejada e cons-;truída para ser uma;
+capital política e ad-;ministrativa. É um;importante polo eco-;nômico da região,;considerada um cen-;tro estratégico para as;áreas como a in-;dústria e agricultura.; 
 O mês mais quente;do ano é setembro,;com média de 35ºC.;Mais frio é julho,;14ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
 MS, Campo Grande
 cities/saopaulo.png
-Fundada em 1872;por mineiros, que;vieram aproveitar;os campos de pastagens;nativas, águas;cristalinas e das;terras férteis da; região dos cerrados. 
-A cidade foi planejada;em meio a uma vasta;área verde, entre;diversos jardins;e por este motivo é;uma das cidades;mais arborizadas;do Brasil. Possui;
-uma forte relação;com a cultura;indígena em suas;raízes históricas.;E por causa da cor;de sua terra,;roxa ou vermelha,;é conhecida como;"Cidade Morena".
+Fundada em 1872;por mineiros, que;vieram aproveitar;os campos de pasta-;gens nativas, águas;cristalinas e das;terras férteis da;região dos cerrados. 
+A cidade foi planeja-;da em meio a uma;vasta área verde,;entre diversos jardins;e por este motivo é;uma das cidades ma-;is arborizadas;do Brasil. Possui;
+uma forte relação;com a cultura indí-;gena em suas raízes;históricas. E por ca-;usa da cor de sua;terra, roxa ou;vermelha, é conhe-;cida como "Cidade Morena".
 
 MT, Cuiabá
 cities/saopaulo.png
-Fundada em 1719;por bandeirantes;paulistas, é conhe-;cida como "cidade;verde", por causa da;grande arborização e;situa-se na margem;do rio Cuiabá.  
-A sua economia hoje;está concentrada no;comércio, de gêneros;alimentícios e;vestuário, e na;agroindústria, onde;cultivam-se lavouras;de hortifruti.;
+Fundada em 1719;por bandeirantes;paulistas, é conhe-;cida como "cidade;verde", por causa da;grande arborização;e situa-se na mar-;gem do rio Cuiabá.  
+A sua economia hoje;está concentrada no;comércio, de gêne-;ros alimentícios e ves-;tuário, e na agro-;indústria, onde cul-;tivam-se lavouras;de hortifruti.;
 O mês mais quente;do ano é outubro,;com média de 34ºC.;Mais frio é julho,;17ºC. A precipitação;média é de 1400mm;anuais, concentra-;dos no verão.
 
 PR, Curitiba
@@ -60,33 +60,33 @@ O mês mais quente;do ano é fevereiro,;com média de 26ºC.;Mais frio é julho,
 
 SC, Florianópolis
 cities/saopaulo.png
-Fundada em 1673,;a cidade é conhecida;por ter uma;elevada qualidade de;vida, sendo a capital;brasileira com maior;pontuação do IDH.;
-A economia do município;é fortemente ba-;seada na tecnologia;da informação, no;turismo e nos;serviços. É o melhor;local para o em-;preendedorismo no país.;
-A cidade é com-;posta pela ilha prin-;cipal e tem mais;algumas ilhas cir-;cundantes. É um centro;de atividade de;navegação, conhecida;por "Ilha da Magia".
+Fundada em 1673,;a cidade é conhecida;por ter uma elevada;qualidade de vida,;sendo a capital bra-;sileira com maior;pontuação do IDH.;A economia 
+do município é;fortemente basea-;do na tecnologia da;informação, no tu-;rismo e nos servi-;ços. É o melhor lo-;cal para o empre-;endedorismo no país.;
+A cidade é compos-;ta pela ilha princi-;pal e tem mais al-;gumas ilhas circun-;dantes. É um centro;de atividade de na-;vegação, conhecida;por "Ilha da Magia".
 
 RS, Porto Alegre
 cities/saopaulo.png
-Fundada em 1772;e povoada por casais;portugueses, hoje;é sede da maior;concentração urbana da;região Sul e quinta;mais populosa do;Brasil.
-O município é conhecido;como "Capital dos;Gaúchos", tem uma;cultura diversificada,;possui ricas;tradições folclóricas,;e um significativo;patrimônio histórico;
-com numerosos museus.;O mês mais quente;do ano é janeiro,;com média de 30ºC.;Mais frio é julho,;10ºC.
+Fundada em 1772;e povoada por casais;portugueses, hoje é;sede da maior con-;centração urbana da;região Sul e quinta;mais populosa do;Brasil.
+O município é conhe-;cido como "Capital dos;Gaúchos", tem uma;cultura diversificada,;possui ricas tradi-;ções folclóricas, e;um significativo;patrimônio histórico;
+com muitos museus.; ;O mês mais quente;do ano é janeiro,;com média de 30ºC.;Mais frio é julho,;10ºC.
 
 AM, Manaus
 cities/saopaulo.png
-Fundada em 1669;pelos portugueses,;a cidade é o mais;importante centro de;estudos científicos de;sustentabilidade.;Conhecida como "Paris;dos Trópicos",
-devido a sua intensa;modernização durante;a época áurea da;borracha, atraindo;investimentos es-;trangeiros e imi-;grantes de algumas;partes do mundo.;
+Fundada em 1669;pelos portugueses,;a cidade é o mais;importante centro;de estudos científicos;de sustentabilidade.;Conhecida como;"Paris dos Trópicos",
+devido a sua moder-;nização durante a;época áurea da;borracha, atraindo;investimentos es-;trangeiros e imi-;grantes de algumas;partes do mundo.;
 O mês mais quente;do ano é setembro,;com média de 33ºC.;Mais frio é junho,;23ºC. A precipitação;média é de 2300mm;anuais, concentra-;dos no verão.
 
 PA, Belém
 cities/saopaulo.png
-Fundada em 1616;pelos portugueses, é;uma cidade histórica;e portuária,;sendo a capital mais;chuvosa do Brasil;devido a seu clima;equatorial.
+Fundada em 1616;pelos portugueses, é;uma cidade histórica;e portuária, sendo;a capital mais;chuvosa do Brasil;devido a seu clima;equatorial.
 A cidade exerce sig-;nificativa influência;como metrópole;regional, influen-;ciando mais de 8;milhões de pessoas;nos estados do Pará,;Amapá e Maranhão,;
-seja do ponto de;vista cultural, eco-;nômico ou político.;A precipitação mé-;dia é de 3000mm anuais,;concentrados;no verão.
+seja do ponto de;vista cultural, eco-;nômico ou político.;A precipitação mé-;dia é de 3000mm;anuais, concentrados;no verão.
 
 AC, Rio Branco
 cities/saopaulo.png.
-Fundada em 1882,;foi uma das últimas;cidades do Brasil;a ser efetivamente;povoada e localiza-se;às margens do Rio;Acre. O desenvolvi-;mento do município; 
-ocorreu durante um;grande período dado;pelo Ciclo da Borracha.;Atualmente, a;madeira é o principal;produto de exportação;do estado, que;também é um grande;
-produtor de castanha-;do-pará, fruto;do açaí e óleo da;copaíba. O mês mais;quente do ano é se-;tembro, com média de;33ºC. Mais frio;é julho, 17ºC.
+Fundada em 1882,;foi uma das últimas;cidades do Brasil;a ser efetivamente;povoada e localiza-;se às margens do Rio;Acre. O desenvolvi-;mento do município; 
+ocorreu durante um;grande período dado;pelo Ciclo da Borra-;cha. Atualmente, a ma-;deira é o principal;produto de exporta-;ção do estado, que;também é um grande;
+produtor de casta-;nha-do-pará, fruto do;açaí e óleo da;copaíba. O mês mais;quente do ano é se-;tembro, com média;de 33ºC. Mais frio é;julho, 17ºC.
 
 DF, Brasília
 cities/saopaulo.png
