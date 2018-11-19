@@ -1,94 +1,94 @@
 ﻿SP, São Paulo
 cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
+Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político. 
 O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
 O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
-SP, São Paulo
+RJ, Rio de Janeiro
+cities/saopaulo.png
+Fundada em 1565;por militares portu-;gueses, a cida-;de é o maior desti-;no turístico interna-;cional da América;Latina e de todo o ;Hemisfério Sul. 
+O município é um dos;principais centros;econômicos, cultura-;is e financeiros; do país, e foi;designada como;Patrimônio Cultural;da Humanidade.;
+O mês mais quente;do ano é fevereiro,;com média de 34ºC.;Mais frio é julho,;17ºC. A precipitação;média é de 1200mm;anuais, concentra-;dos no verão.
+
+MG, Belo Horizonte
+cities/saopaulo.png
+Fundada em 1897;por conta da mineração,;a cidade já;foi indicada como a;metrópole com melhor;qualidade de vida na; América Latina. 
+O município é carac-;terizada pela pre-;dominância do setor;terciário em sua;economia, com des-;taque para o;comércio e serviços;financeiros.;
+É também conhecida;como a "capital;nacional dos botecos",; por existirem mais;bares per capita do;que em qualquer;outra grande cidade;do Brasil.
+
+BA, Salvador
+cities/saopaulo.png
+Fundada em 1549;por Tomé de Sousa, a;cidade é uma das;mais antigas da;América e foi a primeira;sede da adminis-;tração colonial por-;tuguesa do Brasil.
+O município é notado;em todo o país pela;sua cultura afro-;brasileira na gas-;tronomia, na re-;ligião e na música,;reconhecida como;a "Capital da Alegria".;
+O mês mais quente;do ano é fevereiro,;com média de 31ºC.;Mais frio é agosto,;21ºC. A precipitação;média é de 1800mm;anuais, concentra-;dos no outono.
+
+PE, Recife
+cities/saopaulo.png
+Fundada em 1537,;foi a mais rica ca-;pitania do Brasil;Colônia, conhecida;em todo o mundo por;conta da cultura da;cana-de-açúcar e do; pau-brasil.
+O município é conhe-;cido como a "Veneza;Brasileira", sendo;um dos locais que;mais atrae turistas,;principalmente por;conta do carnaval;e do são joão.;
+O mês mais quente;do ano é fevereiro,;com média de 31ºC.;Mais frio é agosto,;20ºC. A precipitação;média é de 2200mm;anuais, concentra-;dos no inverno.
+
+CE, Fortaleza
+cities/saopaulo.png
+Fundada em 1726;para defender a região;contra estrangeiros,; é a capital;brasileira mais próxima;da Europa, a;5.608 km de Lisboa,; em Portugal. 
+O município é um im-;portante centro in-;dustrial e comercial;do Brasil, com o;oitavo maior poder;de compra mu-;nicipal da nação, o; segundo destino mais; 
+desejado do país;e quarta cidade bra-;sileira que mais;recebe turistas. O mês;mais quente do ano;é dezembro, com;média de 31ºC. Mais; frio é julho, 22ºC.
+
+GO, Goiânia
+cities/saopaulo.png
+Fundada em 1933;no contexto da Revo-;lução de 30, por;Pedro Ludovico e o;presidente da época; Getúlio Vargas, foi;planejada e cons-;truída para ser uma;
+capital política e;administrativa. É um;importante polo;econômico da região,;considerada um centro;estratégico para; as áreas como;indústria e agricultura.; 
+O mês mais quente;do ano é setembro,;com média de 35ºC.;Mais frio é julho,;14ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
+
+MS, Campo Grande
+cities/saopaulo.png
+Fundada em 1872;por mineiros, que;vieram aproveitar;os campos de pastagens;nativas, águas;cristalinas e das;terras férteis da; região dos cerrados. 
+A cidade foi planejada;em meio a uma vasta;área verde, entre;diversos jardins;e por este motivo é;uma das cidades;mais arborizadas;do Brasil. Possui;
+uma forte relação;com a cultura;indígena em suas;raízes históricas.;E por causa da cor;de sua terra,;roxa ou vermelha,;é conhecida como;"Cidade Morena".
+
+MT, Cuiabá
 cities/saopaulo.png
 Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
 O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
 O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
-SP, São Paulo
+PR, Curitiba
 cities/saopaulo.png
 Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
 O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
 O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
-SP, São Paulo
+SC, Florianópolis
 cities/saopaulo.png
 Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
 O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
 O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
-SP, São Paulo
+RS, Porto Alegre
 cities/saopaulo.png
 Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
 O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
 O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
-SP, São Paulo
+AM, Manaus
 cities/saopaulo.png
 Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
 O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
 O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
-SP, São Paulo
+PA, Belém
 cities/saopaulo.png
 Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
 O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
 O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
-SP, São Paulo
+AC, Rio Branco
 cities/saopaulo.png
 Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
 O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
 O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
-SP, São Paulo
-cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
-
-SP, São Paulo
-cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
-
-SP, São Paulo
-cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
-
-SP, São Paulo
-cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
-
-SP, São Paulo
-cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
-
-SP, São Paulo
-cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
-
-SP, São Paulo
-cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
-
-SP, São Paulo
+DF, Brasília
 cities/saopaulo.png
 Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
 O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
