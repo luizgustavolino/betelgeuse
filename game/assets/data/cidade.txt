@@ -5,7 +5,7 @@ O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;d
 O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
 RJ, Rio de Janeiro
-cities/saopaulo.png
+cities/riodejaneiro.png
 Fundada em 1565;por militares portu-;gueses, a cida-;de é o maior desti-;no turístico interna-;cional da América;Latina e de todo o ;Hemisfério Sul. 
 O município é um dos;principais centros;econômicos, cultura-;is e financeiros; do país, e foi;designada como;Patrimônio Cultural;da Humanidade.;
 O mês mais quente;do ano é fevereiro,;com média de 34ºC.;Mais frio é julho,;17ºC. A precipitação;média é de 1200mm;anuais, concentra-;dos no verão.
@@ -48,25 +48,26 @@ uma forte relação;com a cultura;indígena em suas;raízes históricas.;E por c
 
 MT, Cuiabá
 cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
+Fundada em 1719;por bandeirantes;paulistas, é conhe-;cida como "cidade;verde", por causa da;grande arborização e;situa-se na margem;do rio Cuiabá.  
+A sua economia hoje;está concentrada no;comércio, de gêneros;alimentícios e;vestuário, e na;agroindústria, onde;cultivam-se lavouras;de hortifruti.;
+O mês mais quente;do ano é outubro,;com média de 34ºC.;Mais frio é julho,;17ºC. A precipitação;média é de 1400mm;anuais, concentra-;dos no verão.
 
 PR, Curitiba
-cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
+cities/curitiba.png
+Fundada em 1661;por um pequeno povo-;ado bandeirante,;recebe a classificação;de cidade autos-;suficiente, e co-;nhecida pela alcunha;de "Cidade Modelo".
+O município foi ci-;tado como o que se;preocupa em ser eco-;logicamente sus-;tentável, com qua-;lidade de vida,;boa infraestrutura;e dinamismo econômico.;
+O mês mais quente;do ano é fevereiro,;com média de 26ºC.;Mais frio é julho,;9ºC. A precipitação;média é de 1500mm;anuais, concentra-;dos no verão.
 
 SC, Florianópolis
 cities/saopaulo.png
-Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
-O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
-O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
+Fundada em 1673,;a cidade é conhecida;por ter uma;elevada qualidade de;vida, sendo a capital;brasileira com maior;pontuação do IDH.;
+A economia do município;é fortemente ba-;seada na tecnologia;da informação, no;turismo e nos;serviços. É o melhor;local para o em-;preendedorismo no país.;
+A cidade é com-;posta pela ilha prin-;cipal e tem mais;algumas ilhas cir-;cundantes. É um centro;de atividade de;navegação, conhecida;por "Ilha da Magia".
 
 RS, Porto Alegre
 cities/saopaulo.png
 Fundada em 1554;por padres jesuítas,;a cidade exerce;influência nacional;e internacional, seja;do ponto de vista;cultural, econômico;ou político.
+Fundada em 1772 
 O município possui o;decimo maior PIB do;mundo. Representa,;isoladamente, 10%;do PIB brasileiro;e 36% de toda a;produção de bens e;serviços do estado.;
 O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,;16ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
