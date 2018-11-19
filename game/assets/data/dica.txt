@@ -1,0 +1,18 @@
+﻿DICAS PARA BELO HORIZONTE
+Museu
+Essa pessoa gosta;muito de pão de;queijo!
+hint-citizen-a.png
+Guardinha
+120
+
+Biblioteca
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+hint-citizen-b.png
+Bibliotecaria
+90
+
+Praia
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+hint-citizen-c.png
+Turista
+140

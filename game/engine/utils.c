@@ -8,6 +8,28 @@
 #include "utils.h"
 #include <math.h>
 
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int roundFloatToInt(float x){
+    int y;
+
+    y = (int)(x + 0.5);
+
+    return y;
+}
+
+float deg2rad(float deg) {
+  return (deg * PI / 180);
+}
+
+float rad2deg(float rad) {
+  return (rad * 180 / PI);
+}
+
 // Code by David Heffernan
 // from: https://bit.ly/2zVGJZS (oct 6, 2018)
 
@@ -102,4 +124,29 @@
 		return delta * easeTransformed;
 	}
 
+//Capture the thief before FRIDAY
+//Can work from 9:00 to 18:00, so after 18:00 PM change day
 
+//Function that calculates the travel time between cities and returns time in hour and minutes.
+//Input should be (City A Latitude, City A Longitude, City B Latitude, City B Longitude)
+//Max travel time based on: Max distance 4.394km (North to South), JET average speed 2.000 km/h. -> MAX TIME: 130 minutes
+//I added up the airport times to it to make it more believable. So each flight is equal to 3 hours + Jet travel time.
+//We can tweak these numbers for balance purposes.
+int travelTime(float lat1, float lon1, float lat2, float lon2){
+
+    //***CODE FROM GEODATASOURCE -> https://www.geodatasource.com/developers/c***
+    float theta, dist;
+
+    theta = lon1 - lon2;
+    dist = sin(deg2rad(lat1)) * sin(deg2rad(lat2)) + cos(deg2rad(lat1)) * cos(deg2rad(lat2)) * cos(deg2rad(theta));
+    dist = acos(dist);
+    dist = rad2deg(dist);
+    dist = dist * 60 * 1.1515;
+    //Distance in km
+    dist = dist * 1.609344;
+    //***End of code from source***
+
+    const int airportTime = 180; //Airport time in minutes. Same for every flight
+    int minutes = roundFloatToInt(airportTime + dist * 60/2000); //1 hour (in minutes) divided by the speed of the JET times the travel distance
+	return minutes;
+}
