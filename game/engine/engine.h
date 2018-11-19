@@ -170,6 +170,7 @@ void fillRGB(Game *game, unsigned char r, unsigned char g, unsigned char b);
 void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b);
 void drawText(const char *text,  double x, double y);
 void drawCentralizedText(const char *text,  double x, double y);
+char *readTXT(Game *game, char *filename, int line);
 
 // Play/pause audio
 void stopSoundtrack(Game *game);

@@ -14,36 +14,6 @@
 
 void loadGameLevel(Game *game, int level[]);
 
-// Função que lê a linha escolhida do arquivo .txt selecionado. Retorna a string utilizando a váriavel temporária 'holder'
-char *readTXT(Game *game, char *filename, int line){
-
-    FILE *fp;
-    char *holder = (char *)malloc(MAXCHAR * sizeof(char));
-
-    // Abre o arquivo .txt
-    fp = fopen(filename, "r");
-
-    if (fp == NULL){
-        // Se o arquivo estiver vazio retorna 0
-        Logger.error("Could not open file %s", filename);
-        return 0;
-    } else{
-        Logger.info("File %s loaded successfully", filename);
-    }
-
-    int i = 0;
-
-    while(i <= line){
-        // Lê o arquivo linha por linha até chegar na linha escolhida e retorna a string
-        fgets(holder, MAXCHAR, fp);
-        if(i == line) return holder;
-        i++;
-    }
-
-    Logger.error("Could not load line %d of file %s", line, filename);
-    return NULL;
-}
-
 void loadGameData(Game *game){
 
     //RANDOMIZE LEVELS
@@ -53,40 +23,40 @@ void loadGameData(Game *game){
     //LEVEL 2:      [1,5*,6,7,8]     *destino certo
     //LEVEL 3:      [5,9*,10,11,12]  *fim de jogo
 
-    // Game levels
+    //Game levels
     int LEVEL_1[5];
     int LEVEL_2[5];
     int LEVEL_3[5];
 
     int size = 16;
     int array[size];
+    int i;
 
-    // Preenche o vetor com 1-16
-    for (int i = 0; i < size; i++) {
+    //Preenche o vetor com 1-16 (Número de cidades no jogo)
+    for (i = 0; i < size; i++) {
         array[i] = i + 1;
     }
 
-    // Embaralha o vetor
+    //Embaralha o vetor
     srand(time(NULL));
-    int i;
     for(i = size-1; i > 0; i--) {
         int j = rand() % (i+1);
         swap(&array[i], &array[j]);
     }
 
-    //Fill levels
-    LEVEL_1[0] = array[0]; // Crime
-    for(int i = 1; i < 5; i++){
+    //Preenche o level seguindo a descrição no início da função
+    LEVEL_1[0] = array[0]; // Cidade atual é a cidade onde o crime aconteceu
+    for(i = 1; i < 5; i++){
         LEVEL_1[i] = array[i];
     }
 
-    LEVEL_2[0] = LEVEL_1[1]; // Destino certo
-    for(int i = 5; i < 9; i++){
+    LEVEL_2[0] = LEVEL_1[1]; // Destino certo é a nova cidade atual
+    for(i = 5; i < 9; i++){
         LEVEL_2[i-4] = array[i];
     }
 
-    LEVEL_3[0] = LEVEL_2[1]; // Destino certo
-    for(int i = 9; i < 13; i++){
+    LEVEL_3[0] = LEVEL_2[1]; // Destino certo é a nova cidade atual
+    for(i = 9; i < 13; i++){
         LEVEL_3[i-8] = array[i];
     }
 
