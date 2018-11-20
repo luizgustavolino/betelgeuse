@@ -186,42 +186,4 @@ void drawLine(Point a, Point b, Color rgb){
 	al_draw_line(a.x, a.y, b.x, b.y, color, 1.0);
 }
 
-
-// Função que lê a linha escolhida do arquivo .txt selecionado. Retorna a string utilizando a váriavel temporária 'holder'
-char *readTXT(Game *game, char *filename, int line){
-
-    FILE *fp;
-    char *holder = (char *)malloc(MAXCHAR * sizeof(char));
-
-    // 1) find .txt path
-	char *path = allocStringJoining("assets/", filename);
-	ALLEGRO_PATH *dir = al_get_standard_path(ALLEGRO_RESOURCES_PATH);
-	al_set_path_filename(dir, path);
-
-	const char *fullpath = al_path_cstr(dir, ALLEGRO_NATIVE_PATH_SEP);
-	Logger.complement("path: %s", fullpath);
-
-    // 2) load .txt & cleanup tmps
-	fp = fopen(fullpath, "r");
-	al_destroy_path(dir);
-	free(path);
-
-    if(fp == NULL) {
-		Logger.error("Failed to load .txt ");
-		Logger.complement("%s", fullpath);
-		return NULL;
-	} else {
-        int i = 0;
-        while(i <= line){
-            // Lê o arquivo linha por linha até chegar na linha escolhida e retorna a string
-            fgets(holder, MAXCHAR, fp);
-            if(i == line) return holder;
-            i++;
-        }
-
-        Logger.error("Could not load line %d of file %s", line, filename);
-        return NULL;
-	}
-}
-
 #endif

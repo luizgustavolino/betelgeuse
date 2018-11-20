@@ -28,6 +28,7 @@ float deg2rad(float deg);
 float rad2deg(float rad);
 
 char* allocStringJoining(const char *s1, const char *s2);
+void replaceChar(char *source, char orig, char repl);
 
 // funções de suavização
 float cubicEaseInOut(float p);

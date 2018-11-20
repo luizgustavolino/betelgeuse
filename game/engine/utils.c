@@ -8,6 +8,8 @@
 #include "utils.h"
 #include <math.h>
 
+#include "engine.h"
+
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
@@ -43,6 +45,13 @@ float rad2deg(float rad) {
 	    return result;
 	}
 
+// Based on code by Serge Ballesta
+// from: https://bit.ly/2OZasFG
+
+	void replaceChar(char *source, char orig, char repl) {
+	    char *ix = source;
+	    while((ix = strchr(ix, orig)) != NULL) *ix++ = repl;
+	}
 
 // Based on code by Warren Moore
 // from: https://github.com/warrenm/AHEasing (oct 20, 2018)
@@ -149,4 +158,55 @@ int travelTime(float lat1, float lon1, float lat2, float lon2){
     const int airportTime = 180; //Airport time in minutes. Same for every flight
     int minutes = roundFloatToInt(airportTime + dist * 60/2000); //1 hour (in minutes) divided by the speed of the JET times the travel distance
 	return minutes;
+}
+
+
+// Função que lê a linha escolhida do arquivo .txt selecionado.
+// Retorna a string utilizando a váriavel temporária 'holder'
+char *readTXT(Game *game, char *filename, int line){
+
+    FILE *fp;
+    char holder[MAXCHAR];
+
+    // 1) find .txt path
+	char *path = allocStringJoining("assets/", filename);
+	ALLEGRO_PATH *dir = al_get_standard_path(ALLEGRO_RESOURCES_PATH);
+	al_set_path_filename(dir, path);
+
+	const char *fullpath = al_path_cstr(dir, ALLEGRO_NATIVE_PATH_SEP);
+	Logger.complement("path: %s", fullpath);
+
+    // 2) load .txt & cleanup tmps
+	fp = fopen(fullpath, "r");
+	al_destroy_path(dir);
+	free(path);
+
+    if(fp == NULL) {
+
+		Logger.error("Failed to load .txt ");
+		Logger.complement("%s", fullpath);
+		return NULL;
+
+	} else {
+        int i = 0;
+        while(i <= line){
+            // Lê o arquivo linha por linha até chegar na linha escolhida e retorna a string
+            fgets(holder, MAXCHAR, fp);
+            if(i == line) {
+
+            	int len = strlen(holder);
+            	char *response = (char*) malloc(sizeof(char*) * len);
+            	strcpy (response, holder);
+            	replaceChar(response, '\r', '\0');
+            	replaceChar(response, '\n', '\0');
+            	fclose(fp);
+            	return response;
+
+            }
+            i++;
+        }
+
+        Logger.error("Could not load line %d of file %s", line, filename);
+        return NULL;
+	}
 }
