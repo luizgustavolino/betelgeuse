@@ -1,47 +1,47 @@
-﻿Belo Horizonte
+﻿São Paulo
+        ***URGENTE***; ;A torre da TV Gaveta;acaba de ser roubada!; ;Sua missão: Capturar o;meliante. Rápido! Datena;conta com você!; ;Boa sorte, recruta!
+
+Rio de Janeiro
+        ***URGENTE***; ;O troféu do carnaval;acaba de ser roubado!; ;Sua missão: Capturar o;ladrão. Rápido!;A beija-flor conta com você!; ;Boa sorte, recruta!
+
+Belo Horizonte
         ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
 
-São Paulo
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Salvador
+        ***URGENTE***; ;Acabaram de cortar;os cabos do elevador;Lacerda!; ;Sua missão: Capturar o;miserável. Rápido! Ivete;conta com você!; ;Boa sorte, recruta!
 
-Irlanda
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Recife
+        ***URGENTE***; ;Acabaram de roubar;todos os guarda-chuvas;de frevo!; ;Sua missão: Capturar o;cangaceiro. Rápido!;Recife,depende de você!; ;Boa sorte, recruta!
 
-Russia
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Fortaleza
+        ***URGENTE***; ;A estátua da Iracema;acaba de ser roubada!; ;Sua missão: Capturar o;bandoleiro. Rápido!;A Lenda do Ceará;depende de você!; ;Boa sorte, recruta!
 
-Belgica
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Goiânia
+        ***URGENTE***; ;A viola de Lelé de Saramago e;Rufiano acaba de;ser roubada! E não há nenhuma;evidência.; ;Sua missão: Capturar o;bandido.; ;Boa sorte, recruta!
 
-Holanda
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Campo Grande
+        ***URGENTE***; ;Acabou de desabar;as grutas em Bonito!; ;Sua missão: Capturar o;patife. Rápido! Campo;Grande conta com você!; ;Boa sorte, recruta!
 
-Diadema
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Cuiabá
+        ***URGENTE***; ;Sumiram todos os;cururus da cidade!; ;Sua missão: Capturar o;salafrário. Rápido!;Naiara & Monalisa;contam com você!; ;Boa sorte, recruta!
 
-Acre
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Curitiba
+        ***URGENTE***; ;Uma coleção rara de;orquideas acaba de;serem roubadas!; ;Sua missão: Capturar o;ladrão. Rápido! Curitiba;depende de você!; ;Boa sorte, recruta!
 
-Marte
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Florianópolis
+        ***URGENTE***; ;A estátua Hercílio Luz;acaba de ser roubada!; ;Sua missão: Capturar o;criminoso. Rápido! Floripa;depende de você!; ;Boa sorte, recruta!
 
-Lua
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Porto Alegre
+        ***URGENTE***; ;A fórmula do cacetinho;acaba de ser;roubada!; ;Sua missão: Capturar o;marginal. Rápido! Porto Alegre;depende de você!; ;Boa sorte, recruta!
 
-Plutao
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Manaus
+        ***URGENTE***; ;O Muiraquitã acaba de ser;roubada!; ;Sua missão: Capturar o;canalha. Rápido! Manaus;depende de você!; ;Boa sorte, recruta!
 
-Mcdonalds
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Belém
+        ***URGENTE***; ;Acabaram de explodir o;forte do castelo de;Belém!; ;Sua missão: Capturar o;bandoleiro. Rápido! Joelma;conta com você!; ;Boa sorte, recruta!
 
-É, garota do verão
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Rio Branco
+        ***URGENTE***; ;Acabaram de surgir;alienígenas no Stonehenge!; ;Sua missão: Capturar o;extraterrestre. Rápido!;Rio Branco depende;de você!; ;Boa sorte, recruta!
 
-Burger King
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
-
-Amo muito tudo isso
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
-
-Pesadao
-        ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
+Brasília
+        ***URGENTE***; ;A Estátua da Justiça;acaba de ser;roubada!; ;Sua missão: Capturar o;canalha. Rápido! Demer;conta com você!; ;Boa sorte, recruta!
