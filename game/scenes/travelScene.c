@@ -28,10 +28,10 @@ static void travelOnEnter(Game *game, int frame) {
     fromLabel = game->gameplayContext.cities[current].imageName;
 
     //Checks what choice the player made
-    if(playerDestinationChoice = 1) toLabel = game->gameplayContext.cities[0].destinations[0].imageName;
-    else if(playerDestinationChoice = 2) toLabel = game->gameplayContext.cities[0].destinations[1].imageName;
-    else if(playerDestinationChoice = 3) toLabel = game->gameplayContext.cities[0].destinations[2].imageName;
-    else if(playerDestinationChoice = 4) toLabel = game->gameplayContext.cities[0].destinations[3].imageName;
+    if(playerDestinationChoice == 1) toLabel = game->gameplayContext.cities[0].destinations[0].imageName;
+    else if(playerDestinationChoice == 2) toLabel = game->gameplayContext.cities[0].destinations[1].imageName;
+    else if(playerDestinationChoice == 3) toLabel = game->gameplayContext.cities[0].destinations[2].imageName;
+    else if(playerDestinationChoice == 4) toLabel = game->gameplayContext.cities[0].destinations[3].imageName;
 
 	jet1	    = loadImageAsset("jet1.png");
 	jet2	    = loadImageAsset("jet2.png");
