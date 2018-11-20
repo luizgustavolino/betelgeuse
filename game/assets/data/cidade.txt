@@ -6,20 +6,20 @@ O mês mais quente;do ano é fevereiro,;com média de 23ºC.;Mais frio é julho,
 
 RJ, Rio de Janeiro
 cities/riodejaneiro.png
-Fundada em 1565;por militares portu-;gueses, a cida-;de é o maior desti-;no turístico interna-;cional da América;Latina e de todo o ;Hemisfério Sul. 
-O município é um dos;principais centros;econômicos, cultura-;is e financeiros; do país, e foi;designada como;Patrimônio Cultural;da Humanidade.;
+Fundada em 1565;por militares portu-;gueses, a cidade é;o maior destino tu-;rístico internacio-;nal da América;Latina e de todo o ;Hemisfério Sul. 
+O município é um dos;principais centros;econômicos, cultura-;is e financeiros do;país, e foi designa-;da como Patrimônio;Cultural da Humani-;dade.;
 O mês mais quente;do ano é fevereiro,;com média de 34ºC.;Mais frio é julho,;17ºC. A precipitação;média é de 1200mm;anuais, concentra-;dos no verão.
 
 MG, Belo Horizonte
 cities/saopaulo.png
-Fundada em 1897;por conta da mine-;ração, a cidade já foi;indicada como a;metrópole com me-;lhor qualidade de;vida na América;Latina. 
+Fundada em 1897;por conta da mine-;ração, a cidade já;foi indicada como a;metrópole com me-;lhor qualidade de;vida na América;Latina. 
 O município é carac-;terizada pela pre-;dominância do setor;terciário em sua;economia, com des-;taque para o comér-;cio e serviços;financeiros.;
 É também conhecida;como a "capital;nacional dos bote-;cos", por existirem;mais bares per ca-;pita do que em qual-;quer outra grande;cidade do Brasil.
 
 BA, Salvador
 cities/saopaulo.png
 Fundada em 1549;por Tomé de Sousa,;a cidade é uma das;mais antigas da Amé-;rica e foi a prime-;ira sede da adminis-;tração colonial por-;tuguesa do Brasil.
-O município é notado;em todo o país pela;sua cultura afro-;brasileira na gastro-;nomia, na religião;e na música,;reconhecida como a;"Capital da Alegria".;
+O município é notado;em todo o país pela;sua cultura afro-;brasileira na gastro-;nomia, na religião;e na música, reco-;nhecida como a;"Capital da Alegria".;
 O mês mais quente;do ano é fevereiro,;com média de 31ºC.;Mais frio é agosto,;21ºC. A precipitação;média é de 1800mm;anuais, concentra-;dos no outono.
 
 PE, Recife
@@ -37,25 +37,25 @@ desejado do país e;quarta cidade bra-;sileira que mais re-;cebe turistas. O mê
 GO, Goiânia
 cities/saopaulo.png
 Fundada em 1933 no;contexto da Revo-;lução de 30, por Pe-;dro Ludovico e o;presidente da época;Getúlio Vargas, foi;planejada e cons-;truída para ser uma;
-capital política e ad-;ministrativa. É um;importante polo eco-;nômico da região,;considerada um cen-;tro estratégico para as;áreas como a in-;dústria e agricultura.; 
+capital política e ad-;ministrativa. É um;importante polo eco-;nômico da região,;considerada um cen-;tro estratégico para;as áreas como a in-;dústria e agricultura.; 
 O mês mais quente;do ano é setembro,;com média de 35ºC.;Mais frio é julho,;14ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
 
 MS, Campo Grande
 cities/saopaulo.png
 Fundada em 1872;por mineiros, que;vieram aproveitar;os campos de pasta-;gens nativas, águas;cristalinas e das;terras férteis da;região dos cerrados. 
-A cidade foi planeja-;da em meio a uma;vasta área verde,;entre diversos jardins;e por este motivo é;uma das cidades ma-;is arborizadas;do Brasil. Possui;
-uma forte relação;com a cultura indí-;gena em suas raízes;históricas. E por ca-;usa da cor de sua;terra, roxa ou;vermelha, é conhe-;cida como "Cidade Morena".
+A cidade foi planeja-;da em meio a uma;vasta área verde,;entre diversos jar-;dins e por este motivo;é uma das cidades ma-;is arborizadas do;Brasil. Possui uma;
+forte relação com;a cultura indíge-;na em suas raízes his-;tóricas. E por ca-;usa da cor de sua;terra, roxa ou ver-;melha, é conheci-;da como "Cidade Morena".
 
 MT, Cuiabá
 cities/saopaulo.png
 Fundada em 1719;por bandeirantes;paulistas, é conhe-;cida como "cidade;verde", por causa da;grande arborização;e situa-se na mar-;gem do rio Cuiabá.  
-A sua economia hoje;está concentrada no;comércio, de gêne-;ros alimentícios e ves-;tuário, e na agro-;indústria, onde cul-;tivam-se lavouras;de hortifruti.;
+A sua economia hoje;está concentrada no;comércio, de gêne-;ros alimentícios, ves-;tuário, e na agro-;indústria, onde cul-;tivam-se lavouras;de hortifruti.;
 O mês mais quente;do ano é outubro,;com média de 34ºC.;Mais frio é julho,;17ºC. A precipitação;média é de 1400mm;anuais, concentra-;dos no verão.
 
 PR, Curitiba
 cities/curitiba.png
-Fundada em 1661;por um pequeno povo-;ado bandeirante,;recebe a classificação;de cidade autos-;suficiente, e co-;nhecida pela alcunha;de "Cidade Modelo".
-O município foi ci-;tado como o que se;preocupa em ser eco-;logicamente sus-;tentável, com qua-;lidade de vida,;boa infraestrutura;e dinamismo econômico.;
+Fundada em 1661;por um pequeno po-;voado bandeirante,;recebe a classifica-;ção de cidade autos-;suficiente, e conhe-;cida pela alcunha;de "Cidade Modelo".
+O município foi cita-;do como o que se;preocupa em ser;ecologicamente sus-;tentável, com qua-;lidade de vida, boa;infraestrutura e di-;namismo econômico.;
 O mês mais quente;do ano é fevereiro,;com média de 26ºC.;Mais frio é julho,;9ºC. A precipitação;média é de 1500mm;anuais, concentra-;dos no verão.
 
 SC, Florianópolis
@@ -66,9 +66,9 @@ A cidade é compos-;ta pela ilha princi-;pal e tem mais al-;gumas ilhas circun-;
 
 RS, Porto Alegre
 cities/saopaulo.png
-Fundada em 1772;e povoada por casais;portugueses, hoje é;sede da maior con-;centração urbana da;região Sul e quinta;mais populosa do;Brasil.
-O município é conhe-;cido como "Capital dos;Gaúchos", tem uma;cultura diversificada,;possui ricas tradi-;ções folclóricas, e;um significativo;patrimônio histórico;
-com muitos museus.; ;O mês mais quente;do ano é janeiro,;com média de 30ºC.;Mais frio é julho,;10ºC.
+Fundada em 1772 e;povoada por casais;portugueses, hoje é;sede da maior con-;centração urbana da;região Sul e quinta;mais populosa do;Brasil.
+O município é conhe-;cido como "Capital;dos Gaúchos", tem;uma cultura diversi-;ficada, possui ricas;tradições folclóricas,;e um significativo;patrimônio histórico;
+com diversos museus.;O mês mais quente;do ano é janeiro,;com média de 30ºC.;Mais frio é julho,;10ºC. A precipitação;média é de 1400mm;anuais.
 
 AM, Manaus
 cities/saopaulo.png
@@ -83,13 +83,13 @@ A cidade exerce sig-;nificativa influência;como metrópole;regional, influen-;c
 seja do ponto de;vista cultural, eco-;nômico ou político.;A precipitação mé-;dia é de 3000mm;anuais, concentrados;no verão.
 
 AC, Rio Branco
-cities/saopaulo.png.
-Fundada em 1882,;foi uma das últimas;cidades do Brasil;a ser efetivamente;povoada e localiza-;se às margens do Rio;Acre. O desenvolvi-;mento do município; 
-ocorreu durante um;grande período dado;pelo Ciclo da Borra-;cha. Atualmente, a ma-;deira é o principal;produto de exporta-;ção do estado, que;também é um grande;
-produtor de casta-;nha-do-pará, fruto do;açaí e óleo da;copaíba. O mês mais;quente do ano é se-;tembro, com média;de 33ºC. Mais frio é;julho, 17ºC.
+cities/saopaulo.png
+Fundada em 1882,;foi uma das últimas;cidades do Brasil a;ser efetivamente;povoada e localiza-;se às margens do Rio;Acre. O desenvolvi-;mento do município; 
+ocorreu durante um;grande período dado;pelo Ciclo da Borra-;cha. Atualmente, a;madeira é o prin-;cipal produto de ex-;portação do estado,;que também é um;
+grande produtor de;castanha-do-pará, do açaí;e óleo da;copaíba. O mês mais;quente do ano é se-;tembro, com média;de 33ºC. Mais frio é;julho, 17ºC.
 
 DF, Brasília
 cities/saopaulo.png
-Fundada em 1960,;pelo então presidente;Juscelino Kubitschek,;é a terceira;capital federal do;Brasil e a sede do;governo do Distrito;Federal. 
-O arquiteto Oscar;Niemeyer projetou os;principais prédios;públicos do muni-;cípio, é a terceira;cidade mais rica;do país. A economia;de Brasília tem como;
-principais bases;a construção civil e;o varejo. E é;classificada como;Patrimônio Cultural;da Humanidade. 
+Fundada em 1960,;pelo ex-presidente; Juscelino Kubitschek,;é a terceira capital;federal do Brasil;e a sede do gover-;no do Distrito;Federal. 
+O arquiteto Oscar;Niemeyer projetou;os principais prédios;públicos do municí-;pio, é a terceira ci-;dade mais rica do;país. A economia;de Brasília tem como;
+principais bases a;construção civil e;o varejo. E é clas-;sificada como;Patrimônio Cultural;da Humanidade. 
