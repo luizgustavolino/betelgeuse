@@ -61,7 +61,7 @@ void loadGameData(Game *game){
     }
 
     loadGameLevel(game, LEVEL_1);
-
+    loadGameLevel(game, LEVEL_2);
 }
 
 void loadGameLevel(Game *game, int level[]){
