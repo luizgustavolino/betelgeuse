@@ -23,6 +23,7 @@ int main(int argc, char **argv){
     Game game = createNewGame();
 
     loadGameData(&game);
+    loadGameLevel(&game, LEVEL_1);
     changeScene(&game, makeDestinationsScene(&game));
 
     // game lyfecycle

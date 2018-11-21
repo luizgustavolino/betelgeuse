@@ -61,6 +61,11 @@ typedef struct ScreenSetup {
 // Estrutura que controla as regras do jogo
 // e mantém o estado atual da partida
 
+//Game levels
+int LEVEL_1[5];
+int LEVEL_2[5];
+int LEVEL_3[5];
+
 #define CITIES_UNTIL_VICTORY        3
 #define DESTINATIONS_COUNT          4
 #define POINTS_OF_INTEREST_COUNT    3

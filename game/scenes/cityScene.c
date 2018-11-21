@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include "cityScene.h"
 #include "destinationsScene.h"
+#include "finalScene.h"
 
 #include "../engine/colors.h"
 
@@ -32,6 +33,28 @@ static void menuCallback(Game *game, int choosenOption);
 
 static void cityOnEnter(Game *game, int frame) {
 
+    //***LOADS NEXT LEVEL***//
+
+    if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == 0){
+        game->gameplayContext.currentCity = game->gameplayContext.currentCity + 1;
+        loadGameLevel(game, LEVEL_2);
+    }
+
+    else if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == 1){
+        game->gameplayContext.currentCity = game->gameplayContext.currentCity + 1;
+        loadGameLevel(game, LEVEL_3);
+    }
+
+    //***NEW LEVEL LOADED***//
+
+    //***CHECKS FOR END OF GAME***//
+
+    else if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == 2){
+        changeScene(game, makeFinalScene(game));
+    }
+
+
+
 	int current     = game->gameplayContext.currentCity;
 	char *background_image = game->gameplayContext.cities[current].imageName;
 	city_background = loadImageAsset(background_image);
@@ -47,7 +70,6 @@ static void cityOnEnter(Game *game, int frame) {
 	page_on = loadImageAsset("page_indic_on.png");
 
 	//playSoundtrack(game, "intro.wav");
-
 }
 
 static void cityOnFrame(Game *game, int frame) {
