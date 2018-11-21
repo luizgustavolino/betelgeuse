@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include "destinationsScene.h"
 #include "cityScene.h"
+#include "travelScene.h"
 
 #include "../engine/colors.h"
 
@@ -39,7 +40,7 @@ static void destinationsOnEnter(Game *game, int frame) {
 static void destinationsOnFrame(Game *game, int frame) {
 
 	if (rewindFrames > 0) {
-		
+
 		drawInterface(game, (rewindFrames--)/2, frame);
 		if (rewindFrames == 1){
 			changeScene(game, makeCityScene(game));
@@ -47,7 +48,7 @@ static void destinationsOnFrame(Game *game, int frame) {
 		}
 
 	} else {
-		drawInterface(game, frame/2, frame);	
+		drawInterface(game, frame/2, frame);
 	}
 
 	setTextRGBColor(YELLOW);
@@ -77,6 +78,11 @@ static void destinationsOnFrame(Game *game, int frame) {
 
 		if (rewindFrames == 0 && game->keyState.b == KEY_IS_RELEASED){
 			rewindFrames = 200;
+		}
+
+		else if (game->keyState.a == KEY_IS_RELEASED) {
+            game->gameplayContext.playerDestinationChoice = currentDestination;
+            changeScene(game, makeTravelScene(game));
 		}
 	}
 

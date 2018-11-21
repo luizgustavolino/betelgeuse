@@ -11,7 +11,6 @@
 //Input 1,2,3 or 4
 //1 Leads to the next LEVEL
 //2,3 or 4 have the "Go back" option
-int playerDestinationChoice = 3;
 
 static int fromCity,toCity,jet,jet1,jet2,jet3;
 char *fromLabel,*toLabel;
@@ -22,16 +21,11 @@ static int flightTime = 1400; //Can be adjusted to match the music
 
 static void travelOnEnter(Game *game, int frame) {
 
-    printf("!!!CHOICE %d\n", playerDestinationChoice);
-
     int current = game->gameplayContext.currentCity;
     fromLabel = game->gameplayContext.cities[current].imageName;
 
     //Checks what choice the player made
-    if(playerDestinationChoice == 1) toLabel = game->gameplayContext.cities[0].destinations[0].imageName;
-    else if(playerDestinationChoice == 2) toLabel = game->gameplayContext.cities[0].destinations[1].imageName;
-    else if(playerDestinationChoice == 3) toLabel = game->gameplayContext.cities[0].destinations[2].imageName;
-    else if(playerDestinationChoice == 4) toLabel = game->gameplayContext.cities[0].destinations[3].imageName;
+    toLabel = game->gameplayContext.cities[0].destinations[game->gameplayContext.playerDestinationChoice].imageName;
 
 	jet1	    = loadImageAsset("jet1.png");
 	jet2	    = loadImageAsset("jet2.png");
@@ -72,11 +66,15 @@ static void travelOnFrame(Game *game, int frame) {
         if(pan < 220) pan = pan + 0.20;
     }
 
-    if (frame > flightTime){
+    if (frame > flightTime && frame < flightTime + 40){
         delta = applyCubicEaseOut(flightTime, flightTime + 40, frame, 70);
         drawImageAsset(toCity, 0, 0);
         drawImageAsset(jet, delta + fly, 60);
     }
+
+//    if (frame > flightTime + 40){
+//        changeScene(game, makeCityScene(game));
+//    }
 }
 
 static void travelOnExit(Game *game, int frame) {
@@ -88,7 +86,7 @@ static void travelOnExit(Game *game, int frame) {
 }
 
 
-Scene makeTravelScene(Game *game, int playerDestinationChoice){
+Scene makeTravelScene(Game *game){
 	Scene travel;
 	travel.onEnter = travelOnEnter;
 	travel.onFrame = travelOnFrame;

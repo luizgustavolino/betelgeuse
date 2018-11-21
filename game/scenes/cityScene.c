@@ -1,10 +1,9 @@
 //
-// SENAC BCC PI 2 
+// SENAC BCC PI 2
 // Projeto Betelgeuse
 
 #include <stddef.h>
 #include <stdio.h>
-#include "cityScene.h"
 #include "cityScene.h"
 #include "destinationsScene.h"
 
@@ -48,7 +47,7 @@ static void cityOnEnter(Game *game, int frame) {
 	page_on = loadImageAsset("page_indic_on.png");
 
 	//playSoundtrack(game, "intro.wav");
-	
+
 }
 
 static void cityOnFrame(Game *game, int frame) {
@@ -58,7 +57,7 @@ static void cityOnFrame(Game *game, int frame) {
 
 	// desenhando texto da cidade
 	drawPage(game, current_page);
-	
+
 	// desenhando hora
 	drawTime(game->gameplayContext.currentTime.dayOfWeek,
 			 game->gameplayContext.currentTime.hour,
@@ -80,7 +79,7 @@ static void cityOnFrame(Game *game, int frame) {
 	if (game->keyState.right == KEY_IS_RELEASED && current_page < 2) current_page++;
 	if (game->keyState.left  == KEY_IS_RELEASED && current_page > 0) current_page--;
 	if (game->keyState.a     == KEY_IS_RELEASED) showMenu(game, 3, menuOptionsDatasource, menuCallback);
-	
+
 }
 
 static void cityOnExit(Game *game, int frame) {
@@ -106,7 +105,7 @@ static void drawInterface(Game *game, int frame){
 
 	drawImageAsset(city_background, bg_align_x, bg_align_y);
 	//drawImageAsset(abin_bg, 0, 0);
-	
+
 	drawImageAsset(city_foreground, 0, 0);
 }
 
@@ -138,7 +137,7 @@ static void drawPage(Game *game, int pageNum){
 
 	setTextRGBColor(LIGHT_BLUE);
 	drawText(game->gameplayContext.cities[current].flavorText[current_page], 107, 37);
-	
+
 }
 
 // #-- Menu options & callbacks

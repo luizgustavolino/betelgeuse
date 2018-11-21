@@ -2,7 +2,7 @@
 #include "engine/logger.h"
 #include "engine/engine.h"
 #include "scenes/splashScene.h"
-#include "scenes/finalScene.h"
+#include "scenes/destinationsScene.h"
 
 // available platforms:
 // - PLATFORM_POKITTO
@@ -21,7 +21,9 @@ int main(int argc, char **argv){
 
     // setup do ambiente + cena inicial
     Game game = createNewGame();
-    changeScene(&game, makeSplashScene(&game));
+
+    loadGameData(&game);
+    changeScene(&game, makeDestinationsScene(&game));
 
     // game lyfecycle
     while (game.running) nextFrame(&game);

@@ -114,6 +114,7 @@ typedef struct GameplayContext {
     GameDate currentTime;
 
     int currentCity;
+    int playerDestinationChoice;
     City cities[CITIES_UNTIL_VICTORY];
 } GameplayContext;
 

@@ -9,7 +9,7 @@
 
 #include "../engine/engine.h"
 
-Scene makeTravelScene(Game *game, int playerDestinationChoice);
+Scene makeTravelScene(Game *game);
 
 #endif
 
