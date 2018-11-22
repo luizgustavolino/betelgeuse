@@ -82,6 +82,7 @@ static void destinationsOnFrame(Game *game, int frame) {
 
 		else if (game->keyState.a == KEY_IS_RELEASED) {
             game->gameplayContext.playerDestinationChoice = currentDestination;
+            travelBack = 0; //Ensures that the plane will travel forward the first time
             changeScene(game, makeTravelScene(game));
 		}
 	}

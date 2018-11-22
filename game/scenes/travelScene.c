@@ -5,7 +5,6 @@
 #include <stddef.h>
 #include <stdio.h>
 #include "travelScene.h"
-#include "missScene.h"
 #include "cityScene.h"
 
 #include "../engine/colors.h"
@@ -23,21 +22,35 @@ static void travelOnEnter(Game *game, int frame) {
     //Checks what choice the player made
     toLabel = game->gameplayContext.cities[current].destinations[game->gameplayContext.playerDestinationChoice].imageName;
 
-	jet1	    = loadImageAsset("jet1.png");
-	jet2	    = loadImageAsset("jet2.png");
-	jet3        = loadImageAsset("jet3.png");
-
-	fromCity    = loadImageAsset(fromLabel);
-	toCity      = loadImageAsset(toLabel);
-
-    flyPosHor = 60; //Jet horizontal position
     flyPosVer = 60; //Jet vertical position
-	bgPos = 0; //Background position
-	width = 220; //Screen width
-	airplaneInOutTime = 320; //Time in frames, can be adjusted to match sound. Declared as float for animation purposes
+    bgPos = 0; //Background position
+    width = 220; //Screen width
+    airplaneInOutTime = 320; //Time in frames, can be adjusted to match sound. Declared as float for animation purposes
     flightTime = 1220; //Time in frames, can be adjusted to match sound. Declared as float for animation purposes
-
     increment = (float)width / ((float)flightTime - (float)airplaneInOutTime); //Increment for the background position
+
+    if (travelBack == 0){
+
+        jet1	    = loadImageAsset("jet1.png");
+        jet2	    = loadImageAsset("jet2.png");
+        jet3        = loadImageAsset("jet3.png");
+
+        fromCity    = loadImageAsset(fromLabel);
+        toCity      = loadImageAsset(toLabel);
+
+        flyPosHor = 60; //Jet horizontal position
+
+    } else {
+
+        jet1	    = loadImageAsset("jet1inverted.png");
+        jet2	    = loadImageAsset("jet2inverted.png");
+        jet3        = loadImageAsset("jet3inverted.png");
+
+        fromCity    = loadImageAsset(toLabel); //Inverted the destinations for traveling back
+        toCity      = loadImageAsset(fromLabel); //Inverted the destinations for traveling back
+
+        flyPosHor = 230; //Jet horizontal position
+    }
 
 }
 
@@ -48,10 +61,15 @@ static void travelOnFrame(Game *game, int frame) {
 
         //Draw assets
         drawImageAsset(fromCity, 0, 0);
-        drawImageAsset(jet1, delta - flyPosHor, flyPosVer);
+        if (travelBack == 0) {
+            drawImageAsset(jet1, delta - flyPosHor, flyPosVer);
+        } else {
+            drawImageAsset(jet1, flyPosHor - delta, flyPosVer);
+        }
     }
 
-    if (frame == airplaneInOutTime) flyPosHor = delta - flyPosHor; //Determines the horizontal position of the jet animation
+    if (frame == airplaneInOutTime) flyPosHor = 85; //Plane is in the middle of the screen
+
     if (frame > airplaneInOutTime && frame <= flightTime){
         if (frame % 600 >= 0 && frame % 600 < 270) {
             jet = jet1;
@@ -62,9 +80,18 @@ static void travelOnFrame(Game *game, int frame) {
         } else if (frame % 600 >= 570 && frame % 600 < 600) {
             jet = jet2;
         }
+
         //Draw assets
-        drawImageAsset(fromCity, 0 - bgPos,0);
-        drawImageAsset(toCity, width - bgPos,0);
+        drawImageAsset(jet, flyPosHor, flyPosVer);
+
+        if (travelBack == 0) {
+            drawImageAsset(fromCity, 0 - bgPos,0);
+            drawImageAsset(toCity, width - bgPos,0);
+        } else {
+            drawImageAsset(fromCity, 0 + bgPos,0);
+            drawImageAsset(toCity, bgPos - width,0);
+        }
+
         drawImageAsset(jet, flyPosHor, flyPosVer);
 
         if(bgPos < width) bgPos = bgPos + increment;
@@ -73,14 +100,21 @@ static void travelOnFrame(Game *game, int frame) {
     if (frame > flightTime && frame <= flightTime + airplaneInOutTime){
         delta = applyCubicEaseInOut(flightTime, flightTime + airplaneInOutTime, frame, 145);
         drawImageAsset(toCity, 0, 0);
-        drawImageAsset(jet, delta + flyPosHor, flyPosVer);
+        if (travelBack == 0) {
+            drawImageAsset(jet, delta + flyPosHor, flyPosVer);
+        } else {
+            drawImageAsset(jet, flyPosHor - delta, flyPosVer);
+        }
     }
 
     if (frame > flightTime + airplaneInOutTime){
         if (game->gameplayContext.playerDestinationChoice == 0){
             changeScene(game, makeCityScene(game));
+        } else if (game->gameplayContext.playerDestinationChoice != 0 && travelBack == 0){
+            travelBack = 1; //Ensures the plane travels backwards
+            changeScene(game, makeTravelScene(game));
         } else {
-            changeScene(game, makeMissScene(game));
+            changeScene(game, makeCityScene(game));
         }
     }
 }

@@ -77,6 +77,8 @@ int LEVEL_3[5];
 #define WEEKDAY_FRI 4
 #define MAXCHAR 200
 
+int travelBack; //Determines flight direction, 0 for forward travel, 1 for backward travel
+
 typedef struct GameDate {
     int dayOfWeek;
     int hour;
