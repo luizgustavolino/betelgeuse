@@ -43,8 +43,6 @@ static void travelOnEnter(Game *game, int frame) {
 
 static void travelOnFrame(Game *game, int frame) {
 
-	if (frame == 1) fillRGB(game, BLACK);
-
     if (frame < airplaneInOutTime){
         delta = applyCubicEaseInOut(0, airplaneInOutTime, frame, 145);
 

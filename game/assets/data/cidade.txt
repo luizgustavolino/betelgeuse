@@ -35,7 +35,7 @@ O município é um im-;portante centro in-;dustrial e comercial;do Brasil, com o
 desejado do país e;quarta cidade bra-;sileira que mais re-;cebe turistas. O mês;mais quente do ano;é dezembro, com;média de 31ºC. Mais;frio é julho, 22ºC.
 
 GO, Goiânia
-cities/saopaulo.png
+cities/goiania.png
 Fundada em 1933 no;contexto da Revo-;lução de 30, por Pe-;dro Ludovico e o;presidente da época;Getúlio Vargas, foi;planejada e cons-;truída para ser uma;
 capital política e ad-;ministrativa. É um;importante polo eco-;nômico da região,;considerada um cen-;tro estratégico para;as áreas como a in-;dústria e agricultura.; 
 O mês mais quente;do ano é setembro,;com média de 35ºC.;Mais frio é julho,;14ºC. A precipitação;média é de 1600mm;anuais, concentra-;dos no verão.
@@ -47,7 +47,7 @@ A cidade foi planeja-;da em meio a uma;vasta área verde,;entre diversos jar-;di
 forte relação com;a cultura indíge-;na em suas raízes his-;tóricas. E por ca-;usa da cor de sua;terra, roxa ou ver-;melha, é conheci-;da como "Cidade Morena".
 
 MT, Cuiabá
-cities/saopaulo.png
+cities/cuiaba.png
 Fundada em 1719;por bandeirantes;paulistas, é conhe-;cida como "cidade;verde", por causa da;grande arborização;e situa-se na mar-;gem do rio Cuiabá.  
 A sua economia hoje;está concentrada no;comércio, de gêne-;ros alimentícios, ves-;tuário, e na agro-;indústria, onde cul-;tivam-se lavouras;de hortifruti.;
 O mês mais quente;do ano é outubro,;com média de 34ºC.;Mais frio é julho,;17ºC. A precipitação;média é de 1400mm;anuais, concentra-;dos no verão.
@@ -77,7 +77,7 @@ devido a sua moder-;nização durante a;época áurea da;borracha, atraindo;inve
 O mês mais quente;do ano é setembro,;com média de 33ºC.;Mais frio é junho,;23ºC. A precipitação;média é de 2300mm;anuais, concentra-;dos no verão.
 
 PA, Belém
-cities/saopaulo.png
+cities/belem.png
 Fundada em 1616;pelos portugueses, é;uma cidade histórica;e portuária, sendo;a capital mais;chuvosa do Brasil;devido a seu clima;equatorial.
 A cidade exerce sig-;nificativa influência;como metrópole;regional, influen-;ciando mais de 8;milhões de pessoas;nos estados do Pará,;Amapá e Maranhão,;
 seja do ponto de;vista cultural, eco-;nômico ou político.;A precipitação mé-;dia é de 3000mm;anuais, concentrados;no verão.

@@ -42,8 +42,6 @@ static void missOnEnter(Game *game, int frame) {
 
 static void missOnFrame(Game *game, int frame) {
 
-	if (frame == 1) fillRGB(game, BLACK);
-
     if (frame < airplaneInOutTime){
         delta = applyCubicEaseInOut(0, airplaneInOutTime, frame, 145);
 
