@@ -77,6 +77,7 @@ static void destinationsOnFrame(Game *game, int frame) {
 		drawImageAsset(select_right, 214 - ((frame/30) % 3), 50);
 
 		if (rewindFrames == 0 && game->keyState.b == KEY_IS_RELEASED){
+            game->gameplayContext.playerDestinationChoice = 1; //Prevents cityScene to load a new level
 			rewindFrames = 200;
 		}
 
