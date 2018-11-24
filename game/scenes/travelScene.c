@@ -13,9 +13,11 @@ static int fromCity,toCity,jet,jet1,jet2,jet3; //Assets
 static char *fromLabel,*toLabel;
 static float delta, increment, flyPosHor, flyPosVer, bgPos;
 static int width, flightTime, airplaneInOutTime; //Animation parameters
+bool flyForward;
 
 static void travelOnEnter(Game *game, int frame) {
 
+    flyForward = game->travel.travelForward;
     int current = game->gameplayContext.currentCity;
     fromLabel = game->gameplayContext.cities[current].imageName;
 
@@ -29,7 +31,7 @@ static void travelOnEnter(Game *game, int frame) {
     flightTime = 1220; //Time in frames, can be adjusted to match sound. Declared as float for animation purposes
     increment = (float)width / ((float)flightTime - (float)airplaneInOutTime); //Increment for the background position
 
-    if (travelBack == 0){
+    if (flyForward){
 
         jet1	    = loadImageAsset("jet1.png");
         jet2	    = loadImageAsset("jet2.png");
@@ -61,7 +63,7 @@ static void travelOnFrame(Game *game, int frame) {
 
         //Draw assets
         drawImageAsset(fromCity, 0, 0);
-        if (travelBack == 0) {
+        if (flyForward) {
             drawImageAsset(jet1, delta - flyPosHor, flyPosVer);
         } else {
             drawImageAsset(jet1, flyPosHor - delta, flyPosVer);
@@ -84,7 +86,7 @@ static void travelOnFrame(Game *game, int frame) {
         //Draw assets
         drawImageAsset(jet, flyPosHor, flyPosVer);
 
-        if (travelBack == 0) {
+        if (flyForward) {
             drawImageAsset(fromCity, 0 - bgPos,0);
             drawImageAsset(toCity, width - bgPos,0);
         } else {
@@ -100,7 +102,7 @@ static void travelOnFrame(Game *game, int frame) {
     if (frame > flightTime && frame <= flightTime + airplaneInOutTime){
         delta = applyCubicEaseInOut(flightTime, flightTime + airplaneInOutTime, frame, 145);
         drawImageAsset(toCity, 0, 0);
-        if (travelBack == 0) {
+        if (flyForward) {
             drawImageAsset(jet, delta + flyPosHor, flyPosVer);
         } else {
             drawImageAsset(jet, flyPosHor - delta, flyPosVer);
@@ -110,11 +112,12 @@ static void travelOnFrame(Game *game, int frame) {
     if (frame > flightTime + airplaneInOutTime){
         if (game->gameplayContext.playerDestinationChoice == 0){
             changeScene(game, makeCityScene(game));
-        } else if (game->gameplayContext.playerDestinationChoice != 0 && travelBack == 0){
-            travelBack = 1; //Ensures the plane travels backwards
+        } else if (game->gameplayContext.playerDestinationChoice != 0 && flyForward == true){
+            game->travel.travelForward = false; //Ensures the plane travels backwards
             changeScene(game, makeTravelScene(game));
         } else {
             changeScene(game, makeCityScene(game));
+            game->travel.travelForward = true;
         }
     }
 }

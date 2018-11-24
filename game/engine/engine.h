@@ -77,7 +77,15 @@ int LEVEL_3[5];
 #define WEEKDAY_FRI 4
 #define MAXCHAR 200
 
-int travelBack; //Determines flight direction, 0 for forward travel, 1 for backward travel
+//Determines flight direction, 0 for forward travel, 1 for backward travel
+typedef struct Travel {
+    bool travelForward;
+} Travel;
+
+//Keeps track of random game mechanics other than LEVELS
+typedef struct Randomize {
+    bool notRandom;
+} Randomize;
 
 typedef struct GameDate {
     int dayOfWeek;
@@ -158,6 +166,8 @@ typedef struct Game {
     Scene currentScene;
     GameplayContext gameplayContext;
     MenuOverlay menuOverlay;
+    Travel travel;
+    Randomize randomize;
 } Game;
 
 

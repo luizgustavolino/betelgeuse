@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include "cityScene.h"
 #include "destinationsScene.h"
+#include "hintsScene.h"
 #include "finalScene.h"
 
 #include "../engine/colors.h"
@@ -37,11 +38,13 @@ static void cityOnEnter(Game *game, int frame) {
 
     if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == 0){
         game->gameplayContext.currentCity = game->gameplayContext.currentCity + 1;
+        game->randomize.notRandom = true;
         loadGameLevel(game, LEVEL_2);
     }
 
     else if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == 1){
         game->gameplayContext.currentCity = game->gameplayContext.currentCity + 1;
+        game->randomize.notRandom = true;
         loadGameLevel(game, LEVEL_3);
     }
 
@@ -179,6 +182,7 @@ char* menuOptionsDatasource(Game *game, int option){
 void menuCallback(Game *game, int choosenOption) {
 	switch (choosenOption) {
 		case CITY_MENU_OPT_INVESTIGATE:
+		    changeScene(game, makeHintsScene(game));
 			break;
 		case CITY_MENU_OPT_FLY:
 			changeScene(game, makeDestinationsScene(game));

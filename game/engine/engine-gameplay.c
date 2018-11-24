@@ -89,7 +89,7 @@ void loadGameLevel(Game *game, int level[]){
 	game->gameplayContext.cities[game->gameplayContext.currentCity].pointsOfInterest[0] = p0;
 
 	Place p1;
-	p1.name = readTXT(game, "data/dica.txt", 8);
+	p1.name = readTXT(game, "data/dica.txt", 7);
 	p1.hint = readTXT(game, "data/dica.txt", 9);
 	p1.hintImageName 	= "hint-citizen-b.png";
 	p1.citizenImageName = readTXT(game, "data/dica.txt", 11);
@@ -97,7 +97,7 @@ void loadGameLevel(Game *game, int level[]){
 	game->gameplayContext.cities[game->gameplayContext.currentCity].pointsOfInterest[1] = p1;
 
 	Place p2;
-	p2.name = readTXT(game, "data/dica.txt", 14);
+	p2.name = readTXT(game, "data/dica.txt", 13);
 	p2.hint = readTXT(game, "data/dica.txt", 15);
 	p2.hintImageName 	= "hint-citizen-c.png";
 	p2.citizenImageName = readTXT(game, "data/dica.txt", 17);
