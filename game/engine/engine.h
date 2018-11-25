@@ -87,6 +87,11 @@ typedef struct Randomize {
     bool notRandom;
 } Randomize;
 
+//Initializes the hint overlay
+typedef struct Hint {
+    bool showHint;
+} Hint;
+
 typedef struct GameDate {
     int dayOfWeek;
     int hour;
@@ -168,6 +173,7 @@ typedef struct Game {
     MenuOverlay menuOverlay;
     Travel travel;
     Randomize randomize;
+    Hint hint;
 } Game;
 
 

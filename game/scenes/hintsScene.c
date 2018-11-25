@@ -12,17 +12,22 @@
 #include "../engine/colors.h"
 
 static void drawInterface(Game *game, int completion, int frame);
+static void drawHint(Game *game, int startFrame, int frame);
 static void drawTime(int day, int hour, int minute);
 
-static int abin_bg, panorama, place_name, place_eta;
-static int select_left, select_right;
+static int abin_bg, panorama, place_name, place_eta, hint_text_bg, hint_face;
+static int select_left, select_right, action_btn_a, action_btn_b;
 static int pano_pin, pano_pin_gray, placePin_x[3], placePin_y[3], loc_x[5], loc_y[5];
 static int instructions;
 
 static int rewindFrames = 0;
+static int startFrame;
 static int currentPlace = 0;
+bool showCurrentHint;
 
 static void hintsOnEnter(Game *game, int frame) {
+
+    showCurrentHint = game->hint.showHint;
 
 	abin_bg = loadImageAsset("abin_pc_bg.png");
 	panorama = loadImageAsset("car_map.png");
@@ -33,6 +38,10 @@ static void hintsOnEnter(Game *game, int frame) {
 	pano_pin = loadImageAsset("pano_pin.png");
 	pano_pin_gray = loadImageAsset("pano_pin_gray.png");
 	instructions = loadImageAsset("jet_instructions.png");
+	hint_text_bg = loadImageAsset("hint_text_bg.png");
+	hint_face = loadImageAsset("hint_face.png");
+	action_btn_a = loadImageAsset("btn_a_from_right_a.png");
+	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
 
 	if (game->randomize.notRandom){
 
@@ -62,67 +71,76 @@ static void hintsOnEnter(Game *game, int frame) {
 
 static void hintsOnFrame(Game *game, int frame) {
 
-	if (rewindFrames > 0) {
+    if (showCurrentHint == false) {
 
-		drawInterface(game, (rewindFrames--)/2, frame);
-		if (rewindFrames == 1){
-			changeScene(game, makeCityScene(game));
-			return;
-		}
+        if (rewindFrames > 0) {
 
-	} else {
-		drawInterface(game, frame/2, frame);
+            drawInterface(game, (rewindFrames--)/2, frame);
+            if (rewindFrames == 1){
+                changeScene(game, makeCityScene(game));
+                return;
+            }
+
+        } else {
+            drawInterface(game, frame/2, frame);
+        }
+
+        int current = game->gameplayContext.currentCity;
+        Place place = game->gameplayContext.cities[current].pointsOfInterest[currentPlace];
+
+        drawTime(game->gameplayContext.currentTime.dayOfWeek,
+                game->gameplayContext.currentTime.hour,
+                game->gameplayContext.currentTime.minutes);
+
+        if (rewindFrames) return;
+
+        if (frame >  80*3) {
+            setTextRGBColor(LIGHT_BLUE);
+            drawCentralizedText(place.name, 167, 48);
+        }
+
+        if (frame >  80*4) {
+
+            drawImageAsset(select_left,  111 + ((frame/30) % 3), 50);
+            drawImageAsset(select_right, 214 - ((frame/30) % 3), 50);
+
+            if (rewindFrames == 0 && game->keyState.b == KEY_IS_RELEASED){
+                game->gameplayContext.playerDestinationChoice = 1; //Prevents cityScene to load a new level
+                rewindFrames = 200;
+            }
+
+            else if (game->keyState.a == KEY_IS_RELEASED) {
+                startFrame = frame;
+                showCurrentHint = true;
+            }
+        }
+
+        if (frame >  80*5) {
+
+            setTextRGBColor(RED);
+            int minutes = place.minutesRequired % 60;
+            int hours   = place.minutesRequired / 60;
+
+            char buffer[12];
+            sprintf(buffer, "+%02dh%02d", hours, minutes);
+            drawCentralizedText(buffer, 186, 75);
+
+            if (game->keyState.right == KEY_IS_RELEASED)
+                currentPlace = (currentPlace + 1) % POINTS_OF_INTEREST_COUNT;
+            if (game->keyState.left  == KEY_IS_RELEASED)
+                currentPlace = (currentPlace + POINTS_OF_INTEREST_COUNT - 1) % POINTS_OF_INTEREST_COUNT;
+        }
+
+    } if (showCurrentHint == false) { //Wipes the instructions when the hints show
+        drawImageAsset(instructions, 146, 129);
+
+        setTextRGBColor(LIGHT_BLUE);
+        drawText("confirma", 164, 131);
+        drawText("cancela", 164, 149);
+
+    } if (showCurrentHint) {
+        drawHint(game, startFrame, frame);
 	}
-
-	setTextRGBColor(YELLOW);
-	drawText("ABIN ROTAS 3D", 85, 11);
-
-	int current = game->gameplayContext.currentCity;
-	Place place = game->gameplayContext.cities[current].pointsOfInterest[currentPlace];
-
-	drawTime(game->gameplayContext.currentTime.dayOfWeek,
-			 game->gameplayContext.currentTime.hour,
-			 game->gameplayContext.currentTime.minutes);
-
-	if (rewindFrames) return;
-
-	if (frame >  80*3) {
-		setTextRGBColor(LIGHT_BLUE);
-		drawCentralizedText(place.name, 167, 48);
-	}
-
-	if (frame >  80*4) {
-
-		drawImageAsset(select_left,  111 + ((frame/30) % 3), 50);
-		drawImageAsset(select_right, 214 - ((frame/30) % 3), 50);
-
-		if (rewindFrames == 0 && game->keyState.b == KEY_IS_RELEASED){
-            game->gameplayContext.playerDestinationChoice = 1; //Prevents cityScene to load a new level
-			rewindFrames = 200;
-		}
-
-		else if (game->keyState.a == KEY_IS_RELEASED) {
-            //Shows hint popup
-		}
-	}
-
-	if (frame >  80*5) {
-
-		setTextRGBColor(RED);
-		int minutes = place.minutesRequired % 60;
-		int hours   = place.minutesRequired / 60;
-
-		char buffer[12];
-  		sprintf(buffer, "+%02dh%02d", hours, minutes);
-		drawCentralizedText(buffer, 186, 75);
-
-		if (game->keyState.right == KEY_IS_RELEASED)
-			currentPlace = (currentPlace + 1) % POINTS_OF_INTEREST_COUNT;
-		if (game->keyState.left  == KEY_IS_RELEASED)
-			currentPlace = (currentPlace + POINTS_OF_INTEREST_COUNT - 1) % POINTS_OF_INTEREST_COUNT;
-
-	}
-
 }
 
 static void hintsOnExit(Game *game, int frame) {
@@ -136,6 +154,9 @@ static void drawInterface(Game *game, int completion, int frame){
 
 	drawImageAsset(abin_bg, 0, 0);
 	if (completion > 30) drawImageAsset(panorama, 7, 31);
+
+	setTextRGBColor(YELLOW);
+    drawText("ABIN PANORAMA 3D", 85, 11);
 
 	if (completion > 40 && completion <= 240) {
         int i;
@@ -168,14 +189,37 @@ static void drawInterface(Game *game, int completion, int frame){
         }
 	}
 
-		drawImageAsset(instructions, 146, 129);
+    if (completion >  60) drawImageAsset(place_name, 108, 38);
+    if (completion >  90) drawImageAsset(place_eta, 158, 65);
+}
 
-		setTextRGBColor(LIGHT_BLUE);
-		drawText("confirma", 164, 131);
-		drawText("cancela", 164, 149);
+static void drawHint(Game *game, int startFrame, int frame){
 
-	if (completion >  60) drawImageAsset(place_name, 108, 38);
-	if (completion >  90) drawImageAsset(place_eta, 158, 65);
+    int localFrame = frame - startFrame;
+
+	int current = game->gameplayContext.currentCity;
+	Place place = game->gameplayContext.cities[current].pointsOfInterest[currentPlace];
+
+    setTextRGBColor(LIGHT_BLUE);
+	drawImageAsset(hint_text_bg, 15, 38);
+	drawText(place.hint, 21, 48);
+
+	if (localFrame > 100) drawImageAsset(hint_face, 30, 98);
+
+    if (localFrame > 170){
+        float delta = applyCubicEaseOut(170, 300, localFrame, 70);
+		if (localFrame % 170 >= 100) {
+			drawImageAsset(action_btn_a, 220 - delta , 145);
+		} else {
+			drawImageAsset(action_btn_b, 220 - delta , 145);
+		} if (localFrame > 300) {
+            setTextRGBColor(61, 140, 222);
+			drawText("voltar", 178, 150);
+
+        } if (game->keyState.a == KEY_IS_RELEASED) {
+            showCurrentHint = false;
+        }
+    }
 }
 
 static void drawTime(int day, int hour, int minute){
