@@ -96,12 +96,6 @@ static IMAGE_ASSET insertImageAsset(ALLEGRO_BITMAP *image){
 	return currentID;
 }
 
-static void removeAssetNode(IMAGE_ASSET tag){
-	ALLEGRO_BITMAP *asset = findAssetNode(tag);
-	if (asset != NULL) al_destroy_bitmap(asset);
-	else Logger.warning("can't unload image asset with id: %d", tag);
-}
-
 static ALLEGRO_BITMAP* findAssetNode(IMAGE_ASSET id){
 
 	// find node that matches id
@@ -114,6 +108,26 @@ static ALLEGRO_BITMAP* findAssetNode(IMAGE_ASSET id){
     } while (current != NULL);
 
 	return NULL;
+}
+
+static void removeAssetNode(IMAGE_ASSET id){
+
+	AssetNode *current  = head->next;
+	AssetNode *previous = head;
+
+    do {
+    	if (current->id == id) {
+    		previous->next = current->next;
+    		ALLEGRO_BITMAP *asset = current->image;
+			if (asset != NULL) al_destroy_bitmap(asset);
+			return;
+    	} else {
+    		previous = current;
+    		current = current->next;
+    	}
+    } while (current != NULL);
+
+	return;
 }
 
 // Fill entire screen with solid RGB color
