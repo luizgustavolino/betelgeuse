@@ -2,7 +2,7 @@
 #include "engine/logger.h"
 #include "engine/engine.h"
 #include "scenes/splashScene.h"
-#include "scenes/destinationsScene.h"
+#include "scenes/hintsScene.h"
 
 // available platforms:
 // - PLATFORM_POKITTO
@@ -23,7 +23,8 @@ int main(int argc, char **argv){
     Game game = createNewGame();
 
     loadGameData(&game);
-    changeScene(&game, makeDestinationsScene(&game));
+    loadGameLevel(&game, LEVEL_1);
+    changeScene(&game, makeHintsScene(&game));
 
     // game lyfecycle
     while (game.running) nextFrame(&game);

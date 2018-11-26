@@ -44,6 +44,10 @@ Game createNewGame(){
     game.keyState.left    = KEY_IS_UP;
 
     game.menuOverlay.visible = false;
+    game.travel.travelForward = true;
+    game.randomize.notRandom = true;
+    game.hint.showHint = false;
+
 
     setupEnvironment(&game);
     preloadMenuAssets(&game);

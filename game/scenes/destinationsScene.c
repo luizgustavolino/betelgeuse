@@ -13,7 +13,7 @@
 static void drawInterface(Game *game, int completion, int frame);
 static void drawTime(int day, int hour, int minute);
 
-static int abin_bg, map, destiny_name, destiny_eta;
+static int abin_bg, map, destination_name, destination_eta;
 static int select_left, select_right;
 static int current_city_pin, d_city_pin;
 static int t_city_pin_a, t_city_pin_b;
@@ -26,8 +26,8 @@ static void destinationsOnEnter(Game *game, int frame) {
 
 	abin_bg = loadImageAsset("abin_pc_bg.png");
 	map = loadImageAsset("jet_map.png");
-	destiny_name = loadImageAsset("jet_destiny_name.png");
-	destiny_eta  = loadImageAsset("jet_destiny_eta.png");
+	destination_name = loadImageAsset("jet_destiny_name.png");
+	destination_eta  = loadImageAsset("jet_destiny_eta.png");
 	select_left  = loadImageAsset("jet_select_l.png");
 	select_right = loadImageAsset("jet_select_r.png");
 	current_city_pin = loadImageAsset("jet_current_city_pin.png");
@@ -77,6 +77,7 @@ static void destinationsOnFrame(Game *game, int frame) {
 		drawImageAsset(select_right, 214 - ((frame/30) % 3), 50);
 
 		if (rewindFrames == 0 && game->keyState.b == KEY_IS_RELEASED){
+            game->gameplayContext.playerDestinationChoice = 1; //Prevents cityScene to load a new level
 			rewindFrames = 200;
 		}
 
@@ -153,8 +154,8 @@ static void drawInterface(Game *game, int completion, int frame){
 
 	}
 
-	if (completion >  60) drawImageAsset(destiny_name, 108, 38);
-	if (completion >  90) drawImageAsset(destiny_eta, 158, 65);
+	if (completion >  60) drawImageAsset(destination_name, 108, 38);
+	if (completion >  90) drawImageAsset(destination_eta, 158, 65);
 }
 
 static void drawTime(int day, int hour, int minute){

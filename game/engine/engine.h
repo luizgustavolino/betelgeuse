@@ -61,6 +61,11 @@ typedef struct ScreenSetup {
 // Estrutura que controla as regras do jogo
 // e mantém o estado atual da partida
 
+//Game levels
+int LEVEL_1[5];
+int LEVEL_2[5];
+int LEVEL_3[5];
+
 #define CITIES_UNTIL_VICTORY        3
 #define DESTINATIONS_COUNT          4
 #define POINTS_OF_INTEREST_COUNT    3
@@ -71,6 +76,21 @@ typedef struct ScreenSetup {
 #define WEEKDAY_THU 3
 #define WEEKDAY_FRI 4
 #define MAXCHAR 200
+
+//Determines flight direction, 0 for forward travel, 1 for backward travel
+typedef struct Travel {
+    bool travelForward;
+} Travel;
+
+//Keeps track of random game mechanics other than LEVELS
+typedef struct Randomize {
+    bool notRandom;
+} Randomize;
+
+//Initializes the hint overlay
+typedef struct Hint {
+    bool showHint;
+} Hint;
 
 typedef struct GameDate {
     int dayOfWeek;
@@ -151,6 +171,9 @@ typedef struct Game {
     Scene currentScene;
     GameplayContext gameplayContext;
     MenuOverlay menuOverlay;
+    Travel travel;
+    Randomize randomize;
+    Hint hint;
 } Game;
 
 
