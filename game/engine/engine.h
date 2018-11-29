@@ -100,8 +100,10 @@ typedef struct GameDate {
 
 typedef struct Place {
     char* name;
+    int pinX;
+    int pinY;
     char* hint;
-    char* hintImageName;
+    char* hintImageName; //Not implemented
     char* citizenImageName;
 
     int minutesRequired;
@@ -124,6 +126,7 @@ typedef struct City {
     int imageAlignY;
     float latitude;
     float longitude;
+    char *panoName;
 
     Place pointsOfInterest[POINTS_OF_INTEREST_COUNT];
     Destination destinations[DESTINATIONS_COUNT];

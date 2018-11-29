@@ -8,16 +8,15 @@
 #include "hintsScene.h"
 #include "cityScene.h"
 
-
 #include "../engine/colors.h"
 
 static void drawInterface(Game *game, int completion, int frame);
 static void drawHint(Game *game, int startFrame, int frame);
 static void drawTime(int day, int hour, int minute);
 
-static int abin_bg, panorama, place_name, place_eta, hint_text_bg, hint_face;
+static int abin_bg, panorama, panorama_box, place_name, place_eta, hint_text_bg, hint_face;
 static int select_left, select_right, action_btn_a, action_btn_b;
-static int pano_pin, pano_pin_gray, placePin_x[3], placePin_y[3], loc_x[5], loc_y[5];
+static int pano_pin, pano_pin_gray;
 static int instructions;
 
 static int rewindFrames = 0;
@@ -30,7 +29,11 @@ static void hintsOnEnter(Game *game, int frame) {
     showCurrentHint = game->hint.showHint;
 
 	abin_bg = loadImageAsset("abin_pc_bg.png");
-	panorama = loadImageAsset("car_map.png");
+	panorama_box = loadImageAsset("pano_box.png");
+	//panorama = loadImageAsset("panoramas/pano_campogrande.png");
+	int current     = game->gameplayContext.currentCity;
+	char *panorama_label = game->gameplayContext.cities[current].panoName;
+	panorama = loadImageAsset(panorama_label);
 	place_name = loadImageAsset("jet_destiny_name.png");
 	place_eta  = loadImageAsset("jet_destiny_eta.png");
 	select_left  = loadImageAsset("jet_select_l.png");
@@ -42,31 +45,6 @@ static void hintsOnEnter(Game *game, int frame) {
 	hint_face = loadImageAsset("hint_face.png");
 	action_btn_a = loadImageAsset("btn_a_from_right_a.png");
 	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
-
-	if (game->randomize.notRandom){
-
-        int pos_x[8] = {10, 22, 34, 46, 58, 70, 82, 94}; //No specific locations. The purpose is purely aesthetic
-        int pos_y[8] = {10, 22, 34, 46, 58, 70, 82, 94}; //No specific locations. The purpose is purely aesthetic
-
-        srand(time(NULL));
-        for(int i = 7; i > 0; i--) {
-            int j = rand() % (i+1);
-            swap(&pos_x[i], &pos_x[j]);
-            j = rand() % (i+1);
-            swap(&pos_y[i], &pos_y[j]);
-        }
-
-        //Preenche os vetores de local
-        for(int i = 0; i < 5; i++){
-            if (i < 3){
-                placePin_x[i] = pos_x[i];
-                placePin_y[i] = pos_y[i] + 30;
-            }
-            loc_x[i] = pos_x[i+3];
-            loc_y[i] = pos_y[i+3] + 30;
-        }
-        game->randomize.notRandom = false;
-	}
 }
 
 static void hintsOnFrame(Game *game, int frame) {
@@ -150,42 +128,45 @@ static void hintsOnExit(Game *game, int frame) {
 static void drawInterface(Game *game, int completion, int frame){
 
 	int current = game->gameplayContext.currentCity;
-	Place place = game->gameplayContext.cities[current].pointsOfInterest[currentPlace];
 
 	drawImageAsset(abin_bg, 0, 0);
-	if (completion > 30) drawImageAsset(panorama, 7, 31);
+	if (completion > 30) drawImageAsset(panorama_box, 7, 31), drawImageAsset(panorama, 8, 36);
 
 	setTextRGBColor(YELLOW);
-    drawText("ABIN PANORAMA 3D", 85, 11);
+    drawText("ABIN PANORAMA", 85, 11);
 
 	if (completion > 40 && completion <= 240) {
         int i;
         float delta;
-        for (i=0; i<8; i++) {
-            if (i > 2) {
-                delta = applyBounceEaseOut(completion + i*5, completion + 180 + i*5, frame, 180);
-                drawImageAsset(pano_pin_gray, loc_x[i-3], delta - loc_y[i-3]);
-            } else {
-                delta = applyBounceEaseOut(completion + i*5, completion + 180 + i*5, frame, 180);
-                drawImageAsset(pano_pin_gray, placePin_x[i], delta - placePin_y[i]);
-            }
+        for (i = 0; i < POINTS_OF_INTEREST_COUNT; i++) {
+            Place p = game->gameplayContext.cities[current].pointsOfInterest[i];
+            delta = applyBounceEaseOut(completion + i*5, completion + 180 + i*5, frame, 180);
+            int loc_x = p.pinX;
+			int loc_y = p.pinY;
+//			int loc_x = 56;
+//			int loc_y = 60;
+            drawImageAsset(pano_pin_gray, loc_x, delta - loc_y);
         }
     }
 
     if (completion > 240) {
         int i;
-		for (i=0; i<8; i++) {
-            if (i > 2) {
-                drawImageAsset(pano_pin_gray, loc_x[i-3], 180 - loc_y[i-3]);
-            } else if (i < 3 && i != currentPlace) {
-                drawImageAsset(pano_pin_gray, placePin_x[i], 180 - placePin_y[i]);
-            }
+		for (i = 0; i < POINTS_OF_INTEREST_COUNT; i++) {
+            Place p = game->gameplayContext.cities[current].pointsOfInterest[i];
+            int loc_x = p.pinX;
+			int loc_y = p.pinY;
+//          int loc_x = 94;
+//			int loc_y = 92;
+            if (i != currentPlace) drawImageAsset(pano_pin_gray, loc_x, 180 - loc_y);
+		}
 
-            if (frame % 180 > 0 && frame % 180 < 90) {
-                drawImageAsset(pano_pin, placePin_x[currentPlace], 180 - placePin_y[currentPlace]);
-            } else {
-                drawImageAsset(pano_pin, placePin_x[currentPlace], 178 - placePin_y[currentPlace]);
-            }
+        Place p = game->gameplayContext.cities[current].pointsOfInterest[currentPlace];
+        int loc_x = p.pinX;
+        int loc_y = p.pinY;
+        if (frame % 180 > 0 && frame % 180 < 90) {
+            drawImageAsset(pano_pin, loc_x, 180 - loc_y);
+        } else {
+            drawImageAsset(pano_pin, loc_x, 178 - loc_y);
         }
 	}
 

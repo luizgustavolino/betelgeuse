@@ -66,41 +66,49 @@ void loadGameLevel(Game *game, int level[]){
 
 	// City A:
 	City correctCity;
-    correctCity.name = readTXT(game, "data/cidade.txt", 6*level[0] - 6); // // Line jump = 6x - 4
+    correctCity.name = readTXT(game, "data/cidade.txt", 6*level[0] - 6); // Line jump = 6x - 6
     correctCity.flavorText[0] = readTXT(game, "data/cidade.txt", 6*level[0] - 4); // Line jump = 6x - 4
     correctCity.flavorText[1] = readTXT(game, "data/cidade.txt", 6*level[0] - 3); // Line jump = 6x - 3
     correctCity.flavorText[2] = readTXT(game, "data/cidade.txt", 6*level[0] - 2); // Line jump = 6x - 2
 
-    correctCity.imageName = readTXT(game, "data/cidade.txt", 6*level[0] - 5); // // Line jump = 6x - 4
+    correctCity.imageName = readTXT(game, "data/cidade.txt", 6*level[0] - 5); // Line jump = 6x - 4
     correctCity.imageAlignX = -73;
     correctCity.imageAlignY = 29;
     correctCity.latitude  = atof(readTXT(game, "data/coordenadas.txt", 4*level[0]-3)); // Line jump = 4x - 3
     correctCity.longitude = atof(readTXT(game, "data/coordenadas.txt", 4*level[0]-2)); // Line jump = 4x - 2
+
+    correctCity.panoName = readTXT(game, "data/dica.txt", 14*level[0] - 13); // Line jump = 14x - 14;
 	game->gameplayContext.cities[game->gameplayContext.currentCity] = correctCity;
 
 	// Pontos de interesse
 
 	Place p0;
-	p0.name = readTXT(game, "data/dica.txt", 1);
-	p0.hint = "''Ele foi para uma cidade de ''edifícios;baixos'', onde raramente atingem qua-;renta andares, e a média é de vinte;andares.''";
-	p0.hintImageName 	= "hint-citizen-a.png";
-	p0.citizenImageName = readTXT(game, "data/dica.txt", 4);
+	p0.name = readTXT(game, "data/dica.txt", 14*level[0] - 12);
+	p0.pinX = atoi(readTXT(game, "data/dica.txt", 14*level[0] - 11));
+	p0.pinY = atoi(readTXT(game, "data/dica.txt", 14*level[0] - 10));
+	p0.hint = readTXT(game, "data/dica.txt", 14*level[0] - 9);
+	p0.hintImageName 	= "hint-citizen-c.png"; //Not implemented
+	p0.citizenImageName = "hint-citizen-c.png";
 	p0.minutesRequired 	= 120;
 	game->gameplayContext.cities[game->gameplayContext.currentCity].pointsOfInterest[0] = p0;
 
 	Place p1;
-	p1.name = readTXT(game, "data/dica.txt", 7);
-	p1.hint = "Ele foi para uma cidade de 'edifícios;baixos', onde raramente atingem qua-;renta andares, e a média é de vinte;andares.";
-	p1.hintImageName 	= "hint-citizen-b.png";
-	p1.citizenImageName = readTXT(game, "data/dica.txt", 11);
+	p1.name = readTXT(game, "data/dica.txt", 14*level[0] - 8);
+	p1.pinX = atoi(readTXT(game, "data/dica.txt", 14*level[0] - 7));
+	p1.pinY = atoi(readTXT(game, "data/dica.txt", 14*level[0] - 6));
+	p1.hint = readTXT(game, "data/dica.txt", 14*level[0] - 5);
+	p1.hintImageName 	= "hint-citizen-c.png"; //Not implemented
+	p1.citizenImageName = "hint-citizen-c.png";
 	p1.minutesRequired 	= 100;
 	game->gameplayContext.cities[game->gameplayContext.currentCity].pointsOfInterest[1] = p1;
 
 	Place p2;
-	p2.name = readTXT(game, "data/dica.txt", 13);
-	p2.hint = "Ele foi para uma cidade de 'edifícios;baixos', onde raramente atingem qua-;renta andares, e a média é de vinte;andares.";
-	p2.hintImageName 	= "hint-citizen-c.png";
-	p2.citizenImageName = readTXT(game, "data/dica.txt", 17);
+	p2.name = readTXT(game, "data/dica.txt", 14*level[0] - 4);
+	p2.pinX = atoi(readTXT(game, "data/dica.txt", 14*level[0] - 3));
+	p2.pinY = atoi(readTXT(game, "data/dica.txt", 14*level[0] - 2));
+	p2.hint = readTXT(game, "data/dica.txt", 14*level[0] - 1);
+	p2.hintImageName 	= "hint-citizen-c.png"; //Not implemented
+	p2.citizenImageName = "hint-citizen-c.png";
 	p2.minutesRequired 	= 140;
 	game->gameplayContext.cities[game->gameplayContext.currentCity].pointsOfInterest[2] = p2;
 
