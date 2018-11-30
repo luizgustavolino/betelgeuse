@@ -58,11 +58,13 @@ static void travelOnEnter(Game *game, int frame) {
 
 static void travelOnFrame(Game *game, int frame) {
 
+    fillRGB(game, BLACK);
+
     if (frame < airplaneInOutTime){
         delta = applyCubicEaseInOut(0, airplaneInOutTime, frame, 145);
 
         //Draw assets
-        drawImageAsset(fromCity, 0, 0);
+        drawImageAsset(fromCity, 8, 22);
         if (flyForward) {
             drawImageAsset(jet1, delta - flyPosHor, flyPosVer);
         } else {
@@ -87,11 +89,11 @@ static void travelOnFrame(Game *game, int frame) {
         drawImageAsset(jet, flyPosHor, flyPosVer);
 
         if (flyForward) {
-            drawImageAsset(fromCity, 0 - bgPos,0);
-            drawImageAsset(toCity, width - bgPos,0);
+            drawImageAsset(fromCity, 8 - bgPos,22);
+            drawImageAsset(toCity, width + 8 - bgPos,22); //+ 8 for the border
         } else {
-            drawImageAsset(fromCity, 0 + bgPos,0);
-            drawImageAsset(toCity, bgPos - width,0);
+            drawImageAsset(fromCity, 8 + bgPos,22);
+            drawImageAsset(toCity, bgPos - width + 8,22); //+ 8 for the border
         }
 
         drawImageAsset(jet, flyPosHor, flyPosVer);
@@ -101,7 +103,7 @@ static void travelOnFrame(Game *game, int frame) {
 
     if (frame > flightTime && frame <= flightTime + airplaneInOutTime){
         delta = applyCubicEaseInOut(flightTime, flightTime + airplaneInOutTime, frame, 145);
-        drawImageAsset(toCity, 0, 0);
+        drawImageAsset(toCity, 8, 22);
         if (flyForward) {
             drawImageAsset(jet, delta + flyPosHor, flyPosVer);
         } else {
