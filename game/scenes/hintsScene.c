@@ -56,6 +56,7 @@ static void hintsOnFrame(Game *game, int frame) {
         if (rewindFrames > 0) {
 
             drawInterface(game, (rewindFrames--)/2, frame);
+            drawTime(game->gameplayContext.currentTime); //Prevents time from vanishing
             if (rewindFrames == 1){
                 changeScene(game, makeCityScene(game));
                 return;
