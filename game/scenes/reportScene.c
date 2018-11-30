@@ -1,5 +1,5 @@
 //
-// SENAC BCC PI 2 
+// SENAC BCC PI 2
 // Projeto Betelgeuse
 
 #include <stddef.h>
@@ -18,7 +18,7 @@ static void reportOnEnter(Game *game, int frame) {
 	bgAsset 		= loadImageAsset("report_bg.png");
 	paperAsset 		= loadImageAsset("report_paper.png");
 	pathAsset 		= loadImageAsset("menu_overlay_path.png");
-	pathDenseAsset 	= loadImageAsset("menu_overlay_path_dense.png"); 
+	pathDenseAsset 	= loadImageAsset("menu_overlay_path_dense.png");
 
 	action_btn_a = loadImageAsset("btn_a_from_right_a.png");
 	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
@@ -46,19 +46,18 @@ static void reportOnFrame(Game *game, int frame) {
 		drawImageAsset(paperAsset, 17, 10 + delta);
 
 		setTextRGBColor(GRAY);
-		
-		char* text = game->gameplayContext.stolenItemText;
-	    drawText(text, 34, 38 + delta);
+
+	    drawText(game->gameplayContext.stolenItemText, 34, 38 + delta);
 
 	} else if (frame > 820) {
 		float delta = applyCubicEaseOut(820, 950, frame, 80);
-		if ( frame % 170 >= 100) { 
+		if ( frame % 170 >= 100) {
 			drawImageAsset(action_btn_a, 220 - delta , 145);
 		} else {
 			drawImageAsset(action_btn_b, 220 - delta , 145);
 		}
 
-		if ( frame > 950) { 
+		if ( frame > 950) {
 			setTextRGBColor(61, 140, 222);
 			drawText("investigar", 168, 150);
 

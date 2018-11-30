@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include "engine.h"
+#include "../engine/colors.h"
 
 #if defined(PLATFORM_WIN) || defined(PLATFORM_MAC) || defined(PLATFORM_LINUX)
 
@@ -184,6 +185,57 @@ void drawCentralizedText(const char *text,  double x, double y){
 void drawLine(Point a, Point b, Color rgb){
 	ALLEGRO_COLOR color = al_map_rgb(rgb.r, rgb.g, rgb.b);
 	al_draw_line(a.x, a.y, b.x, b.y, color, 1.0);
+}
+
+void drawTime(int totalMinutes){
+
+    int minutes, hours, day;
+
+    if (totalMinutes >= 0 && totalMinutes < 540) {
+        minutes = totalMinutes % 60;
+        hours = totalMinutes / 60 + 9;
+        day = WEEKDAY_MON;
+    } else if (totalMinutes >= 540 && totalMinutes < 1080) {
+        totalMinutes = totalMinutes - 540;
+        minutes = totalMinutes % 60;
+        hours = totalMinutes / 60 + 9;
+        day = WEEKDAY_TUE;
+    } else if (totalMinutes >= 1080 && totalMinutes < 1620) {
+        totalMinutes = totalMinutes - 1080;
+        minutes = totalMinutes % 60;
+        hours = totalMinutes / 60 + 9;
+        day = WEEKDAY_WED;
+    } else if (totalMinutes >= 1620 && totalMinutes < 2160) {
+        totalMinutes = totalMinutes - 1620;
+        minutes = totalMinutes % 60;
+        hours = totalMinutes / 60 + 9;
+        day = WEEKDAY_THU;
+    } else if (totalMinutes >= 2160 && totalMinutes < 2700) {
+        totalMinutes = totalMinutes - 2160;
+        minutes = totalMinutes % 60;
+        hours = totalMinutes / 60 + 9;
+        day = WEEKDAY_FRI;
+    } else if (totalMinutes >= 2700) {
+        minutes = 0;
+        hours = 18;
+        day = WEEKDAY_FRI;
+    }
+
+	char buffer[16];
+	char *dayAsText;
+
+	switch(day) {
+		case WEEKDAY_MON: dayAsText = "SEG"; break;
+		case WEEKDAY_TUE: dayAsText = "TER"; break;
+		case WEEKDAY_WED: dayAsText = "QUA"; break;
+		case WEEKDAY_THU: dayAsText = "QUI"; break;
+		case WEEKDAY_FRI: dayAsText = "SEX"; break;
+		default: break;
+	}
+
+  	sprintf(buffer, "%s - %02dh%02d", dayAsText, hours, minutes);
+  	setTextRGBColor(YELLOW);
+  	drawText(buffer, 11, 11);
 }
 
 #endif

@@ -11,7 +11,6 @@
 #include "../engine/colors.h"
 
 static void drawInterface(Game *game, int completion, int frame);
-static void drawTime(int day, int hour, int minute);
 
 static int abin_bg, map, destination_name, destination_eta;
 static int select_left, select_right;
@@ -60,9 +59,7 @@ static void destinationsOnFrame(Game *game, int frame) {
 	int currentCity = game->gameplayContext.currentCity;
 	City city = game->gameplayContext.cities[currentCity];
 
-	drawTime(game->gameplayContext.currentTime.dayOfWeek,
-			 game->gameplayContext.currentTime.hour,
-			 game->gameplayContext.currentTime.minutes);
+    drawTime(game->gameplayContext.currentTime);
 
 	if (rewindFrames) return;
 
@@ -156,25 +153,6 @@ static void drawInterface(Game *game, int completion, int frame){
 
 	if (completion >  60) drawImageAsset(destination_name, 108, 38);
 	if (completion >  90) drawImageAsset(destination_eta, 158, 65);
-}
-
-static void drawTime(int day, int hour, int minute){
-
-	char buffer[16];
-	char* dayAsText;
-
-	switch(day) {
-		case WEEKDAY_MON: dayAsText = "SEG"; break;
-		case WEEKDAY_TUE: dayAsText = "TER"; break;
-		case WEEKDAY_WED: dayAsText = "QUA"; break;
-		case WEEKDAY_THU: dayAsText = "QUI"; break;
-		case WEEKDAY_FRI: dayAsText = "SEX"; break;
-		default: break;
-	}
-
-  	sprintf(buffer, "%s - %02dh%02d", dayAsText, hour, minute);
-  	setTextRGBColor(YELLOW);
-  	drawText(buffer, 11, 11);
 }
 
 Scene makeDestinationsScene(Game *game){

@@ -1,5 +1,5 @@
 //
-// SENAC BCC PI 2 
+// SENAC BCC PI 2
 // Projeto Betelgeuse
 
 #include <stdlib.h>
@@ -38,10 +38,10 @@ float rad2deg(float rad) {
 	char* allocStringJoining(const char *s1, const char *s2){
 
 		// +1 for the null-terminator
-	    char *result = malloc(strlen(s1) + strlen(s2) + 1); 
+	    char *result = malloc(strlen(s1) + strlen(s2) + 1);
 	    strcpy(result, s1);
 	    strcat(result, s2);
-	    
+
 	    return result;
 	}
 

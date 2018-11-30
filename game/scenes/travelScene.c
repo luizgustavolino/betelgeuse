@@ -17,8 +17,13 @@ static char *fromLabel,*toLabel;
 static float delta, increment, flyPosHor, flyPosVer, bgPos;
 static int width, flightTime, airplaneInOutTime; //Animation parameters
 bool flyForward;
+static int currentTime, minutesRequired;
 
 static void travelOnEnter(Game *game, int frame) {
+
+    currentTime = game->gameplayContext.currentTime;
+    int playerChoice = game->gameplayContext.playerDestinationChoice;
+    minutesRequired = game->gameplayContext.cities[game->gameplayContext.currentCity].destinations[playerChoice].minutesRequired;
 
     hint_text_bg = loadImageAsset("hint_text_bg.png");
     hint_face = loadImageAsset("hint_face.png");
@@ -176,9 +181,11 @@ static void drawMessage(Game *game, int startFrame, int frame){
 
         } if (game->keyState.a == KEY_IS_RELEASED) {
             if (game->gameplayContext.playerDestinationChoice != 0){
+                game->gameplayContext.currentTime = currentTime + minutesRequired * 2; //*2 already accounts for the flight back
                 game->travel.travelForward = false; //Ensures the plane travels backwards
                 changeScene(game, makeTravelScene(game));
             } else {
+                game->gameplayContext.currentTime = currentTime + minutesRequired;
                 changeScene(game, makeCityScene(game));
             }
         }

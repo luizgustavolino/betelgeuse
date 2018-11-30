@@ -24,11 +24,9 @@ static int page_off, page_on;
 
 static void drawInterface(Game *game, int frame);
 static void drawPage(Game *game, int pageNum);
-static void drawTime(int day, int hour, int minute);
 
 static char* menuOptionsDatasource(Game *game, int option);
 static void menuCallback(Game *game, int choosenOption);
-
 
 // ### Ciclo de vida da cena
 
@@ -84,9 +82,7 @@ static void cityOnFrame(Game *game, int frame) {
 	drawPage(game, current_page);
 
 	// desenhando hora
-	drawTime(game->gameplayContext.currentTime.dayOfWeek,
-			 game->gameplayContext.currentTime.hour,
-			 game->gameplayContext.currentTime.minutes);
+	drawTime(game->gameplayContext.currentTime);
 
 	// botão de opções
 	setTextRGBColor(BLUE);
@@ -128,25 +124,6 @@ static void drawInterface(Game *game, int frame){
 	//drawImageAsset(abin_bg, 0, 0);
 
 	drawImageAsset(city_foreground, 0, 0);
-}
-
-static void drawTime(int day, int hour, int minute){
-
-	char buffer[16];
-	char* dayAsText;
-
-	switch(day) {
-		case WEEKDAY_MON: dayAsText = "SEG"; break;
-		case WEEKDAY_TUE: dayAsText = "TER"; break;
-		case WEEKDAY_WED: dayAsText = "QUA"; break;
-		case WEEKDAY_THU: dayAsText = "QUI"; break;
-		case WEEKDAY_FRI: dayAsText = "SEX"; break;
-		default: break;
-	}
-
-  	sprintf(buffer, "%s - %02dh%02d", dayAsText, hour, minute);
-  	setTextRGBColor(YELLOW);
-  	drawText(buffer, 11, 11);
 }
 
 static void drawPage(Game *game, int pageNum){

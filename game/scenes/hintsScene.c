@@ -11,7 +11,6 @@
 
 static void drawInterface(Game *game, int completion, int frame);
 static void drawHint(Game *game, int startFrame, int frame);
-static void drawTime(int day, int hour, int minute);
 
 static int abin_bg, city_image, city_box, place_name, place_eta, hint_text_bg, hint_face;
 static int select_left, select_right, action_btn_a, action_btn_b;
@@ -22,6 +21,7 @@ static int rewindFrames = 0;
 static int startFrame;
 static int currentPlace = 0;
 bool showCurrentHint;
+static int currentTime, minutesRequired;
 
 static void hintsOnEnter(Game *game, int frame) {
 
@@ -48,6 +48,9 @@ static void hintsOnEnter(Game *game, int frame) {
 
 static void hintsOnFrame(Game *game, int frame) {
 
+    currentTime = game->gameplayContext.currentTime;
+    minutesRequired = game->gameplayContext.cities[game->gameplayContext.currentCity].pointsOfInterest[currentPlace].minutesRequired;
+
     if (showCurrentHint == false) {
 
         if (rewindFrames > 0) {
@@ -64,10 +67,6 @@ static void hintsOnFrame(Game *game, int frame) {
 
         int current = game->gameplayContext.currentCity;
         Place place = game->gameplayContext.cities[current].pointsOfInterest[currentPlace];
-
-        drawTime(game->gameplayContext.currentTime.dayOfWeek,
-                game->gameplayContext.currentTime.hour,
-                game->gameplayContext.currentTime.minutes);
 
         if (rewindFrames) return;
 
@@ -88,6 +87,7 @@ static void hintsOnFrame(Game *game, int frame) {
 
             else if (game->keyState.a == KEY_IS_RELEASED) {
                 startFrame = frame;
+                game->gameplayContext.currentTime = currentTime + minutesRequired;
                 showCurrentHint = true;
             }
         }
@@ -108,7 +108,8 @@ static void hintsOnFrame(Game *game, int frame) {
                 currentPlace = (currentPlace + POINTS_OF_INTEREST_COUNT - 1) % POINTS_OF_INTEREST_COUNT;
         }
 
-    } if (showCurrentHint == false) { //Wipes the instructions when the hints show
+    } if (showCurrentHint == false) { //Wipes the instructions and time when the hints show
+        drawTime(game->gameplayContext.currentTime);
         drawImageAsset(instructions, 146, 129);
 
         setTextRGBColor(LIGHT_BLUE);
@@ -180,6 +181,8 @@ static void drawHint(Game *game, int startFrame, int frame){
 	int current = game->gameplayContext.currentCity;
 	Place place = game->gameplayContext.cities[current].pointsOfInterest[currentPlace];
 
+	drawTime(game->gameplayContext.currentTime);
+
     setTextRGBColor(LIGHT_BLUE);
 	drawImageAsset(hint_text_bg, 15, 38);
 	drawText(place.hint, 21, 48);
@@ -200,25 +203,6 @@ static void drawHint(Game *game, int startFrame, int frame){
             showCurrentHint = false;
         }
     }
-}
-
-static void drawTime(int day, int hour, int minute){
-
-	char buffer[16];
-	char* dayAsText;
-
-	switch(day) {
-		case WEEKDAY_MON: dayAsText = "SEG"; break;
-		case WEEKDAY_TUE: dayAsText = "TER"; break;
-		case WEEKDAY_WED: dayAsText = "QUA"; break;
-		case WEEKDAY_THU: dayAsText = "QUI"; break;
-		case WEEKDAY_FRI: dayAsText = "SEX"; break;
-		default: break;
-	}
-
-  	sprintf(buffer, "%s - %02dh%02d", dayAsText, hour, minute);
-  	setTextRGBColor(YELLOW);
-  	drawText(buffer, 11, 11);
 }
 
 Scene makeHintsScene(Game *game){

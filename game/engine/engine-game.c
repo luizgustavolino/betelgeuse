@@ -43,6 +43,7 @@ Game createNewGame(){
     game.keyState.down    = KEY_IS_UP;
     game.keyState.left    = KEY_IS_UP;
 
+    game.gameplayContext.playerDestinationChoice = 1;
     game.menuOverlay.visible = false;
     game.travel.travelForward = true;
     game.randomize.notRandom = true;

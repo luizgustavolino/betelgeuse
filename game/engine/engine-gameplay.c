@@ -49,10 +49,10 @@ void loadGameData(Game *game){
         LEVEL_3[i] = array[i+8];
     }
 
-    game->gameplayContext.currentTime.dayOfWeek = WEEKDAY_MON;
-	game->gameplayContext.currentTime.hour 		= 9;
-	game->gameplayContext.currentTime.minutes 	= 0;
+	game->gameplayContext.currentTime = 0; //Sets current time in minutes to 0
 	game->gameplayContext.currentCity = 0;
+
+	loadGameLevel(game, LEVEL_1); //Loads the first level
 }
 
 void loadGameLevel(Game *game, int level[]){
@@ -110,10 +110,10 @@ void loadGameLevel(Game *game, int level[]){
 
 	// Destinos
 
+    //d0 is the right choice
 	Destination d0;
 	d0.name = readTXT(game, "data/cidade.txt", 6*level[1] - 6); // // Line jump = 6x - 4
     d0.imageName = readTXT(game, "data/dica.txt", 14*level[1] - 13); // Line jump = 14x - 14;
-    d0.rightChoice = true;
     d0.latitude  = atof(readTXT(game, "data/coordenadas.txt", 4*level[1]-3)); // Line jump = 4x - 3
     d0.longitude = atof(readTXT(game, "data/coordenadas.txt", 4*level[1]-2)); // Line jump = 4x - 2
     d0.minutesRequired = travelTime(correctCity.latitude, correctCity.longitude, d0.latitude, d0.longitude);
@@ -122,7 +122,6 @@ void loadGameLevel(Game *game, int level[]){
     Destination d1;
 	d1.name = readTXT(game, "data/cidade.txt", 6*level[2] - 6); // // Line jump = 6x - 4
     d1.imageName = readTXT(game, "data/dica.txt", 14*level[2] - 13); // Line jump = 14x - 14;
-    d1.rightChoice = false;
     d1.latitude  = atof(readTXT(game, "data/coordenadas.txt", 4*level[2]-3)); // Line jump = 4x - 3
     d1.longitude = atof(readTXT(game, "data/coordenadas.txt", 4*level[2]-2)); // Line jump = 4x - 2
     d1.minutesRequired = travelTime(correctCity.latitude, correctCity.longitude, d1.latitude, d1.longitude);
@@ -131,7 +130,6 @@ void loadGameLevel(Game *game, int level[]){
     Destination d2;
 	d2.name = readTXT(game, "data/cidade.txt", 6*level[3] - 6); // // Line jump = 6x - 4
     d2.imageName = readTXT(game, "data/dica.txt", 14*level[3] - 13); // Line jump = 14x - 14;
-    d2.rightChoice = false;
     d2.latitude  = atof(readTXT(game, "data/coordenadas.txt", 4*level[3]-3)); // Line jump = 4x - 3
     d2.longitude = atof(readTXT(game, "data/coordenadas.txt", 4*level[3]-2)); // Line jump = 4x - 2
     d2.minutesRequired = travelTime(correctCity.latitude, correctCity.longitude, d2.latitude, d2.longitude);
@@ -140,7 +138,6 @@ void loadGameLevel(Game *game, int level[]){
     Destination d3;
 	d3.name = readTXT(game, "data/cidade.txt", 6*level[4] - 6); // // Line jump = 6x - 4
     d3.imageName = readTXT(game, "data/dica.txt", 14*level[4] - 13); // Line jump = 14x - 14;
-    d3.rightChoice = false;
     d3.latitude  = atof(readTXT(game, "data/coordenadas.txt", 4*level[4]-3)); // Line jump = 4x - 3
     d3.longitude = atof(readTXT(game, "data/coordenadas.txt", 4*level[4]-2)); // Line jump = 4x - 2
     d3.minutesRequired = travelTime(correctCity.latitude, correctCity.longitude, d3.latitude, d3.longitude);
