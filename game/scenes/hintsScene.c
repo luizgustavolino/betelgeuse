@@ -4,7 +4,6 @@
 
 #include <stddef.h>
 #include <stdio.h>
-#include "time.h"
 #include "hintsScene.h"
 #include "cityScene.h"
 
@@ -133,7 +132,7 @@ static void drawInterface(Game *game, int completion, int frame){
 	if (completion > 30) drawImageAsset(city_box, 7, 31), drawImageAsset(city_image, 8, 36);
 
 	setTextRGBColor(YELLOW);
-    drawText("ABIN PANORAMA", 85, 11);
+    drawText(game->gameplayContext.cities[current].name, 85, 11);
 
 	if (completion > 40 && completion <= 240) {
         int i;
