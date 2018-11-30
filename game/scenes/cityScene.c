@@ -59,7 +59,7 @@ static void cityOnEnter(Game *game, int frame) {
 
 
 	int current     = game->gameplayContext.currentCity;
-	char *background_image = game->gameplayContext.cities[current].imageName;
+	char *background_image = game->gameplayContext.cities[current].smallImageName;
 	city_background = loadImageAsset(background_image);
 
 	abin_bg = loadImageAsset("abin_pc_bg.png");
@@ -124,11 +124,7 @@ static void cityOnExit(Game *game, int frame) {
 // desenha a interface e fundo
 static void drawInterface(Game *game, int frame){
 
-	int current = game->gameplayContext.currentCity;
-	int bg_align_x = game->gameplayContext.cities[current].imageAlignX;
-    int bg_align_y = game->gameplayContext.cities[current].imageAlignY;
-
-	drawImageAsset(city_background, bg_align_x, bg_align_y);
+	drawImageAsset(city_background, 9, 33);
 	//drawImageAsset(abin_bg, 0, 0);
 
 	drawImageAsset(city_foreground, 0, 0);

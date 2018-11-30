@@ -122,11 +122,9 @@ typedef struct City {
     char *name;
     char *flavorText[3];
     char *imageName;
-    int imageAlignX;
-    int imageAlignY;
+    char *smallImageName;
     float latitude;
     float longitude;
-    char *panoName;
 
     Place pointsOfInterest[POINTS_OF_INTEREST_COUNT];
     Destination destinations[DESTINATIONS_COUNT];

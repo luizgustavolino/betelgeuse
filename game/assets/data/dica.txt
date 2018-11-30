@@ -111,7 +111,7 @@ Parque
 92
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
 
-panorama/pano_saopaulo.png
+panorama/pano_cuiaba.png
 Igreja
 54
 75
@@ -125,7 +125,7 @@ Biblioteca
 72
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
 
-panorama/pano_riodejaneiro.png
+panorama/pano_curitiba.png
 Ópera
 52
 55
@@ -139,7 +139,7 @@ Consulado
 87
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
 
-panorama/pano_belohorizonte.png
+panorama/pano_florianopolis.png
 Parque
 20
 44
@@ -153,7 +153,7 @@ Biblioteca
 75
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
 
-panorama/pano_salvador.png
+panorama/pano_portoalegre.png
 Mercado
 77
 62
@@ -167,7 +167,7 @@ Parque
 136
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
 
-panorama/pano_recife.png
+panorama/pano_manaus.png
 Parque
 106
 52
@@ -181,7 +181,7 @@ Consulado
 82
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
 
-panorama/pano_fortaleza.png
+panorama/pano_belem.png
 Praia
 55
 45
@@ -195,7 +195,7 @@ Biblioteca
 93
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
 
-panorama/pano_goiania.png
+panorama/pano_riobranco.png
 Hotel
 43
 108
@@ -209,7 +209,7 @@ Escritório
 141
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
 
-panorama/pano_campogrande.png
+panorama/pano_brasilia.png
 Hotel
 64
 72
