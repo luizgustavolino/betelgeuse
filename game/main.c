@@ -2,16 +2,6 @@
 #include "engine/logger.h"
 #include "engine/engine.h"
 #include "scenes/splashScene.h"
-#include "scenes/cityScene.h"
-
-// available platforms:
-// - PLATFORM_POKITTO
-// - PLATFORM_WIN
-// - PLATFORM_MAC
-// - PLATFORM_LINUX
-// engines:
-// - ENGINE_ALLEGRO (win, mac and linux)
-// - ENGINE_POKITTO
 
 int main(int argc, char **argv){
 
@@ -24,7 +14,7 @@ int main(int argc, char **argv){
 
     loadGameData(&game); //temp
     loadGameLevel(&game, LEVEL_1); //temp
-    changeScene(&game, makeCityScene(&game));
+    changeScene(&game, makeSplashScene(&game));
 
     // game lyfecycle
     while (game.running) nextFrame(&game);

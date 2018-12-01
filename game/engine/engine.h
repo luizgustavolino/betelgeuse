@@ -14,19 +14,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// 'platform' to 'render' definitions
-#if defined(PLATFORM_WIN) || defined(PLATFORM_MAC) || defined(PLATFORM_LINUX)
-    #define ENGINE_ALLEGRO
-#elif defined(PLATFORM_POKITTO)
-    #define ENGINE_POKITTO
-#endif
-
 // platform specifics globals
-#ifdef ENGINE_ALLEGRO
-    #include <allegro5/allegro.h>
-    ALLEGRO_DISPLAY *window;
-    ALLEGRO_EVENT_QUEUE *queue;
-#endif
+#include <allegro5/allegro.h>
+ALLEGRO_DISPLAY *window;
+ALLEGRO_EVENT_QUEUE *queue;
 
 // engine droplets includes
 #include "logger.h"
@@ -75,7 +66,6 @@ int LEVEL_3[5];
 #define WEEKDAY_WED 2
 #define WEEKDAY_THU 3
 #define WEEKDAY_FRI 4
-#define MAXCHAR 200
 
 //Determines flight direction, 0 for forward travel, 1 for backward travel
 typedef struct Travel {

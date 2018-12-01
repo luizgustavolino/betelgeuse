@@ -6,8 +6,6 @@
 #include <stdlib.h>
 #include "engine.h"
 
-#ifdef ENGINE_ALLEGRO
-
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_font.h>
@@ -153,5 +151,3 @@ static void shutdownAllegro(){
     // al_uninstall & al_shutdown functions is auto called
     // by allegro, as stated in v5.0 manual
 }
-
-#endif

@@ -11,7 +11,6 @@
 #include "math.h"
 #include "engine.h"
 
-
 void loadGameData(Game *game){
 
     //RANDOMIZE LEVELS

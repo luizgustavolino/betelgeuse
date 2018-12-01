@@ -6,8 +6,6 @@
 #include "engine.h"
 #include "../engine/colors.h"
 
-#if defined(PLATFORM_WIN) || defined(PLATFORM_MAC) || defined(PLATFORM_LINUX)
-
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_font.h>
@@ -252,4 +250,3 @@ void drawTime(int totalMinutes){
   	drawText(buffer, 11, 11);
 }
 
-#endif

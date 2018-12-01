@@ -166,7 +166,8 @@ int travelTime(float lat1, float lon1, float lat2, float lon2){
 char *readTXT(Game *game, char *filename, int line){
 
     FILE *fp;
-    char holder[MAXCHAR];
+    int string_buffer_size = 256;
+    char holder[string_buffer_size];
 
     // 1) find .txt path
 	char *path = allocStringJoining("assets/", filename);
@@ -191,7 +192,7 @@ char *readTXT(Game *game, char *filename, int line){
         int i = 0;
         while(i <= line){
             // Lê o arquivo linha por linha até chegar na linha escolhida e retorna a string
-            fgets(holder, MAXCHAR, fp);
+            fgets(holder, string_buffer_size, fp);
             if(i == line) {
 
             	int len = strlen(holder);

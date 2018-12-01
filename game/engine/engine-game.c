@@ -20,12 +20,7 @@ void menuOverlayOnFrame(Game *game, int frame);
 Game createNewGame(){
 
     struct Game game;
-
-#ifdef PLATFORM_POKITTO
-    game.screenSetup.scaleFactor = 1;
-#else
     game.screenSetup.scaleFactor = 3;
-#endif
 
     game.screenSetup.width  = 220 * game.screenSetup.scaleFactor;
     game.screenSetup.height = 176 * game.screenSetup.scaleFactor;
@@ -49,9 +44,9 @@ Game createNewGame(){
     game.randomize.notRandom = true;
     game.hint.showHint = false;
 
-
     setupEnvironment(&game);
     preloadMenuAssets(&game);
+
     return game;
 }
 
@@ -83,7 +78,9 @@ void endGame(Game *game){
 	// Avisa a cena anterior que o jogo acabou
     // & platform specifcs
     int frame = game->frame - game->sceneFrame;
-	if (game->currentScene.onExit != NULL) game->currentScene.onExit(game, frame);
+	if (game->currentScene.onExit != NULL)
+        game->currentScene.onExit(game, frame);
+    
     unloadMenuAssets(game);
     quitEnvironment(game);
 }

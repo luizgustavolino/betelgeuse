@@ -6,8 +6,6 @@
 #include <stdlib.h>
 #include "engine.h"
 
-#ifdef ENGINE_ALLEGRO
-
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_font.h>
@@ -56,5 +54,3 @@ static actionState updateForKey(int keyCode, actionState currentState) {
 	Logger.error("Key not handled: %d!", keyCode);
 	return KEY_IS_UP;
 }
-
-#endif

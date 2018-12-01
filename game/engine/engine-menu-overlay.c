@@ -7,8 +7,6 @@
 #include "engine.h"
 #include "colors.h"
 
-#ifdef ENGINE_ALLEGRO
-
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_font.h>
@@ -192,5 +190,3 @@ void menuOverlayOnFrame(Game *game, int frame){
 	}
 
 }
-
-#endif

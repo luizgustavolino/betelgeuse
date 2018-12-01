@@ -8,8 +8,6 @@
 #include <stdlib.h>
 #include "engine.h"
 
-#if defined(PLATFORM_WIN) || defined(PLATFORM_MAC) || defined(PLATFORM_LINUX)
-
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_font.h>
@@ -20,7 +18,6 @@
 #include <allegro5/allegro_native_dialog.h>
 
 ALLEGRO_AUDIO_STREAM *currentOST = NULL;
-
 
 void stopSoundtrack(Game *game){
 	if (currentOST != NULL) {
@@ -77,5 +74,3 @@ void playSoundtrack(Game *game, char* name){
 	free(path);
 
 }
-
-#endif

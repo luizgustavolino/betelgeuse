@@ -6,8 +6,6 @@
 #include <stdlib.h>
 #include "engine.h"
 
-#ifdef ENGINE_ALLEGRO
-
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_font.h>
@@ -45,5 +43,3 @@ void loopEnvironmentBeforeFrame(Game *game, bool *shouldDraw){
 void loopEnvironmentAfterFrame(Game *game, bool redrawing) {
 	
 }
-
-#endif
