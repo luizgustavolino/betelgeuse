@@ -174,6 +174,7 @@ typedef struct Game {
 // Funções de apoio ao motor do jogo
 Game createNewGame();
 void loadGameData(Game *game);
+void loadGameLevel(Game *game, int level[]);
 void nextFrame(Game *game);
 void endGame(Game *game);
 

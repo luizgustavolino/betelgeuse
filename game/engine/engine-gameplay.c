@@ -12,8 +12,6 @@
 #include "engine.h"
 
 
-void loadGameLevel(Game *game, int level[]);
-
 void loadGameData(Game *game){
 
     //RANDOMIZE LEVELS

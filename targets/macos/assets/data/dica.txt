@@ -1,18 +1,226 @@
-﻿DICAS PARA BELO HORIZONTE
-Museu
+﻿ESTRUTURA DE DICAS
+panorama/pano_saopaulo.png
+Igreja
+54
+75
 Essa pessoa gosta;muito de pão de;queijo!
-hint-citizen-a.png
-Guardinha
-120
-
-Biblioteca
+Hotel
+23
+124
 Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
-hint-citizen-b.png
-Bibliotecaria
-90
-
-Praia
+Biblioteca
+102
+72
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-hint-citizen-c.png
-Turista
-140
+
+panorama/pano_riodejaneiro.png
+Ópera
+52
+55
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+82
+86
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Consulado
+129
+87
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_belohorizonte.png
+Parque
+20
+44
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+25
+102
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Biblioteca
+102
+75
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_salvador.png
+Mercado
+77
+62
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+85
+110
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Parque
+65
+136
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_recife.png
+Parque
+106
+52
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+91
+103
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Consulado
+15
+82
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_fortaleza.png
+Praia
+55
+45
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+27
+130
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Biblioteca
+113
+93
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_goiania.png
+Hotel
+43
+108
+Essa pessoa gosta;muito de pão de;queijo!
+Consulado
+24
+130
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Escritório
+62
+141
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_campogrande.png
+Hotel
+64
+72
+Essa pessoa gosta;muito de pão de;queijo!
+Consulado
+24
+52
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Parque
+94
+92
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_cuiaba.png
+Igreja
+54
+75
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+23
+124
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Biblioteca
+102
+72
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_curitiba.png
+Ópera
+52
+55
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+82
+86
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Consulado
+129
+87
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_florianopolis.png
+Parque
+20
+44
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+25
+102
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Biblioteca
+102
+75
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_portoalegre.png
+Mercado
+77
+62
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+85
+110
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Parque
+65
+136
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_manaus.png
+Parque
+106
+52
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+91
+103
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Consulado
+15
+82
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_belem.png
+Praia
+55
+45
+Essa pessoa gosta;muito de pão de;queijo!
+Hotel
+27
+130
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Biblioteca
+113
+93
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_riobranco.png
+Hotel
+43
+108
+Essa pessoa gosta;muito de pão de;queijo!
+Consulado
+24
+130
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Escritório
+62
+141
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+panorama/pano_brasilia.png
+Hotel
+64
+72
+Essa pessoa gosta;muito de pão de;queijo!
+Consulado
+24
+52
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
+Parque
+94
+92
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+
+
