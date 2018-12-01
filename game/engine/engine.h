@@ -92,16 +92,12 @@ typedef struct Hint {
     bool showHint;
 } Hint;
 
-typedef struct GameDate {
-    int dayOfWeek;
-    int hour;
-    int minutes;
-} GameDate;
-
 typedef struct Place {
     char* name;
+    int pinX;
+    int pinY;
     char* hint;
-    char* hintImageName;
+    char* hintImageName; //Not implemented
     char* citizenImageName;
 
     int minutesRequired;
@@ -111,7 +107,6 @@ typedef struct Destination {
     char *name;
     char *imageName;
     int minutesRequired;
-    bool rightChoice;
     float latitude;
     float longitude;
 } Destination;
@@ -120,8 +115,7 @@ typedef struct City {
     char *name;
     char *flavorText[3];
     char *imageName;
-    int imageAlignX;
-    int imageAlignY;
+    char *smallImageName;
     float latitude;
     float longitude;
 
@@ -130,8 +124,8 @@ typedef struct City {
 } City;
 
 typedef struct GameplayContext {
-    char* stolenItemText;
-    GameDate currentTime;
+    char *stolenItemText;
+    int currentTime;
 
     int currentCity;
     int playerDestinationChoice;
@@ -195,6 +189,7 @@ void setTextRGBColor(unsigned char r, unsigned char g, unsigned char b);
 void drawText(const char *text,  double x, double y);
 void drawCentralizedText(const char *text,  double x, double y);
 char *readTXT(Game *game, char *filename, int line);
+void drawTime(int totalMinutes);
 
 // Play/pause audio
 void stopSoundtrack(Game *game);

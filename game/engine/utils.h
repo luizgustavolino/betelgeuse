@@ -1,10 +1,10 @@
 //
-// SENAC BCC PI 2 
+// SENAC BCC PI 2
 // Projeto Betelgeuse
 //
 // utils.h
 // funções de apoio
-// 
+//
 
 #ifndef betelgeuse_engine_utils_h
 #define betelgeuse_engine_utils_h

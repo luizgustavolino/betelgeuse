@@ -24,11 +24,9 @@ static int page_off, page_on;
 
 static void drawInterface(Game *game, int frame);
 static void drawPage(Game *game, int pageNum);
-static void drawTime(int day, int hour, int minute);
 
 static char* menuOptionsDatasource(Game *game, int option);
 static void menuCallback(Game *game, int choosenOption);
-
 
 // ### Ciclo de vida da cena
 
@@ -59,7 +57,7 @@ static void cityOnEnter(Game *game, int frame) {
 
 
 	int current     = game->gameplayContext.currentCity;
-	char *background_image = game->gameplayContext.cities[current].imageName;
+	char *background_image = game->gameplayContext.cities[current].smallImageName;
 	city_background = loadImageAsset(background_image);
 
 	abin_bg = loadImageAsset("abin_pc_bg.png");
@@ -84,9 +82,7 @@ static void cityOnFrame(Game *game, int frame) {
 	drawPage(game, current_page);
 
 	// desenhando hora
-	drawTime(game->gameplayContext.currentTime.dayOfWeek,
-			 game->gameplayContext.currentTime.hour,
-			 game->gameplayContext.currentTime.minutes);
+	drawTime(game->gameplayContext.currentTime);
 
 	// botão de opções
 	setTextRGBColor(BLUE);
@@ -124,33 +120,10 @@ static void cityOnExit(Game *game, int frame) {
 // desenha a interface e fundo
 static void drawInterface(Game *game, int frame){
 
-	int current = game->gameplayContext.currentCity;
-	int bg_align_x = game->gameplayContext.cities[current].imageAlignX;
-    int bg_align_y = game->gameplayContext.cities[current].imageAlignY;
-
-	drawImageAsset(city_background, bg_align_x, bg_align_y);
+	drawImageAsset(city_background, 9, 33);
 	//drawImageAsset(abin_bg, 0, 0);
 
 	drawImageAsset(city_foreground, 0, 0);
-}
-
-static void drawTime(int day, int hour, int minute){
-
-	char buffer[16];
-	char* dayAsText;
-
-	switch(day) {
-		case WEEKDAY_MON: dayAsText = "SEG"; break;
-		case WEEKDAY_TUE: dayAsText = "TER"; break;
-		case WEEKDAY_WED: dayAsText = "QUA"; break;
-		case WEEKDAY_THU: dayAsText = "QUI"; break;
-		case WEEKDAY_FRI: dayAsText = "SEX"; break;
-		default: break;
-	}
-
-  	sprintf(buffer, "%s - %02dh%02d", dayAsText, hour, minute);
-  	setTextRGBColor(YELLOW);
-  	drawText(buffer, 11, 11);
 }
 
 static void drawPage(Game *game, int pageNum){

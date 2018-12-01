@@ -9,13 +9,26 @@
 
 #include "../engine/colors.h"
 
-static int fromCity,toCity,jet,jet1,jet2,jet3; //Assets
+static void drawMessage(Game *game, int startFrame, int frame);
+
+static int fromCity,toCity,jet,jet1,jet2,jet3,hint_text_bg,hint_face,action_btn_a,action_btn_b; //Assets
+static int startFrame;
 static char *fromLabel,*toLabel;
 static float delta, increment, flyPosHor, flyPosVer, bgPos;
 static int width, flightTime, airplaneInOutTime; //Animation parameters
 bool flyForward;
+static int currentTime, minutesRequired;
 
 static void travelOnEnter(Game *game, int frame) {
+
+    currentTime = game->gameplayContext.currentTime;
+    int playerChoice = game->gameplayContext.playerDestinationChoice;
+    minutesRequired = game->gameplayContext.cities[game->gameplayContext.currentCity].destinations[playerChoice].minutesRequired;
+
+    hint_text_bg = loadImageAsset("hint_text_bg.png");
+    hint_face = loadImageAsset("hint_face.png");
+    action_btn_a = loadImageAsset("btn_a_from_right_a.png");
+	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
 
     flyForward = game->travel.travelForward;
     int current = game->gameplayContext.currentCity;
@@ -58,11 +71,13 @@ static void travelOnEnter(Game *game, int frame) {
 
 static void travelOnFrame(Game *game, int frame) {
 
-    if (frame < airplaneInOutTime){
+    if (frame <= flightTime + airplaneInOutTime) fillRGB(game, BLACK);
+
+    if (frame <= airplaneInOutTime){
         delta = applyCubicEaseInOut(0, airplaneInOutTime, frame, 145);
 
         //Draw assets
-        drawImageAsset(fromCity, 0, 0);
+        drawImageAsset(fromCity, 8, 22);
         if (flyForward) {
             drawImageAsset(jet1, delta - flyPosHor, flyPosVer);
         } else {
@@ -87,11 +102,11 @@ static void travelOnFrame(Game *game, int frame) {
         drawImageAsset(jet, flyPosHor, flyPosVer);
 
         if (flyForward) {
-            drawImageAsset(fromCity, 0 - bgPos,0);
-            drawImageAsset(toCity, width - bgPos,0);
+            drawImageAsset(fromCity, 8 - bgPos,22);
+            drawImageAsset(toCity, width + 8 - bgPos,22); //+ 8 for the border
         } else {
-            drawImageAsset(fromCity, 0 + bgPos,0);
-            drawImageAsset(toCity, bgPos - width,0);
+            drawImageAsset(fromCity, 8 + bgPos,22);
+            drawImageAsset(toCity, bgPos - width + 8,22); //+ 8 for the border
         }
 
         drawImageAsset(jet, flyPosHor, flyPosVer);
@@ -101,7 +116,7 @@ static void travelOnFrame(Game *game, int frame) {
 
     if (frame > flightTime && frame <= flightTime + airplaneInOutTime){
         delta = applyCubicEaseInOut(flightTime, flightTime + airplaneInOutTime, frame, 145);
-        drawImageAsset(toCity, 0, 0);
+        drawImageAsset(toCity, 8, 22);
         if (flyForward) {
             drawImageAsset(jet, delta + flyPosHor, flyPosVer);
         } else {
@@ -111,13 +126,68 @@ static void travelOnFrame(Game *game, int frame) {
 
     if (frame > flightTime + airplaneInOutTime){
         if (game->gameplayContext.playerDestinationChoice == 0){
-            changeScene(game, makeCityScene(game));
+            startFrame = flightTime + airplaneInOutTime;
+            drawMessage(game, startFrame, frame);
         } else if (game->gameplayContext.playerDestinationChoice != 0 && flyForward == true){
-            game->travel.travelForward = false; //Ensures the plane travels backwards
-            changeScene(game, makeTravelScene(game));
+            startFrame = flightTime + airplaneInOutTime;
+            drawMessage(game, startFrame, frame);
         } else {
             changeScene(game, makeCityScene(game));
             game->travel.travelForward = true;
+        }
+    }
+}
+
+static void drawMessage(Game *game, int startFrame, int frame){
+
+    int localFrame = frame - startFrame;
+    int btnLength;
+
+	int current = game->gameplayContext.currentCity;
+	Destination destination = game->gameplayContext.cities[current].destinations[game->gameplayContext.playerDestinationChoice];
+
+    setTextRGBColor(LIGHT_BLUE);
+	drawImageAsset(hint_text_bg, 15, 38);
+
+	if (game->gameplayContext.playerDestinationChoice != 0) {
+	    setTextRGBColor(BLUE);
+	    drawText("Aeroporto.", 21, 48);
+        drawText(destination.name, 78, 48);
+        setTextRGBColor(LIGHT_BLUE);
+        drawText("Suspeito? Hmm... não, não vi ninguém;com essa descrição pousar aqui. Você;tem certeza que este é o destino?", 21, 60);
+        btnLength = 220;
+	} else {
+	    setTextRGBColor(BLUE);
+	    drawText("Aeroporto.", 21, 48);
+        drawText(destination.name, 78, 48);
+        setTextRGBColor(LIGHT_BLUE);
+        drawText("Suspeito? Sim! Vi uma pessoa com essa;descrição pousar aqui. Você vai adorar;a cidade!", 21, 60);
+        btnLength = 209;
+	}
+
+	if (localFrame > 100) drawImageAsset(hint_face, 30, 98);
+
+	if (localFrame > 170){
+        float delta = applyCubicEaseOut(170, 300, localFrame, 70);
+		if (localFrame % 170 >= 100) {
+			drawImageAsset(action_btn_a, btnLength - delta , 145);
+		} else {
+			drawImageAsset(action_btn_b, btnLength - delta , 145);
+		} if (localFrame > 300) {
+
+            setTextRGBColor(61, 140, 222);
+            if (game->gameplayContext.playerDestinationChoice != 0) drawText("voltar", 178, 150);
+            else drawText("continuar", 167, 150);
+
+        } if (game->keyState.a == KEY_IS_RELEASED) {
+            if (game->gameplayContext.playerDestinationChoice != 0){
+                game->gameplayContext.currentTime = currentTime + minutesRequired * 2; //*2 already accounts for the flight back
+                game->travel.travelForward = false; //Ensures the plane travels backwards
+                changeScene(game, makeTravelScene(game));
+            } else {
+                game->gameplayContext.currentTime = currentTime + minutesRequired;
+                changeScene(game, makeCityScene(game));
+            }
         }
     }
 }
