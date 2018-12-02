@@ -119,6 +119,7 @@ static void removeAssetNode(IMAGE_ASSET id){
     		previous->next = current->next;
     		ALLEGRO_BITMAP *asset = current->image;
 			if (asset != NULL) al_destroy_bitmap(asset);
+			free(current);
 			return;
     	} else {
     		previous = current;

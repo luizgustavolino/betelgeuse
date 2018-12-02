@@ -84,6 +84,7 @@ static bool loadAllegro(Game *game){
 		errorMessage = "Failed to initialize allegro acodec addon!";
 
 	setupImageAssetPool();
+	setupAudioSfxPool();
 
 	int width  = game->screenSetup.width;
 	int height = game->screenSetup.height;

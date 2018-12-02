@@ -41,5 +41,5 @@ void loopEnvironmentBeforeFrame(Game *game, bool *shouldDraw){
 }
 
 void loopEnvironmentAfterFrame(Game *game, bool redrawing) {
-	
+	garbageCollectAudioSfxPool();
 }

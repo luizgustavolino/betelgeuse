@@ -183,6 +183,9 @@ char *readTXT(Game *game, char *filename, int line);
 void drawTime(int totalMinutes);
 
 // Play/pause audio
+typedef unsigned int AUDIO_ASSET;
+void setupAudioSfxPool();
+void garbageCollectAudioSfxPool();
 void stopSoundtrack(Game *game);
 void playSfx(Game *game, char* name);
 void playSoundtrack(Game *game, char* name);
