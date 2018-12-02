@@ -32,6 +32,19 @@ static void menuCallback(Game *game, int choosenOption);
 
 static void cityOnEnter(Game *game, int frame) {
 
+	//***CHECKS FOR END OF GAME***//
+	// - LOSE: if current time bigger than limit
+	if (game->gameplayContext.currentTime >= WORKING_HOURS_IN_DAY * WORKING_DAYS) {
+		changeScene(game, makeFinalScene(game));
+		return;
+	}
+
+	// - WIN: if current city is the last city
+	if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == CITIES_UNTIL_VICTORY - 1){
+        changeScene(game, makeFinalScene(game));
+        return;
+    }
+
     //***LOADS NEXT LEVEL***//
 
     if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == 0){
@@ -45,12 +58,6 @@ static void cityOnEnter(Game *game, int frame) {
     }
 
     //***NEW LEVEL LOADED***//
-
-    //***CHECKS FOR END OF GAME***//
-
-    else if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == 2){
-        changeScene(game, makeFinalScene(game));
-    }
 
 	int current     = game->gameplayContext.currentCity;
 	char *background_image = game->gameplayContext.cities[current].smallImageName;

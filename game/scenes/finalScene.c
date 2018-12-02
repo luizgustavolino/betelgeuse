@@ -77,15 +77,28 @@ static void finalOnFrame(Game *game, int frame) {
     }
 
     if (frame >= startDly + 1800 && frame < endFrame){
-        if(frame == startDly + 1800) playSfx(game, "gameLoss.wav");
-        if(frame == startDly + 2220) playSoundtrack(game, "gameOver.wav");
+
         float delta = 170 - applyCubicEaseOut(startDly + 1800, startDly + 1930, frame, 170);
 		drawImageAsset(windowPopup, 0, delta - 14);
-
 		setTextRGBColor(LIGHT_BLUE);
 
-		char* text = "     *** O bandido escapou ***; ;    Foi visto pela última vez na;    cidade Belo Horizonte.; ;    Você está DEMITIDO, recruta.; ;Ass.;ABIN;Agência Brasileira de Inteligência";
-	    drawText(text, 20, 14 + delta);
+		if (game->gameplayContext.currentTime >= WORKING_HOURS_IN_DAY * WORKING_DAYS) {
+
+        	if(frame == startDly + 2220) playSfx(game, "gameover.wav");
+			char* text = "     *** O bandido escapou ***; ;    Foi visto pela última vez;    em: ; ;    Você está DEMITIDO, recruta.; ;Ass.;ABIN;Agência Brasileira de Inteligência";
+	    	drawText(text, 20, 14 + delta);
+
+	    	setTextRGBColor(RED);
+	    	int current = game->gameplayContext.currentCity;
+	    	drawText(game->gameplayContext.cities[current].destinations[0].name, 53, 50 + delta);
+
+	    } else {
+
+	    	if(frame == startDly + 1800) playSfx(game, "victory.wav");
+			char* text = "   *** O bandido foi preso ***; ;    Sua astúcia em capturá-lo;    será recompensada.; ;    Você foi PROMOVIDO, recruta.; ;Ass.;ABIN;Agência Brasileira de Inteligência";
+	    	drawText(text, 20, 14 + delta);
+
+	    } 
     }
 
     if (frame >= startDly + 2400){

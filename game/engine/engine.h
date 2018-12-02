@@ -70,6 +70,9 @@ int HINTS[3];
 #define WEEKDAY_THU 3
 #define WEEKDAY_FRI 4
 
+#define WORKING_HOURS_IN_DAY    540
+#define WORKING_DAYS            5
+
 //Determines flight direction, 0 for forward travel, 1 for backward travel
 typedef struct Travel {
     bool travelForward;

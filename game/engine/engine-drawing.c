@@ -247,7 +247,10 @@ void drawTime(int totalMinutes){
 	}
 
   	sprintf(buffer, "%s - %02dh%02d", dayAsText, hours, minutes);
-  	setTextRGBColor(YELLOW);
+
+  	if (totalMinutes >= WORKING_HOURS_IN_DAY * WORKING_DAYS) setTextRGBColor(RED);
+	else setTextRGBColor(YELLOW);
+  	
   	drawText(buffer, 11, 11);
 }
 

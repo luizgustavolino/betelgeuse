@@ -145,6 +145,7 @@ static void travelOnFrame(Game *game, int frame) {
 
     drawImageAsset(overlay, 0, 0);
     drawTime(game->gameplayContext.currentTime);
+    setTextRGBColor(YELLOW);
     drawText("Voando pela ABIN JET", 85, 11);
 
     if (frame > flightTime + airplaneInOutTime){
