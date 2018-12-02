@@ -57,6 +57,9 @@ int LEVEL_1[5];
 int LEVEL_2[5];
 int LEVEL_3[5];
 
+//Game hints
+int HINTS[3];
+
 #define CITIES_UNTIL_VICTORY        3
 #define DESTINATIONS_COUNT          4
 #define POINTS_OF_INTEREST_COUNT    3

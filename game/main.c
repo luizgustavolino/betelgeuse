@@ -14,7 +14,6 @@ int main(int argc, char **argv){
 
     changeScene(&game, makeSplashScene(&game));
 
-
     // game lyfecycle
     while (game.running) nextFrame(&game);
     endGame(&game);
