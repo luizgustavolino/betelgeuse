@@ -48,9 +48,8 @@ void loadGameData(Game *game){
 
 	game->gameplayContext.currentTime = 0; //Sets current time in minutes to 0
 	game->gameplayContext.currentCity = 0;
-	int test [5] = {1,5,1,1,1};
 
-	loadGameLevel(game, test); //Loads the first level
+	loadGameLevel(game, LEVEL_1); //Loads the first level
 }
 
 void loadGameLevel(Game *game, int level[]){
@@ -67,7 +66,7 @@ void loadGameLevel(Game *game, int level[]){
 
     //Embaralha o vetor de dicas
     srand(time(NULL));
-    for(i = sizeHints-1; i > 0; i--) {
+    for(i = sizeHints-1; i > 0; i--){
         int j = rand() % (i+1);
         swap(&arrayHints[i], &arrayHints[j]);
     }
