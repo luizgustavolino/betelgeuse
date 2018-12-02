@@ -29,8 +29,8 @@ static void splashOnFrame(Game *game, int frame) {
 	int exposeTime 	= 400;
 	int totalFrames	= waitTime + 3 * exposeTime + waitTime * 2;
 
-	if (frame < waitTime){
-		fillRGB(game, max(0, color - 35), max(0, color - 10), color);
+	if (frame < waitTime) {
+        fillRGB(game, max(0, color - 35), max(0, color - 10), color);
 
 	} else if (frame < waitTime + 1 * exposeTime){
 		drawImageAsset(senacLogo, 107, 59);
@@ -52,13 +52,14 @@ static void splashOnFrame(Game *game, int frame) {
 		fillRGB(game, 220, 245, 255);
 
 	}else if (frame < waitTime + 3 * exposeTime){
+	    fillRGB(game, 220, 245, 255);
 		drawImageAsset(betelgeuseLogo, 74, 52);
 		if(frame == waitTime + 2 * exposeTime){
             playSfx(game, "betelgeuse.wav");
 		}
 
 	} else if (frame < totalFrames){
-
+	    fillRGB(game, 220, 245, 255);
 		int initialFrame = waitTime + 3 * exposeTime;
 		float delta = applyCubicEaseInOut(initialFrame, totalFrames, frame, 160);
 		drawImageAsset(betelgeuseLogo, 74, 52 - delta);

@@ -19,12 +19,14 @@ static int width, flightTime, airplaneInOutTime; //Animation parameters
 bool flyForward;
 static int currentTime, minutesRequired;
 static int overlay;
+static int targetTime;
 
 static void travelOnEnter(Game *game, int frame) {
 
     currentTime = game->gameplayContext.currentTime;
     int playerChoice = game->gameplayContext.playerDestinationChoice;
     minutesRequired = game->gameplayContext.cities[game->gameplayContext.currentCity].destinations[playerChoice].minutesRequired;
+    targetTime = game->gameplayContext.currentTime + minutesRequired;
 
     hint_text_bg = loadImageAsset("hint_text_bg.png");
     hint_face = loadImageAsset("hint_face.png");
@@ -35,6 +37,8 @@ static void travelOnEnter(Game *game, int frame) {
     flyForward = game->travel.travelForward;
     int current = game->gameplayContext.currentCity;
     fromLabel = game->gameplayContext.cities[current].imageName;
+
+    playSfx(game, "plane.wav");
 
     //Checks what choice the player made
     toLabel = game->gameplayContext.cities[current].destinations[game->gameplayContext.playerDestinationChoice].imageName;
@@ -48,8 +52,7 @@ static void travelOnEnter(Game *game, int frame) {
 
     if(flyForward){
         playSoundtrack(game, game->gameplayContext.cities[game->gameplayContext.currentCity].destinations[playerChoice].ost);
-    }
-    else{
+    } else{
         playSoundtrack(game, game->gameplayContext.cities[game->gameplayContext.currentCity].ost);
     }
 
@@ -75,6 +78,8 @@ static void travelOnEnter(Game *game, int frame) {
 
         flyPosHor = 230; //Jet horizontal position
     }
+
+
 
 }
 
@@ -133,6 +138,11 @@ static void travelOnFrame(Game *game, int frame) {
         }
     }
 
+    if (game->gameplayContext.currentTime < targetTime) {
+        if (frame%5 == 0) game->gameplayContext.currentTime++;
+        if (frame%40 == 0) playSfx(game, "pi.wav");
+    }
+
     drawImageAsset(overlay, 0, 0);
     drawTime(game->gameplayContext.currentTime);
     drawText("Voando pela ABIN JET", 85, 11);
@@ -162,25 +172,25 @@ static void drawMessage(Game *game, int startFrame, int frame){
 	Destination destination = game->gameplayContext.cities[current].destinations[game->gameplayContext.playerDestinationChoice];
 
     setTextRGBColor(LIGHT_BLUE);
-	drawImageAsset(hint_text_bg, 15, 38);
+	drawImageAsset(hint_text_bg, 15, 30);
 
 	if (game->gameplayContext.playerDestinationChoice != 0) {
 	    setTextRGBColor(BLUE);
-	    drawText("Aeroporto.", 21, 48);
-        drawText(destination.name, 78, 48);
+	    drawText("Aeroporto.", 21, 40);
+        drawText(destination.name, 78, 40);
         setTextRGBColor(LIGHT_BLUE);
-        drawText("Suspeito? Hmm... não, não vi ninguém;com essa descrição pousar aqui. Você;tem certeza que este é o destino?", 21, 60);
+        drawText("Suspeito? Hmm... não, não vi ninguém;com essa descrição pousar aqui. Você;tem certeza que este é o destino?", 21, 54);
         btnLength = 220;
 	} else {
 	    setTextRGBColor(BLUE);
-	    drawText("Aeroporto.", 21, 48);
-        drawText(destination.name, 78, 48);
+	    drawText("Aeroporto.", 21, 40);
+        drawText(destination.name, 78, 40);
         setTextRGBColor(LIGHT_BLUE);
-        drawText("Suspeito? Sim! Vi uma pessoa com essa;descrição pousar aqui. Você vai adorar;a cidade!", 21, 60);
+        drawText("Suspeito? Sim! Vi uma pessoa com essa;descrição pousar aqui. Você vai adorar;a cidade!", 21, 54);
         btnLength = 209;
 	}
 
-	if (localFrame > 100) drawImageAsset(hint_face, 30, 98);
+	if (localFrame > 100) drawImageAsset(hint_face, 30, 92);
 
 	if (localFrame > 170){
         float delta = applyCubicEaseOut(170, 300, localFrame, 80);
@@ -191,16 +201,14 @@ static void drawMessage(Game *game, int startFrame, int frame){
 		} if (localFrame > 300) {
 
             setTextRGBColor(61, 140, 222);
-            if (game->gameplayContext.playerDestinationChoice != 0) drawText("voltar", 175, 150);
-            else drawText("continuar", 167, 150);
+            if (game->gameplayContext.playerDestinationChoice != 0) drawText("voltar", 169, 150);
+            else drawText("continuar", 156, 150);
 
         } if (game->keyState.a == KEY_IS_RELEASED) {
             if (game->gameplayContext.playerDestinationChoice != 0){
-                game->gameplayContext.currentTime = currentTime + minutesRequired * 2; //*2 already accounts for the flight back
                 game->travel.travelForward = false; //Ensures the plane travels backwards
                 changeScene(game, makeTravelScene(game));
             } else {
-                game->gameplayContext.currentTime = currentTime + minutesRequired;
                 changeScene(game, makeCityScene(game));
             }
         }
