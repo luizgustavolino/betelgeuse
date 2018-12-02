@@ -18,6 +18,7 @@ static float delta, increment, flyPosHor, flyPosVer, bgPos;
 static int width, flightTime, airplaneInOutTime; //Animation parameters
 bool flyForward;
 static int currentTime, minutesRequired;
+static int overlay;
 
 static void travelOnEnter(Game *game, int frame) {
 
@@ -29,6 +30,7 @@ static void travelOnEnter(Game *game, int frame) {
     hint_face = loadImageAsset("hint_face.png");
     action_btn_a = loadImageAsset("btn_a_from_right_a.png");
 	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
+    overlay = loadImageAsset("jet_overlay.png");
 
     flyForward = game->travel.travelForward;
     int current = game->gameplayContext.currentCity;
@@ -84,7 +86,7 @@ static void travelOnFrame(Game *game, int frame) {
         delta = applyCubicEaseInOut(0, airplaneInOutTime, frame, 145);
 
         //Draw assets
-        drawImageAsset(fromCity, 8, 22);
+        drawImageAsset(fromCity, 8, 39);
         if (flyForward) {
             drawImageAsset(jet1, delta - flyPosHor, flyPosVer);
         } else {
@@ -109,11 +111,11 @@ static void travelOnFrame(Game *game, int frame) {
         drawImageAsset(jet, flyPosHor, flyPosVer);
 
         if (flyForward) {
-            drawImageAsset(fromCity, 8 - bgPos,22);
-            drawImageAsset(toCity, width + 8 - bgPos,22); //+ 8 for the border
+            drawImageAsset(fromCity, 8 - bgPos, 39);
+            drawImageAsset(toCity, width + 8 - bgPos, 39); //+ 8 for the border
         } else {
-            drawImageAsset(fromCity, 8 + bgPos,22);
-            drawImageAsset(toCity, bgPos - width + 8,22); //+ 8 for the border
+            drawImageAsset(fromCity, 8 + bgPos, 39);
+            drawImageAsset(toCity, bgPos - width + 8, 39); //+ 8 for the border
         }
 
         drawImageAsset(jet, flyPosHor, flyPosVer);
@@ -123,13 +125,17 @@ static void travelOnFrame(Game *game, int frame) {
 
     if (frame > flightTime && frame <= flightTime + airplaneInOutTime){
         delta = applyCubicEaseInOut(flightTime, flightTime + airplaneInOutTime, frame, 145);
-        drawImageAsset(toCity, 8, 22);
+        drawImageAsset(toCity, 8, 39);
         if (flyForward) {
             drawImageAsset(jet, delta + flyPosHor, flyPosVer);
         } else {
             drawImageAsset(jet, flyPosHor - delta, flyPosVer);
         }
     }
+
+    drawImageAsset(overlay, 0, 0);
+    drawTime(game->gameplayContext.currentTime);
+    drawText("Voando pela ABIN JET", 85, 11);
 
     if (frame > flightTime + airplaneInOutTime){
         if (game->gameplayContext.playerDestinationChoice == 0){
@@ -143,6 +149,8 @@ static void travelOnFrame(Game *game, int frame) {
             game->travel.travelForward = true;
         }
     }
+
+
 }
 
 static void drawMessage(Game *game, int startFrame, int frame){
@@ -175,7 +183,7 @@ static void drawMessage(Game *game, int startFrame, int frame){
 	if (localFrame > 100) drawImageAsset(hint_face, 30, 98);
 
 	if (localFrame > 170){
-        float delta = applyCubicEaseOut(170, 300, localFrame, 70);
+        float delta = applyCubicEaseOut(170, 300, localFrame, 80);
 		if (localFrame % 170 >= 100) {
 			drawImageAsset(action_btn_a, btnLength - delta , 145);
 		} else {
@@ -183,7 +191,7 @@ static void drawMessage(Game *game, int startFrame, int frame){
 		} if (localFrame > 300) {
 
             setTextRGBColor(61, 140, 222);
-            if (game->gameplayContext.playerDestinationChoice != 0) drawText("voltar", 178, 150);
+            if (game->gameplayContext.playerDestinationChoice != 0) drawText("voltar", 175, 150);
             else drawText("continuar", 167, 150);
 
         } if (game->keyState.a == KEY_IS_RELEASED) {
