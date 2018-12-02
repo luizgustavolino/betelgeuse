@@ -146,6 +146,19 @@ static void hintsOnFrame(Game *game, int frame) {
 
 static void hintsOnExit(Game *game, int frame) {
 	unloadImageAsset(abin_bg);
+	unloadImageAsset(city_box);
+	unloadImageAsset(city_image);
+	unloadImageAsset(place_name);
+	unloadImageAsset(place_eta);
+	unloadImageAsset(select_left);
+	unloadImageAsset(select_right);
+	unloadImageAsset(loc_pin);
+	unloadImageAsset(loc_pin_gray);
+	unloadImageAsset(instructions);
+	unloadImageAsset(hint_text_bg);
+	unloadImageAsset(hint_face);
+	unloadImageAsset(action_btn_a);
+	unloadImageAsset(action_btn_b);
 }
 
 static void drawInterface(Game *game, int completion, int frame){

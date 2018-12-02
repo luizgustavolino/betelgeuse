@@ -107,6 +107,15 @@ static void destinationsOnFrame(Game *game, int frame) {
 
 static void destinationsOnExit(Game *game, int frame) {
 	unloadImageAsset(abin_bg);
+	unloadImageAsset(map);
+	unloadImageAsset(destination_eta);
+	unloadImageAsset(select_left);
+	unloadImageAsset(select_right);
+	unloadImageAsset(current_city_pin);
+	unloadImageAsset(d_city_pin);
+	unloadImageAsset(t_city_pin_a);
+	unloadImageAsset(t_city_pin_b);
+	unloadImageAsset(instructions);
 }
 
 static void drawInterface(Game *game, int completion, int frame){

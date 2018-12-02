@@ -2,6 +2,7 @@
 #include "engine/logger.h"
 #include "engine/engine.h"
 #include "scenes/splashScene.h"
+#include "scenes/creditsScene.h"
 
 int main(int argc, char **argv){
 
@@ -13,7 +14,8 @@ int main(int argc, char **argv){
     // setup do ambiente + cena inicial
     Game game = createNewGame();
 
-    changeScene(&game, makeSplashScene(&game));
+    //changeScene(&game, makeSplashScene(&game));
+    changeScene(&game, makeCreditsScene(&game));
 
     // game lyfecycle
     while (game.running) nextFrame(&game);
