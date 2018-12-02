@@ -36,6 +36,8 @@ static void travelOnEnter(Game *game, int frame) {
     int current = game->gameplayContext.currentCity;
     fromLabel = game->gameplayContext.cities[current].imageName;
 
+    playSfx(game, "plane.wav");
+
     //Checks what choice the player made
     toLabel = game->gameplayContext.cities[current].destinations[game->gameplayContext.playerDestinationChoice].imageName;
 
