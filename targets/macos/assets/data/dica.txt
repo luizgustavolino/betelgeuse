@@ -9,12 +9,12 @@ Hotel
 Biblioteca
 104
 72
-Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui.
-O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo".
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário.
-O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos.
-A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal.
-A pessoa que você procura estava por;aqui escutando Adoniran Barbosa.
+Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui. 
+O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo". 
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário. 
+O estado que ele foi é conhecido como;Mar de Morros, onde a forma do rele-;vo em que colinas e morros são;totalmente asimétricos. 
+A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal. 
+A pessoa que você procura estava por;aqui escutando Adoniran Barbosa. 
 
 Rio de Janeiro
 panorama/pano_riodejaneiro.png
@@ -27,12 +27,12 @@ Hotel
 Consulado
 129
 87
-Passou uma pessoa por aqui escutando;Vinicius de Moraes.
-Passou um cara com a camiseta do;Tabajara FC.
+Passou uma pessoa por aqui escutando;Vinicius de Moraes. 
+Passou um cara com a camiseta do;Tabajara FC. 
 Só sei que ele estava ligando para um;número com o DDD 22.
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria.
-Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara.
-A pessoa falava que ia para o estado;do tucano-de-papo-amarelo.
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria. 
+Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara. 
+A pessoa falava que ia para o estado;do tucano-de-papo-amarelo. 
 
 Belo Horizonte
 panorama/pano_belohorizonte.png
@@ -45,12 +45,12 @@ Hotel
 Biblioteca
 102
 75
-A pessoa que você procura foi para a;conhecida cidade-jardim.
-Ele foi para o Aeroporto Internacional;de Confins.
-Só sei que ele estava ligando para um;número com o DDD 31.
-Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça.
-Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço).
-A pessoa queria dar um mergulho no;Rio São Francisco.
+A pessoa que você procura foi para a;conhecida cidade-jardim. 
+Ele foi para o Aeroporto Internacional;de Confins. 
+Só sei que ele estava ligando para um;número com o DDD 31. 
+Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça. 
+Diz a pessoa que tava inu para a Serra;do Cural, parte da ramificação da;Cordilheira do Espinhaço. 
+A pessoa queria dar um mergulho no;Rio São Francisco. 
 
 Salvador
 panorama/pano_salvador.png
@@ -63,12 +63,12 @@ Hotel
 Consulado
 75
 116
-Essa pessoa gosta muito de pão de;queijo!
-Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas.
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite.
-Essa pessoa gosta muito de pão de;brigadeiro!
-Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas.
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja.
+Um pessoa passou por aqui que iria;visitar a conhecida Roma Negra.
+Ele foi para a cidade em homenagem a;Jesus Cristo, o Salvador.
+Ele foi para a cidade de tanta glória.
+Só vi que ele estava ligando para um;número com o DDD 71.
+Bom eu vi uma pessoa dando um mergulho;na  Baía de Todos-os-Santos. 
+Uma pessoa estava por aqui lendo os;romances do Jorge Amado.
 
 Recife
 panorama/pano_recife.png
@@ -81,12 +81,12 @@ Hotel
 Consulado
 15
 82
-Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui.
-O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo".
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário.
-O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos.
-A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal.
-A pessoa que você procura estava por;aqui escutando Adoniran Barbosa.
+Ele foi para um local com grande;incidência de ataque de tubarões.
+Passou uma pessoa por aqui lendo;Casa-Grande & Senzala.
+Ele disse que iria para uma cidade;que investe muito em ciência e engenharia.
+Ele disse que estava indo para a famosa;cidade do bolo de rolo, recheado com goiabada.
+Ele falava que foi para a cidade;onde a padroeira é a Nossa Senhora do Carmo.
+Uma pessoa passou por aqui;cantando as músicas do Reginaldo Rossi.
 
 Fortaleza
 panorama/pano_fortaleza.png
@@ -99,12 +99,12 @@ Hotel
 Biblioteca
 113
 93
-Passou uma pessoa por aqui escutando;Vinicius de Moraes.
-Passou um cara com a camiseta do;Tabajara FC.
-Só sei que ele estava ligando para um;número com o DDD 22.
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria.
-Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara.
-A pessoa falava que ia para o estado;do tucano-de-papo-amarelo.
+Só vi que ele estava com um adesivo;com o lema em latim "Fortitudine",;que, em português, significa "força, valor,;coragem". 
+Ele disse que ia fazer uma visita no;Parque Ecológico do Cocó.
+Passou uma pessoa por aqui que iria;viajar para um local com a vegetação;predominante de mangue e restinga.
+Só sei que ele estava ligando para um;número com o DDD 82. 
+Ele falava da sua padroeira, Nossa;Senhora da Assunção.
+Ele foi para o estado do pássaro;jandaia.
 
 Goiânia
 panorama/pano_goiania.png
@@ -117,12 +117,12 @@ Consulado
 Escritório
 62
 141
-A pessoa que você procura foi para a;conhecida cidade-jardim.
-Ele foi para o Aeroporto Internacional;de Confins.
-Só sei que ele estava ligando para um;número com o DDD 31.
-Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça.
-Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço).
-A pessoa queria dar um mergulho no;Rio São Francisco.
+A pessoa que você procura foi para a;conhecida cidade-jardim. 
+Ele foi para o Aeroporto Internacional;de Confins. 
+Só sei que ele estava ligando para um;número com o DDD 31. 
+Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça. 
+Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço). 
+A pessoa queria dar um mergulho no;Rio São Francisco. 
 
 Campo Grande
 panorama/pano_campogrande.png
@@ -135,12 +135,12 @@ Consulado
 Parque
 94
 92
-Essa pessoa gosta muito de pão de;queijo!
-Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas.
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite.
-Essa pessoa gosta muito de pão de;brigadeiro!
-Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas.
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja.
+Essa pessoa gosta muito de pão de;queijo! 
+Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas. 
+Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite. 
+Essa pessoa gosta muito de pão de;brigadeiro! 
+Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas. 
+Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja. 
 
 Cuiabá
 panorama/pano_cuiaba.png
@@ -153,12 +153,12 @@ Igreja
 Parque
 70
 45
-Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui.
-O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo".
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário.
-O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos.
-A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal.
-A pessoa que você procura estava por;aqui escutando Adoniran Barbosa.
+Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui. 
+O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo". 
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário. 
+O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos. 
+A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal. 
+A pessoa que você procura estava por;aqui escutando Adoniran Barbosa. 
 
 Curitiba
 panorama/pano_curitiba.png
@@ -171,12 +171,12 @@ Consulado
 Parque
 120
 90
-Passou uma pessoa por aqui escutando;Vinicius de Moraes.
-Passou um cara com a camiseta do;Tabajara FC.
-Só sei que ele estava ligando para um;número com o DDD 22.
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria.
-Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara.
-A pessoa falava que ia para o estado;do tucano-de-papo-amarelo.
+Passou uma pessoa por aqui escutando;Vinicius de Moraes. 
+Passou um cara com a camiseta do;Tabajara FC. 
+Só sei que ele estava ligando para um;número com o DDD 22. 
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria. 
+Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara. 
+A pessoa falava que ia para o estado;do tucano-de-papo-amarelo. 
 
 Florianópolis
 panorama/pano_florianopolis.png
@@ -189,11 +189,11 @@ Shopping
 Consulado
 47
 132
-A pessoa que você procura foi para a;conhecida cidade-jardim.
-Ele foi para o Aeroporto Internacional;de Confins.
-Só sei que ele estava ligando para um;número com o DDD 31.
-Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça.
-Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço).
+A pessoa que você procura foi para a;conhecida cidade-jardim. 
+Ele foi para o Aeroporto Internacional;de Confins. 
+Só sei que ele estava ligando para um;número com o DDD 31. 
+Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça. 
+Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço). 
 A pessoa queria dar um mergulho no;Rio São Francisco.
 
 Porto Alegre
