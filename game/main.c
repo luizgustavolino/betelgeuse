@@ -2,7 +2,6 @@
 #include "engine/logger.h"
 #include "engine/engine.h"
 #include "scenes/splashScene.h"
-#include "scenes/creditsScene.h"
 
 int main(int argc, char **argv){
 

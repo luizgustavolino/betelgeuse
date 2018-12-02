@@ -42,7 +42,7 @@ static void creditsOnFrame(Game *game, int frame) {
     if (frame > 1) {
         setTextRGBColor(LIGHT_BLUE);
         drawImageAsset(betelgeuseLogo, 74, 150 - frame/12.0);
-        drawCentralizedText("Projeto: Desenvolvimento;de jogos em 2D", 110, 230 - frame/12.0);
+        drawCentralizedText("Projeto Integrador II:;Jogo Educacional em 2D", 110, 230 - frame/12.0);
         drawCentralizedText("***Grupo***; ;Ana \"BlackWitch\" França;Kauê \"Beorn\" Sales;Lucas \"Brê\" Breur;Luiz \"Lino\" Lino;Vinycius \"Zaartis\" Zanardi", 110, 266 - frame/12.0);
         drawCentralizedText("***Software***; ;Biblioteca Allegro 5.0;Code::Blocks 17.12;pxtone;Audacity", 110, 374 - frame/12.0);
     }

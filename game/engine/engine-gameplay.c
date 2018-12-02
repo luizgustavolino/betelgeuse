@@ -48,8 +48,9 @@ void loadGameData(Game *game){
 
 	game->gameplayContext.currentTime = 0; //Sets current time in minutes to 0
 	game->gameplayContext.currentCity = 0;
+	int test [5] = {1,5,1,1,1};
 
-	loadGameLevel(game, LEVEL_1); //Loads the first level
+	loadGameLevel(game, test); //Loads the first level
 }
 
 void loadGameLevel(Game *game, int level[]){
