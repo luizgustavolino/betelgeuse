@@ -138,8 +138,6 @@ static void hintsOnFrame(Game *game, int frame) {
         drawImageAsset(instructions, 146, 129);
 
         setTextRGBColor(LIGHT_BLUE);
-        drawText("confirma", 164, 131);
-        drawText("cancela", 164, 149);
 
     } if (showCurrentHint) {
         drawHint(game, startFrame, frame);

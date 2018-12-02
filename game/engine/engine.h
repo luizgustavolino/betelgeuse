@@ -75,11 +75,6 @@ typedef struct Travel {
     bool travelForward;
 } Travel;
 
-//Keeps track of random game mechanics other than LEVELS
-typedef struct Randomize {
-    bool notRandom;
-} Randomize;
-
 //Initializes the hint overlay
 typedef struct Hint {
     bool showHint;
@@ -161,7 +156,6 @@ typedef struct Game {
     GameplayContext gameplayContext;
     MenuOverlay menuOverlay;
     Travel travel;
-    Randomize randomize;
     Hint hint;
 } Game;
 

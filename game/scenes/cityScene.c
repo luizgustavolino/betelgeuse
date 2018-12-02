@@ -36,13 +36,11 @@ static void cityOnEnter(Game *game, int frame) {
 
     if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == 0){
         game->gameplayContext.currentCity = game->gameplayContext.currentCity + 1;
-        game->randomize.notRandom = true;
         loadGameLevel(game, LEVEL_2);
     }
 
     else if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == 1){
         game->gameplayContext.currentCity = game->gameplayContext.currentCity + 1;
-        game->randomize.notRandom = true;
         loadGameLevel(game, LEVEL_3);
     }
 
@@ -53,8 +51,6 @@ static void cityOnEnter(Game *game, int frame) {
     else if (game->gameplayContext.playerDestinationChoice == 0 && game->gameplayContext.currentCity == 2){
         changeScene(game, makeFinalScene(game));
     }
-
-
 
 	int current     = game->gameplayContext.currentCity;
 	char *background_image = game->gameplayContext.cities[current].smallImageName;

@@ -41,7 +41,6 @@ Game createNewGame(){
     game.gameplayContext.playerDestinationChoice = 1;
     game.menuOverlay.visible = false;
     game.travel.travelForward = true;
-    game.randomize.notRandom = true;
     game.hint.showHint = false;
 
     setupEnvironment(&game);

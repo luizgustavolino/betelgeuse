@@ -5,9 +5,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "utils.h"
+#include <time.h>
 #include <math.h>
 
+#include "utils.h"
 #include "engine.h"
 
 void swap(int *a, int *b) {
@@ -30,6 +31,11 @@ float deg2rad(float deg) {
 
 float rad2deg(float rad) {
   return (rad * 180 / PI);
+}
+
+int randomInt(){
+	srand(time(NULL));
+	return rand(); 
 }
 
 // Code by David Heffernan

@@ -22,6 +22,7 @@
      _a > _b ? _a : _b; })
 
 void swap(int *a, int *b);
+int randomInt();
 
 int roundFloatToInt(float x);
 float deg2rad(float deg);

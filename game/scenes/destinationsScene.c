@@ -34,6 +34,8 @@ static void destinationsOnEnter(Game *game, int frame) {
 	t_city_pin_a = loadImageAsset("jet_t_city_pin_a.png");
 	t_city_pin_b = loadImageAsset("jet_t_city_pin_b.png");
 	instructions = loadImageAsset("jet_instructions.png");
+
+	currentDestination = randomInt()%DESTINATIONS_COUNT;
 }
 
 static void destinationsOnFrame(Game *game, int frame) {
@@ -130,9 +132,6 @@ static void drawInterface(Game *game, int completion, int frame){
 
 		drawImageAsset(instructions, 146, 129);
 
-		setTextRGBColor(LIGHT_BLUE);
-		drawText("confirma", 164, 131);
-		drawText("cancela", 164, 149);
 	}
 
 	if (completion > 50) {
