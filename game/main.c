@@ -12,9 +12,8 @@ int main(int argc, char **argv){
     // setup do ambiente + cena inicial
     Game game = createNewGame();
 
-    loadGameData(&game); //temp
-    loadGameLevel(&game, LEVEL_1); //temp
     changeScene(&game, makeSplashScene(&game));
+
 
     // game lyfecycle
     while (game.running) nextFrame(&game);
