@@ -29,11 +29,9 @@ static void hintsOnEnter(Game *game, int frame) {
 
 	abin_bg = loadImageAsset("abin_pc_bg.png");
 	city_box = loadImageAsset("city_box.png");
-	//panorama = loadImageAsset("panoramas/pano_campogrande.png");
-	int current     = game->gameplayContext.currentCity;
+	int current = game->gameplayContext.currentCity;
 	char *city_image_label = game->gameplayContext.cities[current].imageName;
-	//city_image = loadImageAsset(city_image_label);
-	city_image = loadImageAsset("panorama/pano_fortaleza.png"); //test
+	city_image = loadImageAsset(city_image_label);
 	place_name = loadImageAsset("jet_destiny_name.png");
 	place_eta  = loadImageAsset("jet_destiny_eta.png");
 	select_left  = loadImageAsset("jet_select_l.png");
