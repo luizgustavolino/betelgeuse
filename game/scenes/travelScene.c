@@ -180,17 +180,17 @@ static void drawMessage(Game *game, int startFrame, int frame){
         drawText(destination.name, 78, 40);
         setTextRGBColor(LIGHT_BLUE);
         drawText("Suspeito? Hmm... não, não vi ninguém;com essa descrição pousar aqui. Você;tem certeza que este é o destino?", 21, 54);
-        if(frame == startFrame)
-            playSfx(game, "travel_fail");
+        if(localFrame == 1)
+            playSfx(game, "travel_fail.wav");
         btnLength = 220;
 	} else {
 	    setTextRGBColor(BLUE);
 	    drawText("Aeroporto.", 21, 40);
         drawText(destination.name, 78, 40);
         setTextRGBColor(LIGHT_BLUE);
+        if(localFrame == 1)
+            playSfx(game, "travel_fail.wav");
         drawText("Suspeito? Sim! Vi uma pessoa com essa;descrição pousar aqui. Você vai adorar;a cidade!", 21, 54);
-        if(frame == startFrame)
-            playSfx(game, "travel_correct.wav");
         btnLength = 209;
 	}
 
