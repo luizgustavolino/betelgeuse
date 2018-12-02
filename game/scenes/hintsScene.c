@@ -30,10 +30,11 @@ static void hintsOnEnter(Game *game, int frame) {
 
 	abin_bg = loadImageAsset("abin_pc_bg.png");
 	city_box = loadImageAsset("city_box.png");
+
 	int current  = game->gameplayContext.currentCity;
 	char *city_image_label = game->gameplayContext.cities[current].imageName;
-
-	city_image     = loadImageAsset("panorama/pano_fortaleza.png"); //test
+    city_image = loadImageAsset(city_image_label);
+	
 	place_name     = loadImageAsset("jet_destiny_name.png");
 	place_eta      = loadImageAsset("jet_destiny_eta.png");
 	select_left    = loadImageAsset("jet_select_l.png");
@@ -44,8 +45,8 @@ static void hintsOnEnter(Game *game, int frame) {
 	hint_text_bg   = loadImageAsset("hint_text_bg.png");
 	hint_face      = loadImageAsset("hint_face.png");
 	action_btn_a   = loadImageAsset("btn_a_from_right_a.png");
-	action_btn_b   = loadImageAsset("btn_a_from_right_b.png");
-
+	action_btn_b   = loadImageAsset("btn_a_from_right_b.png");	
+	
 }
 
 static void hintsOnFrame(Game *game, int frame) {
@@ -55,6 +56,7 @@ static void hintsOnFrame(Game *game, int frame) {
     if (game->gameplayContext.currentTime < targetTime) {
         
         if (frame%5 == 0) game->gameplayContext.currentTime++;
+        if (frame%40 == 0) playSfx(game, "pi.wav");
 
         drawImageAsset(abin_bg, 0, 0);
         drawImageAsset(city_box, 7, 31);

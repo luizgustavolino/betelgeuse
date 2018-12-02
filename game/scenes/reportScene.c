@@ -65,6 +65,7 @@ static void reportOnFrame(Game *game, int frame) {
 
 			if (game->keyState.a == KEY_IS_RELEASED) {
 				changeScene(game, makeCityScene(game));
+                playSoundtrack(game, game->gameplayContext.cities[game->gameplayContext.currentCity].ost);
 			}
 		}
 	}

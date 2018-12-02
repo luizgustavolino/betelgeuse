@@ -38,6 +38,8 @@ static void travelOnEnter(Game *game, int frame) {
     int current = game->gameplayContext.currentCity;
     fromLabel = game->gameplayContext.cities[current].imageName;
 
+    playSfx(game, "plane.wav");
+
     //Checks what choice the player made
     toLabel = game->gameplayContext.cities[current].destinations[game->gameplayContext.playerDestinationChoice].imageName;
 
@@ -136,8 +138,9 @@ static void travelOnFrame(Game *game, int frame) {
         }
     }
 
-    if (game->gameplayContext.currentTime < targetTime && frame%5 == 0) {
-        game->gameplayContext.currentTime++;
+    if (game->gameplayContext.currentTime < targetTime) {
+        if (frame%5 == 0) game->gameplayContext.currentTime++;
+        if (frame%40 == 0) playSfx(game, "pi.wav");
     }
 
     drawImageAsset(overlay, 0, 0);

@@ -1,226 +1,289 @@
-﻿ESTRUTURA DE DICAS
+﻿São Paulo
 panorama/pano_saopaulo.png
 Igreja
 54
 75
-Essa pessoa gosta;muito de pão de;queijo!
 Hotel
 23
 124
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Biblioteca
 104
 72
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Rio de Janeiro
 panorama/pano_riodejaneiro.png
 Ópera
 52
 55
-Essa pessoa gosta;muito de pão de;queijo!
 Hotel
 82
 86
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Consulado
 129
 87
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Belo Horizonte
 panorama/pano_belohorizonte.png
 Parque
 20
 44
-Essa pessoa gosta;muito de pão de;queijo!
 Hotel
 25
 102
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Biblioteca
 102
 75
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Salvador
 panorama/pano_salvador.png
 Farol
 111
 98
-Essa pessoa gosta;muito de pão de;queijo!
 Hotel
 40
 120
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Consulado
 75
 116
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Recife
 panorama/pano_recife.png
 Parque
 106
 52
-Essa pessoa gosta;muito de pão de;queijo!
 Hotel
 91
 103
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Consulado
 15
 82
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Fortaleza
 panorama/pano_fortaleza.png
 Praia
 55
 45
-Essa pessoa gosta;muito de pão de;queijo!
 Hotel
 27
 130
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Biblioteca
 113
 93
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Goiânia
 panorama/pano_goiania.png
 Hotel
 43
 108
-Essa pessoa gosta;muito de pão de;queijo!
 Consulado
 24
 130
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Escritório
 62
 141
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Campo Grande
 panorama/pano_campogrande.png
 Hotel
 64
 72
-Essa pessoa gosta;muito de pão de;queijo!
 Consulado
 24
 52
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Parque
 94
 92
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Cuiabá
 panorama/pano_cuiaba.png
 Hotel
 40
 112
-Essa pessoa gosta;muito de pão de;queijo!
 Igreja
 98
 88
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Parque
 70
 45
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Curitiba
 panorama/pano_curitiba.png
 Escritório
 70
 138
-Essa pessoa gosta;muito de pão de;queijo!
 Consulado
 30
 92
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Parque
 120
 90
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Florianópolis
 panorama/pano_florianopolis.png
 Hotel
 85
 116
-Essa pessoa gosta;muito de pão de;queijo!
 Shopping
 25
 102
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Consulado
 47
 132
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Porto Alegre
 panorama/pano_portoalegre.png
 Consolado
 52
 85
-Essa pessoa gosta;muito de pão de;queijo!
 Hotel
 40
 125
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Rádio
 113
 105
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Manaus
 panorama/pano_manaus.png
 Teatro
 78
 95
-Essa pessoa gosta;muito de pão de;queijo!
 Praça
 48
 45
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Biblioteca
 20
 100
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Belém
 panorama/pano_belem.png
 Biblioteca
 20
 100
-Essa pessoa gosta;muito de pão de;queijo!
 Hotel
 65
 108
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Mercadão
 65
 55
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Rio Branco
 panorama/pano_riobranco.png
 Mercadão
 40
 55
-Essa pessoa gosta;muito de pão de;queijo!
 Praça
 120
 55
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Ponte
 75
 120
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
+Brasília
 panorama/pano_brasilia.png
 Consulado
 35
 70
-Essa pessoa gosta;muito de pão de;queijo!
 Hotel
 130
 88
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas
 Parque
 82
 48
+Essa pessoa gosta;muito de pão de;queijo!
+Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
 Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
+Essa pessoa gosta;muito de pão de;brigadeiro!
+Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
+Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
 
 
