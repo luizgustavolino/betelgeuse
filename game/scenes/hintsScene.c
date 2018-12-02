@@ -22,6 +22,7 @@ static int startFrame;
 static int currentPlace = 0;
 bool showCurrentHint;
 static int currentTime, minutesRequired;
+static int targetTime;
 
 static void hintsOnEnter(Game *game, int frame) {
 
@@ -29,31 +30,50 @@ static void hintsOnEnter(Game *game, int frame) {
 
 	abin_bg = loadImageAsset("abin_pc_bg.png");
 	city_box = loadImageAsset("city_box.png");
-	//panorama = loadImageAsset("panoramas/pano_campogrande.png");
-	int current     = game->gameplayContext.currentCity;
+	int current  = game->gameplayContext.currentCity;
 	char *city_image_label = game->gameplayContext.cities[current].imageName;
-	//city_image = loadImageAsset(city_image_label);
-	city_image = loadImageAsset("panorama/pano_fortaleza.png"); //test
-	place_name = loadImageAsset("jet_destiny_name.png");
-	place_eta  = loadImageAsset("jet_destiny_eta.png");
-	select_left  = loadImageAsset("jet_select_l.png");
-	select_right = loadImageAsset("jet_select_r.png");
-	loc_pin = loadImageAsset("loc_pin.png");
-	loc_pin_gray = loadImageAsset("loc_pin_gray.png");
-	instructions = loadImageAsset("jet_instructions.png");
-	hint_text_bg = loadImageAsset("hint_text_bg.png");
-	hint_face = loadImageAsset("hint_face.png");
-	action_btn_a = loadImageAsset("btn_a_from_right_a.png");
-	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
+
+	city_image     = loadImageAsset("panorama/pano_fortaleza.png"); //test
+	place_name     = loadImageAsset("jet_destiny_name.png");
+	place_eta      = loadImageAsset("jet_destiny_eta.png");
+	select_left    = loadImageAsset("jet_select_l.png");
+	select_right   = loadImageAsset("jet_select_r.png");
+	loc_pin        = loadImageAsset("loc_pin.png");
+	loc_pin_gray   = loadImageAsset("loc_pin_gray.png");
+	instructions   = loadImageAsset("jet_instructions.png");
+	hint_text_bg   = loadImageAsset("hint_text_bg.png");
+	hint_face      = loadImageAsset("hint_face.png");
+	action_btn_a   = loadImageAsset("btn_a_from_right_a.png");
+	action_btn_b   = loadImageAsset("btn_a_from_right_b.png");
+
 }
 
 static void hintsOnFrame(Game *game, int frame) {
 
-    currentTime = game->gameplayContext.currentTime;
-    minutesRequired = game->gameplayContext.cities[game->gameplayContext.currentCity].pointsOfInterest[currentPlace].minutesRequired;
+    int current = game->gameplayContext.currentCity;
+
+    if (game->gameplayContext.currentTime < targetTime) {
+        
+        if (frame%5 == 0) game->gameplayContext.currentTime++;
+
+        drawImageAsset(abin_bg, 0, 0);
+        drawImageAsset(city_box, 7, 31);
+        drawImageAsset(city_image, 8, 36);
+
+        setTextRGBColor(YELLOW);
+        drawText(game->gameplayContext.cities[current].name, 85, 11);
+
+        drawTime(game->gameplayContext.currentTime);
+        startFrame = frame;
+
+        return;
+    }
 
     if (showCurrentHint == false) {
 
+        currentTime = game->gameplayContext.currentTime;
+        minutesRequired = game->gameplayContext.cities[game->gameplayContext.currentCity].pointsOfInterest[currentPlace].minutesRequired;
+    
         if (rewindFrames > 0) {
 
             drawInterface(game, (rewindFrames--)/2, frame);
@@ -67,7 +87,6 @@ static void hintsOnFrame(Game *game, int frame) {
             drawInterface(game, frame/2, frame);
         }
 
-        int current = game->gameplayContext.currentCity;
         Place place = game->gameplayContext.cities[current].pointsOfInterest[currentPlace];
 
         if (rewindFrames) return;
@@ -85,12 +104,10 @@ static void hintsOnFrame(Game *game, int frame) {
             if (rewindFrames == 0 && game->keyState.b == KEY_IS_RELEASED){
                 game->gameplayContext.playerDestinationChoice = 1; //Prevents cityScene to load a new level
                 rewindFrames = 200;
-            }
-
-            else if (game->keyState.a == KEY_IS_RELEASED) {
-                startFrame = frame;
-                game->gameplayContext.currentTime = currentTime + minutesRequired;
+            } else if (game->keyState.a == KEY_IS_RELEASED) {
+                targetTime = game->gameplayContext.currentTime + minutesRequired;
                 showCurrentHint = true;
+                return;
             }
         }
 
@@ -110,7 +127,11 @@ static void hintsOnFrame(Game *game, int frame) {
                 currentPlace = (currentPlace + POINTS_OF_INTEREST_COUNT - 1) % POINTS_OF_INTEREST_COUNT;
         }
 
-    } if (showCurrentHint == false) { //Wipes the instructions and time when the hints show
+    }
+
+    //Wipes the instructions and time when the hints show
+    if (showCurrentHint == false) { 
+
         drawTime(game->gameplayContext.currentTime);
         drawImageAsset(instructions, 146, 129);
 
