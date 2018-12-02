@@ -12,7 +12,6 @@ static int robber,exclamation,idle1,idle2,idle3,idle4,walk2,walk3,walk4,walk5,wa
 static int aBtnIconA, aBtnIconB;
 static float walk = -10;
 
-
 static void creditsOnEnter(Game *game, int frame) {
 
     betelgeuseLogo = loadImageAsset("splash_betelgeuse.png");
@@ -28,6 +27,7 @@ static void creditsOnEnter(Game *game, int frame) {
 	walk6       = loadImageAsset("robber_walk_6.png");
 	aBtnIconA	= loadImageAsset("main_a_btn_icon_a.png");
 	aBtnIconB	= loadImageAsset("main_a_btn_icon_b.png");
+    walk        = -10;
 }
 
 static void creditsOnFrame(Game *game, int frame) {

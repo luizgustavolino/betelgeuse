@@ -1,20 +1,20 @@
 ﻿São Paulo
-        ***URGENTE***; ;A torre da TV Gaveta;acaba de ser roubada!; ;Sua missão: Capturar o;meliante. Rápido! Datena;conta com você!; ;Boa sorte, recruta!
+        ***URGENTE***; ;A torre da TV Gaveta;acaba de ser roubada!; ;Sua missão: Capturar o;meliante. Rápido! Antena;conta com você!; ;Boa sorte, recruta!
 
 Rio de Janeiro
-        ***URGENTE***; ;O troféu do carnaval;acaba de ser roubado!; ;Sua missão: Capturar o;ladrão. Rápido! A beija-;flor conta com você!; ;Boa sorte, recruta!
+        ***URGENTE***; ;O troféu do carnaval;acaba de ser roubado!; ;Sua missão: Capturar o;ladrão. Rápido! O carna-;val depende de você!; ;Boa sorte, recruta!
 
 Belo Horizonte
         ***URGENTE***; ;A fórmula do pão de;queijo acaba de ser;roubada!; ;Sua missão: Capturar o;bandido. Rápido! Minas;depende de você!; ;Boa sorte, recruta!
 
 Salvador
-        ***URGENTE***; ;Acabaram de cortar os;cabos do elevador;Lacerda!; ;Sua missão: Capturar o;miserável. Rápido! Ivete;conta com você!; ;Boa sorte, recruta!
+        ***URGENTE***; ;Acabaram de cortar os;cabos do elevador;Lacerda!; ;Sua missão: Capturar o;miserável. Rápido! Izete;conta com você!; ;Boa sorte, recruta!
 
 Recife
         ***URGENTE***; ;Acabaram de roubar;todos os guarda-chuvas;de frevo!; ;Sua missão: Capturar o;cangaceiro. Rápido!;Recife, depende de você!; ;Boa sorte, recruta!
 
 Fortaleza
-        ***URGENTE***; ;A estátua da Iracema;acaba de ser roubada!; ;Sua missão: Capturar o;bandoleiro. Rápido!;A Lenda do Ceará;depende de você!; ;Boa sorte, recruta!
+        ***URGENTE***; ;A estátua da Iracema;acaba de ser roubada!; ;Sua missão: Capturar o;bandoleiro. Rápido! A;Lenda do Ceará depende;de você!; ;Boa sorte, recruta!
 
 Goiânia
         ***URGENTE***; ;A viola de Lelé de Sarama-;go e Rufiano acaba de ser;roubada! E não há nenhu-;ma evidência.; ;Sua missão: Capturar o;bandido.; ;Boa sorte, recruta!
@@ -23,25 +23,25 @@ Campo Grande
         ***URGENTE***; ;Acabaram de desabar;as grutas em Bonito!; ;Sua missão: Capturar o;patife. Rápido! Campo;Grande conta com você!; ;Boa sorte, recruta!
 
 Cuiabá
-        ***URGENTE***; ;Sumiram todos os;cururus da cidade!; ;Sua missão: Capturar o;salafrário. Rápido!;Naiara & Monalisa;contam com você!; ;Boa sorte, recruta!
+        ***URGENTE***; ;Capturaram todos os;sapos cururus da cidade!; ;Sua missão: Capturar o;salafrário. Rápido!;Naiara & Monalisa;contam com você!; ;Boa sorte, recruta!
 
 Curitiba
-        ***URGENTE***; ;Uma coleção rara de;orquideas acaba de;serem roubadas!; ;Sua missão: Capturar o;ladrão. Rápido! Curitiba;depende de você!; ;Boa sorte, recruta!
+        ***URGENTE***; ;Uma coleção rara de;orquideas acabam de;serem roubadas!; ;Sua missão: Capturar o;ladrão. Rápido! Curitiba;depende de você!; ;Boa sorte, recruta!
 
 Florianópolis
-        ***URGENTE***; ;A estátua Hercílio Luz;acaba de ser roubada!; ;Sua missão: Capturar o;criminoso. Rápido! Floripa;depende de você!; ;Boa sorte, recruta!
+        ***URGENTE***; ;A estátua Hercílio Luz;acaba de ser roubada!; ;Sua missão: Capturar o;criminoso. Rápido! Floripa;conta com você!; ;Boa sorte, recruta!
 
 Porto Alegre
         ***URGENTE***; ;A fórmula do cacetinho;acaba de ser roubada!; ;Sua missão: Capturar o;marginal. Rápido! Porto;Alegre depende de;você!; ;Boa sorte, recruta!
 
 Manaus
-        ***URGENTE***; ;O Muiraquitã acaba de ser;roubada!; ;Sua missão: Capturar o;canalha. Rápido! Manaus;depende de você!; ;Boa sorte, recruta!
+        ***URGENTE***; ;O artefato Muiraquitã;acaba de ser roubado!; ;Sua missão: Capturar o;canalha. Rápido! Manaus;depende de você!; ;Boa sorte, recruta!
 
 Belém
         ***URGENTE***; ;Acabaram de explodir o;forte do castelo de;Belém!; ;Sua missão: Capturar o;bandoleiro. Rápido! Joelma;conta com você!; ;Boa sorte, recruta!
 
 Rio Branco
-        ***URGENTE***; ;Acabaram de surgir ali-;enígenas no Stonehenge!; ;Sua missão: Capturar o;extraterrestre. Rápido!;Rio Branco depende de;você!; ;Boa sorte, recruta!
+        ***URGENTE***; ;O menino do Acre acaba;de ser raptado!; ;Sua missão: Capturar o;sequestrador. Rápido!;Rio Branco depende de;você!; ;Boa sorte, recruta!
 
 Brasília
         ***URGENTE***; ;A Estátua da Justiça;acaba de ser roubada!; ;Sua missão: Capturar o;canalha. Rápido! Themer;conta com você!; ;Boa sorte, recruta!

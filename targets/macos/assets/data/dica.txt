@@ -9,12 +9,12 @@ Hotel
 Biblioteca
 104
 72
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui.
+O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo".
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário.
+O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos.
+A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal.
+A pessoa que você procura estava por;aqui escutando Adoniran Barbosa.
 
 Rio de Janeiro
 panorama/pano_riodejaneiro.png
@@ -27,12 +27,12 @@ Hotel
 Consulado
 129
 87
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Passou uma pessoa por aqui escutando;Vinicius de Moraes.
+Passou um cara com a camiseta do;Tabajara FC.
+Só sei que ele estava ligando para um;número com o DDD 22.
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria.
+Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara.
+A pessoa falava que ia para o estado;do tucano-de-papo-amarelo.
 
 Belo Horizonte
 panorama/pano_belohorizonte.png
@@ -45,12 +45,12 @@ Hotel
 Biblioteca
 102
 75
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+A pessoa que você procura foi para a;conhecida cidade-jardim.
+Ele foi para o Aeroporto Internacional;de Confins.
+Só sei que ele estava ligando para um;número com o DDD 31.
+Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça.
+Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço).
+A pessoa queria dar um mergulho no;Rio São Francisco.
 
 Salvador
 panorama/pano_salvador.png
@@ -63,12 +63,12 @@ Hotel
 Consulado
 75
 116
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Essa pessoa gosta muito de pão de;queijo!
+Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas.
+Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite.
+Essa pessoa gosta muito de pão de;brigadeiro!
+Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas.
+Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja.
 
 Recife
 panorama/pano_recife.png
@@ -81,12 +81,12 @@ Hotel
 Consulado
 15
 82
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui.
+O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo".
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário.
+O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos.
+A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal.
+A pessoa que você procura estava por;aqui escutando Adoniran Barbosa.
 
 Fortaleza
 panorama/pano_fortaleza.png
@@ -99,12 +99,12 @@ Hotel
 Biblioteca
 113
 93
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Passou uma pessoa por aqui escutando;Vinicius de Moraes.
+Passou um cara com a camiseta do;Tabajara FC.
+Só sei que ele estava ligando para um;número com o DDD 22.
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria.
+Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara.
+A pessoa falava que ia para o estado;do tucano-de-papo-amarelo.
 
 Goiânia
 panorama/pano_goiania.png
@@ -117,12 +117,12 @@ Consulado
 Escritório
 62
 141
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+A pessoa que você procura foi para a;conhecida cidade-jardim.
+Ele foi para o Aeroporto Internacional;de Confins.
+Só sei que ele estava ligando para um;número com o DDD 31.
+Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça.
+Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço).
+A pessoa queria dar um mergulho no;Rio São Francisco.
 
 Campo Grande
 panorama/pano_campogrande.png
@@ -135,12 +135,12 @@ Consulado
 Parque
 94
 92
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Essa pessoa gosta muito de pão de;queijo!
+Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas.
+Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite.
+Essa pessoa gosta muito de pão de;brigadeiro!
+Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas.
+Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja.
 
 Cuiabá
 panorama/pano_cuiaba.png
@@ -153,12 +153,12 @@ Igreja
 Parque
 70
 45
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui.
+O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo".
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário.
+O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos.
+A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal.
+A pessoa que você procura estava por;aqui escutando Adoniran Barbosa.
 
 Curitiba
 panorama/pano_curitiba.png
@@ -171,12 +171,12 @@ Consulado
 Parque
 120
 90
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Passou uma pessoa por aqui escutando;Vinicius de Moraes.
+Passou um cara com a camiseta do;Tabajara FC.
+Só sei que ele estava ligando para um;número com o DDD 22.
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria.
+Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara.
+A pessoa falava que ia para o estado;do tucano-de-papo-amarelo.
 
 Florianópolis
 panorama/pano_florianopolis.png
@@ -189,12 +189,12 @@ Shopping
 Consulado
 47
 132
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+A pessoa que você procura foi para a;conhecida cidade-jardim.
+Ele foi para o Aeroporto Internacional;de Confins.
+Só sei que ele estava ligando para um;número com o DDD 31.
+Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça.
+Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço).
+A pessoa queria dar um mergulho no;Rio São Francisco.
 
 Porto Alegre
 panorama/pano_portoalegre.png
@@ -207,12 +207,12 @@ Hotel
 Rádio
 113
 105
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Essa pessoa gosta muito de pão de;queijo!
+Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas.
+Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite.
+Essa pessoa gosta muito de pão de;brigadeiro!
+Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas.
+Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja.
 
 Manaus
 panorama/pano_manaus.png
@@ -225,12 +225,12 @@ Praça
 Biblioteca
 20
 100
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui.
+O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo".
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário.
+O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos.
+A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal.
+A pessoa que você procura estava por;aqui escutando Adoniran Barbosa.
 
 Belém
 panorama/pano_belem.png
@@ -243,12 +243,12 @@ Hotel
 Mercadão
 65
 55
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Passou uma pessoa por aqui escutando;Vinicius de Moraes.
+Passou um cara com a camiseta do;Tabajara FC.
+Só sei que ele estava ligando para um;número com o DDD 22.
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria.
+Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara.
+A pessoa falava que ia para o estado;do tucano-de-papo-amarelo.
 
 Rio Branco
 panorama/pano_riobranco.png
@@ -261,12 +261,12 @@ Praça
 Ponte
 75
 120
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+A pessoa que você procura foi para a;conhecida cidade-jardim.
+Ele foi para o Aeroporto Internacional;de Confins.
+Só sei que ele estava ligando para um;número com o DDD 31.
+Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça.
+Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço).
+A pessoa queria dar um mergulho no;Rio São Francisco.
 
 Brasília
 panorama/pano_brasilia.png
@@ -279,11 +279,11 @@ Hotel
 Parque
 82
 48
-Essa pessoa gosta;muito de pão de;queijo!
-Vi alguém suspeito;falando algo sobre;pescar. Algo;sobre Furnas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de leite.
-Essa pessoa gosta;muito de pão de;brigadeiro!
-Vi alguém suspeito;falando algo sobre;caçar. Algo;sobre Dunas.
-Humm... alguém;assim passou por;aqui. Perguntou sobre;produção de cerveja.
+Essa pessoa gosta muito de pão de;queijo!
+Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas.
+Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite.
+Essa pessoa gosta muito de pão de;brigadeiro!
+Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas.
+Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja.
 
 
