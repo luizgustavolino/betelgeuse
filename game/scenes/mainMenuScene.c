@@ -26,6 +26,8 @@ static void mainMenuOnEnter(Game *game, int frame) {
 
 	action_btn_a = loadImageAsset("btn_a_from_right_a.png");
 	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
+
+	playSoundtrack(game, "main.ogg");
 }
 
 static void mainMenuOnFrame(Game *game, int frame) {

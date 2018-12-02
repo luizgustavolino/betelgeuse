@@ -44,6 +44,13 @@ static void travelOnEnter(Game *game, int frame) {
     flightTime = 1220; //Time in frames, can be adjusted to match sound. Declared as float for animation purposes
     increment = (float)width / ((float)flightTime - (float)airplaneInOutTime); //Increment for the background position
 
+    if(flyForward){
+        playSoundtrack(game, game->gameplayContext.cities[game->gameplayContext.currentCity].destinations[playerChoice].ost);
+    }
+    else{
+        playSoundtrack(game, game->gameplayContext.cities[game->gameplayContext.currentCity].ost);
+    }
+
     if (flyForward){
 
         jet1	    = loadImageAsset("jet1.png");

@@ -1,5 +1,5 @@
 //
-// SENAC BCC PI 2 
+// SENAC BCC PI 2
 // Projeto Betelgeuse
 
 #include <stddef.h>
@@ -12,7 +12,7 @@ static int bccLogo, bccTitle;
 static int betelgeuseLogo;
 
 static void splashOnEnter(Game *game, int frame) {
-	
+
 	senacLogo  = loadImageAsset("splash_senac_logo.png");
 	senacTitle = loadImageAsset("splash_senac_label.png");
 
@@ -23,7 +23,7 @@ static void splashOnEnter(Game *game, int frame) {
 }
 
 static void splashOnFrame(Game *game, int frame) {
-	
+
 	unsigned char color = min(frame, 255);
 	int waitTime 	= 260;
 	int exposeTime 	= 400;
@@ -36,8 +36,13 @@ static void splashOnFrame(Game *game, int frame) {
 		drawImageAsset(senacLogo, 107, 59);
 		drawImageAsset(senacTitle, 76, 75);
 
+		if(frame == waitTime){
+            playSfx(game, "logo.wav");
+		}
+
 	} else if (frame == waitTime + 1 * exposeTime) {
 		fillRGB(game, 220, 245, 255);
+		playSfx(game, "logo.wav");
 
 	} else if (frame < waitTime + 2 * exposeTime){
 		drawImageAsset(bccLogo, 82, 64);
@@ -48,12 +53,15 @@ static void splashOnFrame(Game *game, int frame) {
 
 	}else if (frame < waitTime + 3 * exposeTime){
 		drawImageAsset(betelgeuseLogo, 74, 52);
+		if(frame == waitTime + 2 * exposeTime){
+            playSfx(game, "betelgeuse.wav");
+		}
 
 	} else if (frame < totalFrames){
 
 		int initialFrame = waitTime + 3 * exposeTime;
 		float delta = applyCubicEaseInOut(initialFrame, totalFrames, frame, 160);
-		drawImageAsset(betelgeuseLogo, 74, 52 - delta);		
+		drawImageAsset(betelgeuseLogo, 74, 52 - delta);
 
 	} else {
 		changeScene(game, makeMainMenuScene(game));
@@ -62,7 +70,7 @@ static void splashOnFrame(Game *game, int frame) {
 	if (game->keyState.a == KEY_IS_RELEASED) {
 		changeScene(game, makeMainMenuScene(game));
 	}
-	
+
 }
 
 static void splashOnExit(Game *game, int frame) {

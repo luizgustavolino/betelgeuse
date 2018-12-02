@@ -95,6 +95,7 @@ typedef struct Place {
 
 typedef struct Destination {
     char *name;
+    char *ost;
     char *imageName;
     int minutesRequired;
     float latitude;
@@ -103,6 +104,7 @@ typedef struct Destination {
 
 typedef struct City {
     char *name;
+    char *ost;
     char *flavorText[3];
     char *imageName;
     char *smallImageName;

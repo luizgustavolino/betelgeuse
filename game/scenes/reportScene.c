@@ -22,6 +22,8 @@ static void reportOnEnter(Game *game, int frame) {
 
 	action_btn_a = loadImageAsset("btn_a_from_right_a.png");
 	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
+
+	playSoundtrack(game, "mission.ogg");
 }
 
 static void reportOnFrame(Game *game, int frame) {

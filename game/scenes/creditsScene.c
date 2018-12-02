@@ -15,6 +15,7 @@ static int betelgeuseLogo;
 static void creditsOnEnter(Game *game, int frame) {
 
 	senacLogo  = loadImageAsset("splash_senac_logo.png");
+	playSoundtrack(game, "credits.ogg");
 }
 
 static void creditsOnFrame(Game *game, int frame) {

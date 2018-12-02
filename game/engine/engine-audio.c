@@ -45,6 +45,7 @@ void playSfx(Game *game, char* name){
 
 	ALLEGRO_SAMPLE_INSTANCE *instance = al_create_sample_instance(sample);
 	al_attach_sample_instance_to_mixer(instance, al_get_default_mixer());
+	al_set_sample_instance_gain(instance, 0.8);
 	al_play_sample_instance(instance);
 	insertAudioAsset(sample, instance);
 
@@ -63,7 +64,7 @@ void stopSoundtrack(Game *game){
 }
 
 void playSoundtrack(Game *game, char* name){
-	
+
 	// stop old, if any is loaded
 	stopSoundtrack(game);
 
@@ -75,7 +76,8 @@ void playSoundtrack(Game *game, char* name){
 
 	// filename, buffer_count, samples
 	currentOST = al_load_audio_stream(fullpath, 4, 1024);
-	al_set_audio_stream_gain(currentOST, 0.3);
+	al_set_audio_stream_gain(currentOST, 0.5);
+	al_set_audio_stream_playmode(currentOST, ALLEGRO_PLAYMODE_LOOP);
 	al_attach_audio_stream_to_mixer(currentOST, al_get_default_mixer());
 	al_set_audio_stream_playing(currentOST, true);
 
@@ -111,7 +113,7 @@ void garbageCollectAudioSfxPool(){
     	} else {
     		current = current->next;
     	}
-    	
+
     }
 
 }
