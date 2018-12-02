@@ -66,7 +66,7 @@ static void finalOnFrame(Game *game, int frame) {
             }
         } else if (frame >= startDly + 900 && frame < startDly + 1300) {
             if(frame == startDly + 900) playSfx(game, "mobile.wav");
-            if ( frame % 40 >= 20) {
+                if (frame % 40 >= 20){
                 drawImageAsset(mobile, 62, 117);
             }
         } if (frame >= startDly + 1400) {

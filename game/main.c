@@ -8,6 +8,7 @@ int main(int argc, char **argv){
 
     // informações da plataforma
     setupLogger();
+
     Logger.info("### SENAC BCC PI 2 // Projeto Betelgeuse ###");
 
     // setup do ambiente + cena inicial
