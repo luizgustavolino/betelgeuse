@@ -32,7 +32,8 @@ static void hintsOnEnter(Game *game, int frame) {
 	//panorama = loadImageAsset("panoramas/pano_campogrande.png");
 	int current     = game->gameplayContext.currentCity;
 	char *city_image_label = game->gameplayContext.cities[current].imageName;
-	city_image = loadImageAsset(city_image_label);
+	//city_image = loadImageAsset(city_image_label);
+	city_image = loadImageAsset("panorama/pano_fortaleza.png"); //test
 	place_name = loadImageAsset("jet_destiny_name.png");
 	place_eta  = loadImageAsset("jet_destiny_eta.png");
 	select_left  = loadImageAsset("jet_select_l.png");
@@ -144,8 +145,6 @@ static void drawInterface(Game *game, int completion, int frame){
             delta = applyBounceEaseOut(completion + i*5, completion + 180 + i*5, frame, 180);
             int loc_x = p.pinX;
 			int loc_y = p.pinY;
-//			int loc_x = 56;
-//			int loc_y = 60;
             drawImageAsset(loc_pin_gray, loc_x, delta - loc_y);
         }
     }
@@ -156,8 +155,6 @@ static void drawInterface(Game *game, int completion, int frame){
             Place p = game->gameplayContext.cities[current].pointsOfInterest[i];
             int loc_x = p.pinX;
 			int loc_y = p.pinY;
-//          int loc_x = 94;
-//			int loc_y = 92;
             if (i != currentPlace) drawImageAsset(loc_pin_gray, loc_x, 180 - loc_y);
 		}
 
