@@ -225,12 +225,12 @@ Praça
 Teatro
 78
 95
-Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui.
-O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo".
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário.
-O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente assimétricos.
-A pessoa estava lendo os sermões do;Padre José de Anchieta, uma figura;importante do seu estado natal.
-A pessoa que você procura estava por;aqui escutando Adoniran Barbosa.
+Depois que pegar o suspeito, poderia;gravar o canto do Uirapuru para;este pobre ornitólogo?
+A pessoa deve gostar muito de rios, já;que foi para onde tem cerca de 20% de;toda a concentração de água doce do;planeta.
+Dizia que quando criança, sua mãe con-;tava histórias como a lenda do boto;cor-de-rosa.
+Talvez você consiga encontrá-lo de;cima do Pico da Neblina, o ponto mais;alto do Brasil.
+Acredito que ele tente atravessar a;fronteira para a Colômbia.
+O suspeito estava indo para o maior;estado do Brasil.
 
 Belém
 panorama/pano_belem.png
@@ -243,12 +243,12 @@ Hotel
 Mercadão
 65
 55
-Passou uma pessoa por aqui escutando;Vinicius de Moraes.
-Passou um cara com a camiseta do;Tabajara F.C.
-Só sei que ele estava ligando para um;número com o DDD 22.
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado na indústria.
-Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara.
-A pessoa falava que ia para o estado;do tucano-de-papo-amarelo.
+Ele parecia disposto a transformar a;Ilha de Marajó em um país livre.
+Ele estava comprando um adesivo da;Nossa Senhora de Nazaré, padroeira;da sua cidade natal.
+Ele disse que ia visitar a "Cidade das;Mangueiras".
+Ele disse que queria dar um mergulho;na Baía do Guajará.
+Ele me deu o resto do açaí com guaraná;dele dizendo que ia comer açaí de ver-;dade na origem.
+Ele foi atrás de garimpo, mas a serra;já estava pelada.
 
 Rio Branco
 panorama/pano_riobranco.png
@@ -261,8 +261,8 @@ Ponte
 Praça
 120
 55
-A pessoa que você procura foi para a;conhecida cidade-jardim.
-Ele foi para o Aeroporto Internacional;de Confins.
+Tinha uma pessoa com muita pressa;por aqui, vendo uns panfletos sobre a;"Capital da Natureza".
+///Ele foi para o Aeroporto Internacional;de Confins.
 Só sei que ele estava ligando para um;número com o DDD 31.
 Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça.
 Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço).
