@@ -45,7 +45,7 @@ static void reportOnFrame(Game *game, int frame) {
 		drawImageAsset(bgAsset, 0, 0);
 
 		float delta = 170 - applyCubicEaseOut(520, 720, frame, 170);
-		drawImageAsset(paperAsset, -12, 0 + delta);
+		drawImageAsset(paperAsset, -10, 0 + delta);
 
 		setTextRGBColor(GRAY);
 
