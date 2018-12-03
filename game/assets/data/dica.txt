@@ -117,12 +117,12 @@ Consulado
 Escritório
 62
 141
-A pessoa que você procura foi para a;conhecida cidade-jardim. 
-Ele foi para o Aeroporto Internacional;de Confins. 
-Só sei que ele estava ligando para um;número com o DDD 31. 
-Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça. 
-Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço). 
-A pessoa queria dar um mergulho no;Rio São Francisco. 
+Só sei que ele estava ligando para;um número com o DDD 62.
+Bom, passou uma pessoa por aqui falando;que ia visitar o Planalto;Central do Brasil.
+Notei que tinha uma pessoa com o chaveiro;da santa protetora e;padroeira de alguma cidade,;Nossa Senhora Auxiliadora.
+No capô do carro estava esrito o lema;"pela grandeza da pátria".
+Ele disse que ia para a cidade da;terra roxa.
+Ele disse que iria admirar um vasto;campo cerrado.
 
 Campo Grande
 panorama/pano_campogrande.png
@@ -135,12 +135,12 @@ Consulado
 Parque
 94
 92
-Essa pessoa gosta muito de pão de;queijo! 
-Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas. 
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite. 
-Essa pessoa gosta muito de pão de;brigadeiro! 
-Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas. 
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja. 
+Só sei que ele estava ligando para;um número com o DDD 67.
+Notei que nos folhetos que ele carregava;estava escrito "A Capital;dos Ipês".
+Vi uma pessoa alugando um barco, dizia;que iria navegar pelas bacias;dos rios Paraná e Paraguai.
+Passou uma pessoa suspeita com uns;folhetos para um local turístico;conhecida como "Cidade Morena".
+Tinha uma pessoa por aqui contando;que iria para uma outra cidade;para cultivar ipês-rosa.
+No capô do carro dele tinha um lema;"poder, prosperidade e altruísmo".
 
 Cuiabá
 panorama/pano_cuiaba.png
@@ -153,9 +153,9 @@ Igreja
 Parque
 70
 45
-Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui. 
-O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo". 
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário. 
+Passou uma pessoa suspeita com uns;folhetos para uma cidade turística;conhecida como "Cidade Verde".
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado no extrativismo,;coletando produtos naturais.
+Passou uma pessoa reclamando que tinha;que ir para uma região muito;pantaneira
 O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos. 
 A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal. 
 A pessoa que você procura estava por;aqui escutando Adoniran Barbosa. 
