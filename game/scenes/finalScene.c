@@ -18,6 +18,7 @@ static int action_btn_a, action_btn_b;
 static int startDly = 500, endFrame; //Delay till the phone starts ringing. Could play an intro song or write some story text
 
 static void finalOnEnter(Game *game, int frame) {
+
     bgAsset 		= loadImageAsset("report_bg.png");
 	pathAsset 		= loadImageAsset("menu_overlay_path.png");
 	pathDenseAsset 	= loadImageAsset("menu_overlay_path_dense.png");
@@ -30,6 +31,7 @@ static void finalOnEnter(Game *game, int frame) {
 
 	action_btn_a	= loadImageAsset("btn_a_from_right_a.png");
 	action_btn_b	= loadImageAsset("btn_a_from_right_b.png");
+	stopSoundtrack(game);
 
 }
 

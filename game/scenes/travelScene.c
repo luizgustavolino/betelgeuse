@@ -18,7 +18,7 @@ static float delta, increment, flyPosHor, flyPosVer, bgPos;
 static int width, flightTime, airplaneInOutTime; //Animation parameters
 bool flyForward;
 static int currentTime, minutesRequired;
-static int overlay;
+static int overlay, skyOverlay;
 static int targetTime;
 
 static void travelOnEnter(Game *game, int frame) {
@@ -33,6 +33,7 @@ static void travelOnEnter(Game *game, int frame) {
     action_btn_a = loadImageAsset("btn_a_from_right_a.png");
 	action_btn_b = loadImageAsset("btn_a_from_right_b.png");
     overlay = loadImageAsset("jet_overlay.png");
+    skyOverlay = loadImageAsset("fly_sky_overlay.png");
 
     flyForward = game->travel.travelForward;
     int current = game->gameplayContext.currentCity;
@@ -118,19 +119,27 @@ static void travelOnFrame(Game *game, int frame) {
         if (flyForward) {
             drawImageAsset(fromCity, 8 - bgPos, 39);
             drawImageAsset(toCity, width + 8 - bgPos, 39); //+ 8 for the border
+            drawImageAsset(skyOverlay, width - 18 - bgPos, 40);
         } else {
             drawImageAsset(fromCity, 8 + bgPos, 39);
             drawImageAsset(toCity, bgPos - width + 8, 39); //+ 8 for the border
+            drawImageAsset(skyOverlay, bgPos - 16, 40);
+            drawImageAsset(skyOverlay, 202 + bgPos, 40);
         }
 
+        
         drawImageAsset(jet, flyPosHor, flyPosVer);
 
         if(bgPos < width) bgPos = bgPos + increment;
     }
 
     if (frame > flightTime && frame <= flightTime + airplaneInOutTime){
+        
         delta = applyCubicEaseInOut(flightTime, flightTime + airplaneInOutTime, frame, 145);
         drawImageAsset(toCity, 8, 39);
+        drawImageAsset(skyOverlay, 8 - 26, 40);
+        drawImageAsset(skyOverlay, 202, 40);
+
         if (flyForward) {
             drawImageAsset(jet, delta + flyPosHor, flyPosVer);
         } else {
@@ -189,8 +198,6 @@ static void drawMessage(Game *game, int startFrame, int frame){
 	    drawText("Aeroporto.", 21, 40);
         drawText(destination.name, 78, 40);
         setTextRGBColor(LIGHT_BLUE);
-        if(localFrame == 1)
-            playSfx(game, "travel_fail.wav");
         drawText("Suspeito? Sim! Vi uma pessoa com essa;descrição pousar aqui. Você vai adorar;a cidade!", 21, 54);
         btnLength = 209;
 	}
@@ -227,6 +234,15 @@ static void travelOnExit(Game *game, int frame) {
 	unloadImageAsset(jet3);
 	unloadImageAsset(fromCity);
 	unloadImageAsset(toCity);
+    unloadImageAsset(skyOverlay);
+
+    unloadImageAsset(hint_text_bg);
+    unloadImageAsset(hint_face);
+    unloadImageAsset(action_btn_a);
+    unloadImageAsset(action_btn_b);
+    unloadImageAsset(overlay);
+    unloadImageAsset(skyOverlay);
+    
 }
 
 
