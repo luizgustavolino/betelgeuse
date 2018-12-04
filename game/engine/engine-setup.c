@@ -103,6 +103,9 @@ static bool loadAllegro(Game *game){
  	int scale = min(sx, sy);
  	int dx =  (display_width - scale * game->screenSetup.width)/2;
  	int dy =  (display_height - scale * game->screenSetup.height)/2;
+ 	game->screenSetup.scaleFactor = scale;
+ 	game->screenSetup.fullscreen_dx = dx;
+ 	game->screenSetup.fullscreen_dy = dy;
 
  	Logger.info("Display have: %dx%d", display_width, display_height);
  	Logger.complement("scaling to: %dx", scale);

@@ -47,6 +47,8 @@ typedef struct ScreenSetup {
     unsigned int width;
     unsigned int scaleFactor;
     unsigned int fps;
+    int fullscreen_dx;
+    int fullscreen_dy;
 } ScreenSetup;
 
 // Estrutura que controla as regras do jogo

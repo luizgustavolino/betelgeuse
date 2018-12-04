@@ -20,7 +20,7 @@ void menuOverlayOnFrame(Game *game, int frame);
 Game createNewGame(){
 
     struct Game game;
-    game.screenSetup.scaleFactor = 3;
+    game.screenSetup.scaleFactor = 1;
 
     game.screenSetup.width  = 220;
     game.screenSetup.height = 176;

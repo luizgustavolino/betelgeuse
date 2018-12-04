@@ -127,9 +127,12 @@ void menuOverlayOnFrame(Game *game, int frame){
 
 		int width 	= game->screenSetup.width;
 		int height 	= game->screenSetup.height;
+
+		int dx 	= game->screenSetup.fullscreen_dx;
+		int dy 	= game->screenSetup.fullscreen_dy;
 		int scale   = game->screenSetup.scaleFactor;
 
-		al_draw_scaled_bitmap(backBuffer, 0, 0, width*scale, height*scale,
+		al_draw_scaled_bitmap(backBuffer, dx, dy, width*scale, height*scale,
 										  0, 0, width, height, 0);
 
 		int inner_height = 27 * currentOptionsCount + 10;
