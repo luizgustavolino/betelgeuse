@@ -22,8 +22,8 @@ Game createNewGame(){
     struct Game game;
     game.screenSetup.scaleFactor = 3;
 
-    game.screenSetup.width  = 220 * game.screenSetup.scaleFactor;
-    game.screenSetup.height = 176 * game.screenSetup.scaleFactor;
+    game.screenSetup.width  = 220;
+    game.screenSetup.height = 176;
     game.screenSetup.fps    = 320;
 
     game.currentScene.onEnter = NULL;

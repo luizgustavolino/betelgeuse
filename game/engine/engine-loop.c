@@ -16,6 +16,7 @@
 #include <allegro5/allegro_native_dialog.h>
 
 extern ALLEGRO_EVENT_QUEUE *queue;
+int game_overlay_asset = 0;
 
 void loopEnvironmentBeforeFrame(Game *game, bool *shouldDraw){
 	
@@ -35,11 +36,17 @@ void loopEnvironmentBeforeFrame(Game *game, bool *shouldDraw){
 
     }
 
-    if (redraw) al_flip_display();
+    if (redraw) {
+    	if(!game_overlay_asset) game_overlay_asset = loadImageAsset("game_overlay.png");
+    	drawImageAsset(game_overlay_asset, -220, -176);
+    	al_flip_display();
+    }
+
     (*shouldDraw) = redraw;
     
 }
 
 void loopEnvironmentAfterFrame(Game *game, bool redrawing) {
 	garbageCollectAudioSfxPool();
+	
 }

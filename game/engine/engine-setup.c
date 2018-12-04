@@ -91,13 +91,26 @@ static bool loadAllegro(Game *game){
 	
 	al_set_new_display_option(ALLEGRO_SINGLE_BUFFER, 1, ALLEGRO_REQUIRE);
 	al_set_new_display_option(ALLEGRO_SUPPORT_NPOT_BITMAP, 1, ALLEGRO_REQUIRE);
-	
+	al_set_new_display_flags(ALLEGRO_FULLSCREEN_WINDOW);
+
 	window = al_create_display(width, height);
 
-	int scale = game->screenSetup.scaleFactor;
+	int display_width  = al_get_display_width(window);
+	int display_height = al_get_display_height(window);
+
+	int sx =  (int)(display_width*0.5)  / game->screenSetup.width;
+	int sy =  (int)(display_height*0.5) / game->screenSetup.height;
+ 	int scale = min(sx, sy);
+ 	int dx =  (display_width - scale * game->screenSetup.width)/2;
+ 	int dy =  (display_height - scale * game->screenSetup.height)/2;
+
+ 	Logger.info("Display have: %dx%d", display_width, display_height);
+ 	Logger.complement("scaling to: %dx", scale);
+
 	if (scale != 1) {
 		al_identity_transform(&game_scale_transform);
 		al_scale_transform(&game_scale_transform, scale, scale);
+		al_translate_transform(&game_scale_transform, dx, dy);
 		al_use_transform(&game_scale_transform);
 	}
 
@@ -120,7 +133,7 @@ static bool loadAllegro(Game *game){
 	al_set_window_title(window, "Senac PI II // Betelgeuse");
 	al_flip_display();
 
-	al_resize_display(window, width, height);
+	//al_resize_display(window, width, height);
 
 	queue = al_create_event_queue();
 	al_register_event_source(queue, al_get_display_event_source(window));

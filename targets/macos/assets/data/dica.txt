@@ -1,24 +1,24 @@
 ﻿São Paulo
 panorama/pano_saopaulo.png
-Igreja
-54
-75
 Hotel
 23
 124
+Igreja
+54
+75
 Biblioteca
 104
 72
 Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui. 
 O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo". 
 A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário. 
-O estado que ele foi é conhecido como;Mar de Morros, onde a forma do rele-;vo em que colinas e morros são;totalmente asimétricos. 
-A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal. 
+O estado que ele foi é conhecido como;Mar de Morros, onde a forma do rele-;vo em que colinas e morros são;totalmente assimétricos. 
+A pessoa estava lendo os sermões do;Padre José de Anchieta, uma figura;importante do seu estado natal. 
 A pessoa que você procura estava por;aqui escutando Adoniran Barbosa. 
 
 Rio de Janeiro
 panorama/pano_riodejaneiro.png
-Ópera
+Biblioteca
 52
 55
 Hotel
@@ -28,9 +28,9 @@ Consulado
 129
 87
 Passou uma pessoa por aqui escutando;Vinicius de Moraes. 
-Passou um cara com a camiseta do;Tabajara FC. 
+Passou um cara com a camiseta do;Tabajara F.C. 
 Só sei que ele estava ligando para um;número com o DDD 22.
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria. 
+A pessoa que você procura estava por;aqui e disse que queria investir;pesado na indústria. 
 Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara. 
 A pessoa falava que ia para o estado;do tucano-de-papo-amarelo. 
 
@@ -54,33 +54,33 @@ A pessoa queria dar um mergulho no;Rio São Francisco.
 
 Salvador
 panorama/pano_salvador.png
-Farol
-111
-98
 Hotel
 40
 120
 Consulado
 75
 116
+Farol
+111
+98
 Um pessoa passou por aqui que iria;visitar a conhecida Roma Negra.
 Ele foi para a cidade em homenagem a;Jesus Cristo, o Salvador.
 Ele foi para a cidade de tanta glória.
 Só vi que ele estava ligando para um;número com o DDD 71.
-Bom eu vi uma pessoa dando um mergulho;na  Baía de Todos-os-Santos. 
+Bom, eu vi uma pessoa dando um mer-;gulho na Baía de Todos-os-Santos. 
 Uma pessoa estava por aqui lendo os;romances do Jorge Amado.
 
 Recife
 panorama/pano_recife.png
-Parque
-106
-52
-Hotel
-91
-103
 Consulado
 15
 82
+Hotel
+91
+103
+Parque
+106
+52
 Ele foi para um local com grande;incidência de ataque de tubarões.
 Passou uma pessoa por aqui lendo;Casa-Grande & Senzala.
 Ele disse que iria para uma cidade;que investe muito em ciência e engenharia.
@@ -90,12 +90,12 @@ Uma pessoa passou por aqui;cantando as músicas do Reginaldo Rossi.
 
 Fortaleza
 panorama/pano_fortaleza.png
-Praia
-55
-45
 Hotel
 27
 130
+Praia
+55
+45
 Biblioteca
 113
 93
@@ -108,129 +108,129 @@ Ele foi para o estado do pássaro;jandaia.
 
 Goiânia
 panorama/pano_goiania.png
-Hotel
-43
-108
 Consulado
 24
 130
+Hotel
+43
+108
 Escritório
 62
 141
-A pessoa que você procura foi para a;conhecida cidade-jardim. 
-Ele foi para o Aeroporto Internacional;de Confins. 
-Só sei que ele estava ligando para um;número com o DDD 31. 
-Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça. 
-Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço). 
-A pessoa queria dar um mergulho no;Rio São Francisco. 
+Só sei que ele estava ligando para;um número com o DDD 62.
+Bom, passou uma pessoa por aqui falando;que ia visitar o Planalto;Central do Brasil.
+Notei que tinha uma pessoa com o chaveiro;da santa protetora e;padroeira de alguma cidade,;Nossa Senhora Auxiliadora.
+No capô do carro estava esrito o lema;"Pela grandeza da pátria".
+Ele disse que ia para a cidade da;terra roxa.
+Ele disse que iria admirar um vasto;campo cerrado.
 
 Campo Grande
 panorama/pano_campogrande.png
-Hotel
-64
-72
 Consulado
 24
 52
+Hotel
+64
+72
 Parque
 94
 92
-Essa pessoa gosta muito de pão de;queijo! 
-Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas. 
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite. 
-Essa pessoa gosta muito de pão de;brigadeiro! 
-Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas. 
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja. 
+Só sei que ele estava ligando para;um número com o DDD 67.
+Notei que nos folhetos que ele carregava;estava escrito "A Capital;dos Ipês".
+Vi uma pessoa alugando um barco, dizia;que iria navegar pelas bacias;dos rios Paraná e Paraguai.
+Passou uma pessoa suspeita com uns;folhetos para um local turístico;conhecida como "Cidade Morena".
+Tinha uma pessoa por aqui contando;que iria para uma outra cidade;para cultivar ipês-rosa.
+No capô do carro dele tinha um lema;"Poder, Prosperidade e Altruísmo".
 
 Cuiabá
 panorama/pano_cuiaba.png
 Hotel
 40
 112
-Igreja
-98
-88
 Parque
 70
 45
-Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui. 
-O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo". 
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário. 
-O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos. 
-A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal. 
-A pessoa que você procura estava por;aqui escutando Adoniran Barbosa. 
+Igreja
+98
+88
+Passou uma pessoa suspeita com uns;folhetos para uma cidade turística;conhecida como "Cidade Verde".
+A pessoa que você procura estava por;aqui e disse que queria investir pesado;no extrativismo, coletando produtos;naturais.
+Passou uma pessoa reclamando que;tinha que ir para uma região muito;pantaneira.
+A pessoa parecia interessada em visi-;tar a Chapada dos Guimarães.
+Não é aquela capital que abriga o Cen-;tro Geodésico da América do Sul?
+Suspeito eu não vi, mas não quer com-;prar um aparador de grama para o;mato grosso?
 
 Curitiba
 panorama/pano_curitiba.png
-Escritório
-70
-138
 Consulado
 30
 92
+Escritório
+70
+138
 Parque
 120
 90
-Passou uma pessoa por aqui escutando;Vinicius de Moraes. 
-Passou um cara com a camiseta do;Tabajara FC. 
-Só sei que ele estava ligando para um;número com o DDD 22. 
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria. 
-Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara. 
-A pessoa falava que ia para o estado;do tucano-de-papo-amarelo. 
+A pessoa estava se preparando para;viajar até as cachoeiras do extremo;norte da região sul do país.
+A pessoa me disse que ela viajaria pa-;ra o único estado que tem seu nome na;própria bandeira. Qual era mesmo?
+O sujeito comentou sobre o Festival do;CoverStock, realizado em uma antiga;fábrica.
+A pessoa deixou cair um cartão postal;com a foto de um Jardim Botânico.
+Eu vi várias Araucárias no wallpaper;do celular dessa pessoa.
+O sujeito disse que visitaria os planal-;tos de Guarapuava e Ponta Grossa.
 
 Florianópolis
 panorama/pano_florianopolis.png
-Hotel
-85
-116
 Shopping
 25
 102
 Consulado
 47
 132
-A pessoa que você procura foi para a;conhecida cidade-jardim. 
-Ele foi para o Aeroporto Internacional;de Confins. 
-Só sei que ele estava ligando para um;número com o DDD 31. 
-Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça. 
-Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço). 
-A pessoa queria dar um mergulho no;Rio São Francisco.
+Hotel
+85
+116
+A pessoa comentou que ia para a Ilha;da Magia.
+A pessoa deixou cair um cartão postal;escrito "Ponte Hercílio Luz, 1926".
+O sujeito comentou que andaria de;sandboard nas dunas da Joaquina e;do Santinho.
+Ele parecia muito interessado na histó-;ria dos índios carijós.
+O sujeito disse que ia para uma das;três ilhas-capitais do Brasil. 
+O sujeito só falava sobre as praias do;lugar, acho que eram 42... não, mais;de 100! 
 
 Porto Alegre
 panorama/pano_portoalegre.png
-Consolado
-52
-85
 Hotel
 40
 125
+Consulado
+52
+85
 Rádio
 113
 105
-Essa pessoa gosta muito de pão de;queijo!
-Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas.
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite.
-Essa pessoa gosta muito de pão de;brigadeiro!
-Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas.
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja.
+Parece que a pessoa reservou um;hotel próximo ao lago Guaíba.
+O sujeito comentou sobre uma influên-;cia muito grande de alemães e italianos;no lugar.
+A pessoa se interessava muito por his-;tória, disse que durante a Guerra do;Paraguai essa capital cresceu muito;devido aos investimentos do governo.
+O sujeito disse que queria conhecer o;berço do seu ídolo do futebol: Ronaldi-;nho Gaúcho.
+Só sei que ele estava ligando para um;número com o DDD 51.
+O sujeito sabia muito sobre a história;do lugar, me contou muitos detalhes;sobre a Revolução Farroupilha.
 
 Manaus
 panorama/pano_manaus.png
-Teatro
-78
-95
-Praça
-48
-45
 Biblioteca
 20
 100
-Mano do céu, não sabia que tinha um;bandido por aqui não, se pá ele;já vazou daqui.
-O lema do estado da pessoa que você;procura é "Non dvcor dvco" que;significa "Não sou governado, governo".
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado no mercado imobiliário.
-O estado que ele foi é conhecido como;Mar de Morros, onde a forma do;relevo em que colinas e morros;são totalmente asimétricos.
-A pessoa estava lendo os sermos do;Padre José de Anchieta, uma figura;importante do seu estado natal.
-A pessoa que você procura estava por;aqui escutando Adoniran Barbosa.
+Praça
+48
+45
+Teatro
+78
+95
+Depois que pegar o suspeito, poderia;gravar o canto do Uirapuru para;este pobre ornitólogo?
+A pessoa deve gostar muito de rios, já;que foi para onde tem cerca de 20% de;toda a concentração de água doce do;planeta.
+Dizia que quando criança, sua mãe con-;tava histórias como a lenda do boto;cor-de-rosa.
+Talvez você consiga encontrá-lo de;cima do Pico da Neblina, o ponto mais;alto do Brasil.
+Acredito que ele tente atravessar a;fronteira para a Colômbia.
+O suspeito estava indo para o maior;estado do Brasil.
 
 Belém
 panorama/pano_belem.png
@@ -243,47 +243,45 @@ Hotel
 Mercadão
 65
 55
-Passou uma pessoa por aqui escutando;Vinicius de Moraes.
-Passou um cara com a camiseta do;Tabajara FC.
-Só sei que ele estava ligando para um;número com o DDD 22.
-A pessoa que você procura estava por;aqui e disse que queria investir;pesado na insdústria.
-Putz bixo, essa pessoa foi para uma;cidade que antes era conhecida;como o Estado da Guanabara.
-A pessoa falava que ia para o estado;do tucano-de-papo-amarelo.
+Ele parecia disposto a transformar a;Ilha de Marajó em um país livre.
+Ele estava comprando um adesivo da;Nossa Senhora de Nazaré, padroeira;da sua cidade natal.
+Ele disse que ia visitar a "Cidade das;Mangueiras".
+Ele disse que queria dar um mergulho;na Baía do Guajará.
+Ele me deu o resto do açaí com guaraná;dele dizendo que ia comer açaí de ver-;dade na origem.
+Ele foi atrás de garimpo, mas a serra;já estava pelada.
 
 Rio Branco
 panorama/pano_riobranco.png
 Mercadão
 40
 55
-Praça
-120
-55
 Ponte
 75
 120
-A pessoa que você procura foi para a;conhecida cidade-jardim.
-Ele foi para o Aeroporto Internacional;de Confins.
-Só sei que ele estava ligando para um;número com o DDD 31.
-Ele foi dar um pulo no Parque Estadual;da Serra do Rola-Moça.
-Diz a pessoa que tava inu para a Serra;do Cural (ramificação da Cordi-;lheira do Espinhaço).
-A pessoa queria dar um mergulho no;Rio São Francisco.
+Praça
+120
+55
+Tinha uma pessoa com muita pressa;por aqui, vendo uns panfletos sobre a;"Capital da Natureza".
+Ele estava escutando no rádio algo co-;mo a "Amazônia Ocidental Brasileira".
+Apareceu uma pessoa por aqui contan-;do algumas histórias sobre seu pai que;era seringueiro.
+Passou uma pessoa por aqui falando;sobre a sua descendência turca e liba-;nesa.
+Vish, acho que passou uma pessoa por;aqui dizendo que iria visitar a casa do;Barão do Rio Branco.
+Ele disse que queria visitar o estado da;arara-vermelha!
 
 Brasília
 panorama/pano_brasilia.png
 Consulado
 35
 70
-Hotel
-130
-88
 Parque
 82
 48
-Essa pessoa gosta muito de pão de;queijo!
-Vi alguém suspeito falando algo sobre; pescar. Algo sobre Furnas.
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de leite.
-Essa pessoa gosta muito de pão de;brigadeiro!
-Vi alguém suspeito falando algo sobre;caçar. Algo sobre Dunas.
-Humm... alguém assim passou por aqui.;Perguntou sobre produção de cerveja.
-
-
+Hotel
+130
+88
+Ele ia dar um passeio no Parque da Ci-;dade, que é maior que o Central Park,;diz ele...
+Dizia ele que ia para um lugar que tem;127 embaixadas estrangeiras.
+Ele disse que queria visitar a famosa;"Capital Mundial das Águas".
+Ele ia para o único lugar cercado por;um outro estado.
+Ele estava com um panfleto escrito;"cidade-satélite".
+Vi um sujeito falando que estava de via-;gem para o estado do Gavião-Real.
