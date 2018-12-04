@@ -86,7 +86,7 @@ static void finalOnFrame(Game *game, int frame) {
 
 		if (game->gameplayContext.currentTime >= WORKING_HOURS_IN_DAY * WORKING_DAYS) {
 
-        	if(frame == startDly + 2220) playSfx(game, "gameover.wav");
+        	if(frame == startDly + 1800) playSfx(game, "gameover.wav");
 			char* text = "     *** O bandido escapou ***; ;    Foi visto pela última vez;    em: ; ;    Você está DEMITIDO, recruta.; ;Ass.;ABIN;Agência Brasileira de Inteligência";
 	    	drawText(text, 20, 14 + delta);
 
@@ -100,7 +100,7 @@ static void finalOnFrame(Game *game, int frame) {
 			char* text = "   *** O bandido foi preso ***; ;    Sua astúcia em capturá-lo;    será recompensada.; ;    Você foi PROMOVIDO, recruta.; ;Ass.;ABIN;Agência Brasileira de Inteligência";
 	    	drawText(text, 20, 14 + delta);
 
-	    } 
+	    }
     }
 
     if (frame >= startDly + 2400){
