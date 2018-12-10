@@ -6,7 +6,7 @@
 #include <stdarg.h>
 #include "logger.h"
 
-#define LOGGING 1
+#define LOGGING 0
 
 static void logInfo(const char *format, ...) {
 	if (LOGGING) {

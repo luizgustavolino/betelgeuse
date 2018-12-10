@@ -63,7 +63,7 @@ static void mainMenuOnFrame(Game *game, int frame) {
 			drawText("opções", 178, 150);
 
 			if (game->keyState.a == KEY_IS_RELEASED) {
-				showMenu(game, 2, menuOptionsDatasource, menuCallback);
+				showMenu(game, 3, menuOptionsDatasource, menuCallback);
 			}
 		}
 	}
@@ -72,11 +72,13 @@ static void mainMenuOnFrame(Game *game, int frame) {
 // #-- Menu options & callbacks
 #define MAIN_MENU_OPT_PLAY 		0
 #define MAIN_MENU_OPT_CREDITS 	1
+#define MAIN_MENU_OPT_QUIT 		2
 
 char* menuOptionsDatasource(Game *game, int option){
 	switch (option) {
 		case MAIN_MENU_OPT_PLAY: return "Jogar";
 		case MAIN_MENU_OPT_CREDITS: return "Créditos";
+		case MAIN_MENU_OPT_QUIT: return "Sair do jogo";
 		default: return NULL;
 	}
 }
@@ -89,6 +91,9 @@ void menuCallback(Game *game, int choosenOption) {
 			break;
 		case MAIN_MENU_OPT_CREDITS:
             changeScene(game, makeCreditsScene(game));
+			break;
+		case MAIN_MENU_OPT_QUIT:
+			game->running = false;
 			break;
 		default:
 			break;

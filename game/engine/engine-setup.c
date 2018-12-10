@@ -98,8 +98,8 @@ static bool loadAllegro(Game *game){
 	int display_width  = al_get_display_width(window);
 	int display_height = al_get_display_height(window);
 
-	int sx =  (int)(display_width*0.5)  / game->screenSetup.width;
-	int sy =  (int)(display_height*0.5) / game->screenSetup.height;
+	int sx =  (int)(display_width*0.8)  / game->screenSetup.width;
+	int sy =  (int)(display_height*0.8) / game->screenSetup.height;
  	int scale = min(sx, sy);
  	int dx =  (display_width - scale * game->screenSetup.width)/2;
  	int dy =  (display_height - scale * game->screenSetup.height)/2;
@@ -147,6 +147,16 @@ static bool loadAllegro(Game *game){
     Logger.complement("%dx%dpx (%dx scale)",
     	game->screenSetup.width, game->screenSetup.height,
     	game->screenSetup.scaleFactor);
+
+    int game_overlay_asset = loadImageAsset("game_overlay.png");
+    drawImageAsset(game_overlay_asset, -97, -65);
+
+    al_set_clipping_rectangle(
+    	game->screenSetup.fullscreen_dx,
+    	game->screenSetup.fullscreen_dy,
+    	game->screenSetup.width * game->screenSetup.scaleFactor,
+    	game->screenSetup.height * game->screenSetup.scaleFactor
+    );
 
     al_start_timer(timer);
 

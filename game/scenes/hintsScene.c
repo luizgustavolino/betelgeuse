@@ -47,6 +47,7 @@ static void hintsOnEnter(Game *game, int frame) {
 	action_btn_a   = loadImageAsset("btn_a_from_right_a.png");
 	action_btn_b   = loadImageAsset("btn_a_from_right_b.png");	
 	
+    targetTime = game->gameplayContext.currentTime;
 }
 
 static void hintsOnFrame(Game *game, int frame) {

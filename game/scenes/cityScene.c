@@ -8,6 +8,7 @@
 #include "destinationsScene.h"
 #include "hintsScene.h"
 #include "finalScene.h"
+#include "mainMenuScene.h"
 
 #include "../engine/colors.h"
 
@@ -102,7 +103,7 @@ static void cityOnFrame(Game *game, int frame) {
   	// input: troca de página
 	if (game->keyState.right == KEY_IS_RELEASED && current_page < 2) current_page++;
 	if (game->keyState.left  == KEY_IS_RELEASED && current_page > 0) current_page--;
-	if (game->keyState.a     == KEY_IS_RELEASED) showMenu(game, 3, menuOptionsDatasource, menuCallback);
+	if (game->keyState.a     == KEY_IS_RELEASED) showMenu(game, 4, menuOptionsDatasource, menuCallback);
 
 }
 
@@ -144,12 +145,14 @@ static void drawPage(Game *game, int pageNum){
 // #-- Menu options & callbacks
 #define CITY_MENU_OPT_INVESTIGATE 		0
 #define CITY_MENU_OPT_FLY 				1
-#define CITY_MENU_OPT_BACK				2
+#define CITY_MENU_OPT_ABORT 			2
+#define CITY_MENU_OPT_BACK				3
 
 char* menuOptionsDatasource(Game *game, int option){
 	switch (option) {
 		case CITY_MENU_OPT_INVESTIGATE: return "Investigar";
 		case CITY_MENU_OPT_FLY: return "Viajar";
+		case CITY_MENU_OPT_ABORT: return "Abortar";
 		case CITY_MENU_OPT_BACK: return "Voltar";
 		default: return NULL;
 	}
@@ -162,6 +165,9 @@ void menuCallback(Game *game, int choosenOption) {
 			break;
 		case CITY_MENU_OPT_FLY:
 			changeScene(game, makeDestinationsScene(game));
+			break;
+		case CITY_MENU_OPT_ABORT:
+			changeScene(game, makeMainMenuScene(game));
 			break;
 		case CITY_MENU_OPT_BACK:
 			break;
